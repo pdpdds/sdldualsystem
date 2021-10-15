@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\ai">
+      <UniqueIdentifier>{598ee805-2ae3-43aa-8257-e55720c4acd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\cinematics">
+      <UniqueIdentifier>{6aa5f12c-6343-4bed-bee4-abc8bd79ed2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\editor">
+      <UniqueIdentifier>{8f9205de-6152-4372-a0a2-bb540ea7cc21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\platform">
+      <UniqueIdentifier>{7ddba603-3f6c-41bd-8903-783e456abce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\qbasic">
+      <UniqueIdentifier>{81125e23-c067-4571-8f00-965b7fd41ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\sdl">
+      <UniqueIdentifier>{38314847-71b6-45d3-a9cf-d01abcf9ac10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\scale2x">
+      <UniqueIdentifier>{677aa369-acd4-4ff0-bf9f-c8efeb17a79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\tileattr">
+      <UniqueIdentifier>{4eb2c561-6b01-42a1-8efd-91f233ad6f28}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="_mingw.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="utime.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\enemydata.h">
+      <Filter>소스 파일\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\ray.h">
+      <Filter>소스 파일\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="ai\vort.h">
+      <Filter>소스 파일\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl\snddrv.h">
+      <Filter>소스 파일\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="scale2x\pixel.h">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClInclude>
+    <ClInclude Include="scale2x\portable.h">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClInclude>
+    <ClInclude Include="scale2x\scale2x.h">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClInclude>
+    <ClInclude Include="scale2x\scale3x.h">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClInclude>
+    <ClInclude Include="scale2x\scalebit.h">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="gameorg.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="keen.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="keys.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="latch.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="lz.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="osparam.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pressf10.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sounds.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stamp.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="tga.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="scale2x\file.h">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClInclude>
+    <ClInclude Include="buttons.h">
+      <Filter>소스 파일\editor</Filter>
+    </ClInclude>
+    <ClInclude Include="autoblock.h">
+      <Filter>소스 파일\editor</Filter>
+    </ClInclude>
+    <ClInclude Include="ghosting.h">
+      <Filter>소스 파일\editor</Filter>
+    </ClInclude>
+    <ClInclude Include="platform1.h">
+      <Filter>소스 파일\ai</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dummy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="win-gettimeofday.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\autoray.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\baby.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\balljack.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\butler.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\door.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\earth.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\fireball.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\foob.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\garg.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\gotpoints.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\icecannon.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\meep.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\mother.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\nessie.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ninja.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\platvert.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\ray.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\rope.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\se.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\sndwave.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\tank.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\tankep2.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\teleport.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\vort.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\vortelite.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\walker.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\yorp.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="cinematics\blowupworld.c">
+      <Filter>소스 파일\cinematics</Filter>
+    </ClCompile>
+    <ClCompile Include="cinematics\e1ending.c">
+      <Filter>소스 파일\cinematics</Filter>
+    </ClCompile>
+    <ClCompile Include="cinematics\e3ending.c">
+      <Filter>소스 파일\cinematics</Filter>
+    </ClCompile>
+    <ClCompile Include="cinematics\mortimer.c">
+      <Filter>소스 파일\cinematics</Filter>
+    </ClCompile>
+    <ClCompile Include="cinematics\seqcommon.c">
+      <Filter>소스 파일\cinematics</Filter>
+    </ClCompile>
+    <ClCompile Include="cinematics\TBC.c">
+      <Filter>소스 파일\cinematics</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\autoblock.c">
+      <Filter>소스 파일\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\autolight.c">
+      <Filter>소스 파일\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\buttons.c">
+      <Filter>소스 파일\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\editor.c">
+      <Filter>소스 파일\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\ghosting.c">
+      <Filter>소스 파일\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\menu_editor.c">
+      <Filter>소스 파일\editor</Filter>
+    </ClCompile>
+    <ClCompile Include="sdl\keydrv.c">
+      <Filter>소스 파일\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="sdl\snddrv.c">
+      <Filter>소스 파일\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="sdl\timedrv.c">
+      <Filter>소스 파일\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="sdl\viddrv.c">
+      <Filter>소스 파일\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="scale2x\pixel.c">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClCompile>
+    <ClCompile Include="scale2x\scale2x.c">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClCompile>
+    <ClCompile Include="scale2x\scale3x.c">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClCompile>
+    <ClCompile Include="scale2x\scalebit.c">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClCompile>
+    <ClCompile Include="console.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="customepisode.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="eseq_ep2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fileio.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="FinaleScreenLoader.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fonts.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="game.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gamedo.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gamepdo.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gamepdo_wm.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="graphicmaker.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ini.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="intro.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="latch.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="lprintf.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="lz.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="map.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="maploader.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_custommap.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_keysetup.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_options.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_savegames.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menumanager.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="message.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="misc_ui.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="palette.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sanity.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="savegame.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sgrle.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tga.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="twirly.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="vgatiles.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="scale2x\file.c">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClCompile>
+    <ClCompile Include="scale2x\getopt.c">
+      <Filter>소스 파일\scale2x</Filter>
+    </ClCompile>
+    <ClCompile Include="platform.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="platform\win32.c">
+      <Filter>소스 파일\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="ai\platform1.c">
+      <Filter>소스 파일\ai</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

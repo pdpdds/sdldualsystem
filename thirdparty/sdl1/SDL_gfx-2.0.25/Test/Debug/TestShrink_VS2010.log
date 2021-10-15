@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: 중간 디렉터리(.\Debug\)에 다른 프로젝트(LaplaceRelaxation.vcxproj, TestABGR.vcxproj, TestFonts.vcxproj, TestFramerate.vcxproj, TestGfxBlit.vcxproj, TestGfxPrimitives.vcxproj, TestGfxTexture.vcxproj, TestImageFilter.vcxproj, TestRotozoom.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+  TestShrink.c
+C:\Dev\Level0\SDLProject\thirdparty\sdl1\SDL_gfx-2.0.25\Test\TestShrink.c : fatal error C1041: 프로그램 데이터베이스 'C:\Dev\Level0\SDLProject\thirdparty\sdl1\SDL_gfx-2.0.25\Test\Debug\vc142.pdb'을(를) 열 수 없습니다. 여러 CL.EXE에서 동일한 .PDB 파일에 쓰는 경우 /FS를 사용하십시오.

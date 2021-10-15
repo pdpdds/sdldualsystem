@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\config.cpp" />
+    <ClCompile Include="src\gamectrl.cpp" />
+    <ClCompile Include="src\graphics.cpp" />
+    <ClCompile Include="src\music.cpp" />
+    <ClCompile Include="src\port.cpp" />
+    <ClCompile Include="src\shapeman.cpp" />
+    <ClCompile Include="src\windows.cpp" />
+    <ClCompile Include="src\x_editor.cpp" />
+    <ClCompile Include="src\x_info.cpp" />
+    <ClCompile Include="src\x_obj.cpp" />
+    <ClCompile Include="src\x_obj2.cpp" />
+    <ClCompile Include="src\x_obj3.cpp" />
+    <ClCompile Include="src\x_objman.cpp" />
+    <ClCompile Include="src\x_player.cpp" />
+    <ClCompile Include="src\x_vol1.cpp" />
+    <ClCompile Include="src\_xargon.cpp" />
+    <ClCompile Include="libgamemusic\decode-midi.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\decode-opl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\encode-midi.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\encode-opl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\eventconverter-midi.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\eventconverter-opl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\events.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\exceptions.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\ins-ins-adlib.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\metadata-malv.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-cdfm-zone66.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-cdfm-zone66-gus.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-cmf-creativelabs.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-dro-dosbox-v1.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-dro-dosbox-v2.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-dsm-dsik.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-got.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-ibk-instrumentbank.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-imf-idsoftware.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-klm-wacky.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-mid-type0.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-mus-dmx.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-mus-vinyl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-raw-rdos.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-s3m-screamtracker.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\mus-tbsa-doofus.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\opl-util.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\patch.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\patchbank.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\patch-midi.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\patch-opl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\patch-pcm.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\playback.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\synth-opl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\synth-pcm.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamemusic\track-split.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\bitstream.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\error.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\filter.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\filter_dummy.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\iff.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\iostream_helpers.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\lzw.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\metadata.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream_file.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream_filtered.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream_memory.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream_seg.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream_string.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\stream_sub.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="libgamecommon\suppitem.cpp">
+      <Filter>libgamecommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="libgamemusic\dbopl.cpp">
+      <Filter>libgamemusic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\adlib.h" />
+    <ClInclude Include="src\dosbox.h" />
+    <ClInclude Include="src\include\cfg_win.h" />
+    <ClInclude Include="src\include\config.h" />
+    <ClInclude Include="src\include\copyfile.h" />
+    <ClInclude Include="src\include\gamectrl.h" />
+    <ClInclude Include="src\include\gr.h" />
+    <ClInclude Include="src\include\keyboard.h" />
+    <ClInclude Include="src\include\music.h" />
+    <ClInclude Include="src\include\pixwrite.h" />
+    <ClInclude Include="src\include\uncrunch.h" />
+    <ClInclude Include="src\include\windows.h" />
+    <ClInclude Include="src\include\worx.h" />
+    <ClInclude Include="src\include\xargon.h" />
+    <ClInclude Include="src\include\x_obj.h" />
+    <ClInclude Include="src\include\x_snd.h" />
+    <ClInclude Include="src\port.h" />
+    <ClInclude Include="libgamemusic\decode-midi.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\decode-opl.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\dosbox.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\encode-midi.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\encode-opl.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\ins-ins-adlib.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\metadata-malv.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-cdfm-zone66.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-cdfm-zone66-gus.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-cmf-creativelabs.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-dro-dosbox-v1.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-dro-dosbox-v2.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-dsm-dsik.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-got.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-ibk-instrumentbank.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-imf-idsoftware.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-klm-wacky.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-mid-type0.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-mus-dmx.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-mus-vinyl.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-raw-rdos.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-s3m-screamtracker.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\mus-tbsa-doofus.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\patch-adlib.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\track-split.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+    <ClInclude Include="libgamemusic\dbopl.hpp">
+      <Filter>libgamemusic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\include\x_obj.def" />
+    <None Include="src\Makefile.am" />
+    <None Include="libgamecommon\Makefile.am">
+      <Filter>libgamecommon</Filter>
+    </None>
+    <None Include="libgamecommon\Makefile.in">
+      <Filter>libgamecommon</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="libgamemusic">
+      <UniqueIdentifier>{5bda01aa-6529-46f4-89b0-c58379200029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libgamecommon">
+      <UniqueIdentifier>{d5d21394-7249-411b-a8a9-e4cd940136e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+
+* look at moving the tile width and tile height info from BoardInputC and BoardGraphicsC into the GameBoard class ( possibly using a struct ), and to be static so that it's easily accesibly from all classes 
+
+* fix AI spot picking algorithm
+
+* fix board game won algorithm

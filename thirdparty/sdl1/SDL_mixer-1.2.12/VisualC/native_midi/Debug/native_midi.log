@@ -1,0 +1,4 @@
+﻿  native_midi_common.c
+  native_midi_win32.c
+  코드를 생성하고 있습니다...
+  native_midi.vcxproj -> D:\github\sdldualsystem\thirdparty\Debug\native_midi.lib

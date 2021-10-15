@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\gamelib">
+      <UniqueIdentifier>{2eeebc18-2ee6-41d8-a122-d41f53fd25db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\gamelib\SDL">
+      <UniqueIdentifier>{2100d2f7-4534-4cd1-b6a9-834b704f62e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\include">
+      <UniqueIdentifier>{eb5df431-554d-4e3e-8f3a-ae5b3e5bd601}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="_mingw.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="utime.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="gamelib\SDL\controllersdl.h">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="gamelib\SDL\require_sdl.h">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="gamelib\SDL\sdldata.h">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controller.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\drawbuffer.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\game.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gamelib.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\guisprites.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\level.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\level_defn.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelgen.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelgenbraid.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelgenmaze.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelgensimple.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelgentoast.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelgenutil.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelslice.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\memalloc.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\projectile.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\queue.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\random.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\screen.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tank.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tanklist.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tanksprites.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tweak.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\types.h">
+      <Filter>소스 파일\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dummy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="win-gettimeofday.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="aitwitch.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="game.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="guisprites.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelgenbraid.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelgenmaze.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelgensimple.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelgentoast.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelgenutil.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelslice.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="memalloc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="projectile.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="queue.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="random.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="screen.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tank.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tanklist.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tanksprites.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\bitmap.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\control.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\controllersdl.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\graphics.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\gui.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\logging.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\sdldata.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="gamelib\SDL\events.c">
+      <Filter>소스 파일\gamelib\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="drawbuffer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="levelgen.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="level.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

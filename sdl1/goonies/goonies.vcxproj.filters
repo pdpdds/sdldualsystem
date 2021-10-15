@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="2DCMC.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="auxiliar.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="font_extractor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="geometrics.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Ginterface.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GLTile.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GLTManager.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GMap.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_bat.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_bigrock.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_bone.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_bridge.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_bullet.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_cagedoor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_character.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_closingwall.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_coin.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_drop.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_dropgenerator.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_enemy.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_entrydoor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_exitdoor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_fallingrock.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_fallingwater.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_flame.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_fratelli.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_ghost.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_item.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_jumpingskull.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_key.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_lava.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_musicalnote.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_pipe_water.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_rope.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_skeleton.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_skull.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_skulldoor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_trickyskull.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_water.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_wateropening.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_watersplash.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GObject.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GObjectCreator.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GooniesScript.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboardstate.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelPack.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicManager.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PlacedGLTile.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="randomc.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SDL_glutaux.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SFXManager.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Symbol.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TheGoonies.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TheGooniesApp.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TheGooniesCtnt.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualController.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2DCMC.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="auxiliar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="font_extractor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="geometrics.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Ginterface.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceBrowser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceButton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceConfirmation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceMessage.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceSButton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceText.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GinterfaceTextInput.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GLTile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GLTManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GMap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GMapLayer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_bat.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_bigrock.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_bone.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_bridge.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_bullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_cagedoor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_character.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_closingwall.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_coin.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_drop.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_dropgenerator.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_enemy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_entrydoor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_exitdoor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_fallingrock.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_fallingwater.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_flame.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_fratelli.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_ghost.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_jumpingskull.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_key.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_lava.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_musicalnote.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_pipe_water.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_rope.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_skeleton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_skull.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_skulldoor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_trickyskull.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_water.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_wateropening.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_watersplash.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GObject.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GObjectCreator.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GooniesScript.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboardstate.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelPack.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PlacedGLTile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ranrotb.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SDL_glutaux.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SFXManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_credits.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_editor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_endsequence.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_game.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_gameover.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_gamestart.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_howtoplay.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_interlevel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_konami.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_mapeditor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_msx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_splash.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_title.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="state_titleanimation.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Symbol.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TheGoonies.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TheGooniesApp.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

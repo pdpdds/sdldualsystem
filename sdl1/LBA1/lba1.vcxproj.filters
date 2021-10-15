@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="actor.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="animations.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="collision.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.grid.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.scene.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="extra.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="fcaseopen.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="filereader.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="flamovies.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="gamestate.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="grid.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="holomap.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="hqrdepack.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="interface.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="lbaengine.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="menuoptions.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="movements.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="redraw.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resources.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="screens.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="script.life.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="script.move.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sdlengine.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="shadeangletab.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sys.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="xmidi.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="actor.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="animations.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="collision.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.grid.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.scene.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="extra.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fcaseopen.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="filereader.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="flamovies.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gamestate.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="grid.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="holomap.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="hqrdepack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="interface.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="lbaengine.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="menuoptions.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="movements.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="music.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="redraw.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="resources.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="screens.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="script.life.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="script.move.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sdlengine.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sys.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="text.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="xmidi.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="dummy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

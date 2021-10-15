@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\anim">
+      <UniqueIdentifier>{1fd3e1f7-ea01-47e2-838d-9b545d9d5185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\base">
+      <UniqueIdentifier>{2c044975-5b0b-4896-9251-b2d0e0a5a14c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\cdrom">
+      <UniqueIdentifier>{9eff6aa9-ba89-4dac-84ab-d36373a70cc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data">
+      <UniqueIdentifier>{0fb5dd90-a350-43c8-ad90-76a225f1f3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\data\objstd">
+      <UniqueIdentifier>{5c7ec474-dfa9-44e3-8b9c-2c4f1a1d6db8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\dialog">
+      <UniqueIdentifier>{a39c50d7-dea2-4aae-9cd5-4fc8d736adfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\disk">
+      <UniqueIdentifier>{cb1f6606-bad7-49e6-b690-1dc0d213ed06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\error">
+      <UniqueIdentifier>{941a8c92-82f0-403f-9541-1fb4501ba404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\gameplay">
+      <UniqueIdentifier>{ce6c99a4-c0b2-458d-867c-4694dd2b0428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\gfx">
+      <UniqueIdentifier>{d189fba7-1228-4cca-b94c-e713e70b32d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\inphdl">
+      <UniqueIdentifier>{0be80c28-518c-4824-8ef0-b91ddbfa75ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\landscap">
+      <UniqueIdentifier>{046a7657-5594-48bb-8498-9279094af0af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\list">
+      <UniqueIdentifier>{3d11af01-6e86-4afc-8362-83bba23b51ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\living">
+      <UniqueIdentifier>{39b5a7fd-f806-49f5-a269-6e7af179c1bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\memory">
+      <UniqueIdentifier>{3e926d60-b2df-40dc-bf95-0bea676cdd6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\organisa">
+      <UniqueIdentifier>{b613fa77-dd78-4495-af46-3da9e36fccd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\planing">
+      <UniqueIdentifier>{3b4ff5b4-82ac-46bc-bff4-3ed89fbb8c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\random">
+      <UniqueIdentifier>{a44857a4-a535-4021-98ca-e2407ea79b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\scenes">
+      <UniqueIdentifier>{71d79809-ae85-4dab-9b4b-64943e65a87e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\sound">
+      <UniqueIdentifier>{d6f29ea3-3971-45e4-9cc1-8988c0f43126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\story">
+      <UniqueIdentifier>{76d4222d-38cb-4682-b37b-3df2d12c2fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\text">
+      <UniqueIdentifier>{411227cc-7161-4b09-862c-86b69fdc8ae5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\present">
+      <UniqueIdentifier>{932f2ed1-0e89-4920-a9d9-7ab1c98d9a2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\port">
+      <UniqueIdentifier>{c517a412-3520-42c3-8fe1-93f045bf5c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\intro">
+      <UniqueIdentifier>{c4e406b3-bac7-451c-964e-eec71379ec00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="unistd.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="anim\sysanim.h">
+      <Filter>소스 파일\anim</Filter>
+    </ClInclude>
+    <ClInclude Include="base\base.h">
+      <Filter>소스 파일\base</Filter>
+    </ClInclude>
+    <ClInclude Include="cdrom\cdrom.h">
+      <Filter>소스 파일\cdrom</Filter>
+    </ClInclude>
+    <ClInclude Include="data\database.h">
+      <Filter>소스 파일\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\datacalc.h">
+      <Filter>소스 파일\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\relation.h">
+      <Filter>소스 파일\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\dataappl.h">
+      <Filter>소스 파일\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\objstd\tcdata.h">
+      <Filter>소스 파일\data\objstd</Filter>
+    </ClInclude>
+    <ClInclude Include="data\objstd\tckeys.h">
+      <Filter>소스 파일\data\objstd</Filter>
+    </ClInclude>
+    <ClInclude Include="disk\disk.h">
+      <Filter>소스 파일\disk</Filter>
+    </ClInclude>
+    <ClInclude Include="error\error.h">
+      <Filter>소스 파일\error</Filter>
+    </ClInclude>
+    <ClInclude Include="landscap\landscap.h">
+      <Filter>소스 파일\landscap</Filter>
+    </ClInclude>
+    <ClInclude Include="landscap\raster.h">
+      <Filter>소스 파일\landscap</Filter>
+    </ClInclude>
+    <ClInclude Include="landscap\spot.h">
+      <Filter>소스 파일\landscap</Filter>
+    </ClInclude>
+    <ClInclude Include="list\list.h">
+      <Filter>소스 파일\list</Filter>
+    </ClInclude>
+    <ClInclude Include="living\bob.h">
+      <Filter>소스 파일\living</Filter>
+    </ClInclude>
+    <ClInclude Include="living\living.h">
+      <Filter>소스 파일\living</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\memory.h">
+      <Filter>소스 파일\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="random\random.h">
+      <Filter>소스 파일\random</Filter>
+    </ClInclude>
+    <ClInclude Include="scenes\evidence.h">
+      <Filter>소스 파일\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="scenes\scenes.h">
+      <Filter>소스 파일\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="story\story.h">
+      <Filter>소스 파일\story</Filter>
+    </ClInclude>
+    <ClInclude Include="text\text.h">
+      <Filter>소스 파일\text</Filter>
+    </ClInclude>
+    <ClInclude Include="theclou.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="sound\fmopl.h">
+      <Filter>소스 파일\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="sound\fx.h">
+      <Filter>소스 파일\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="sound\mxr.h">
+      <Filter>소스 파일\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="sound\newsound.h">
+      <Filter>소스 파일\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\prepare.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\support.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\sync.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\system.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\graphics.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\guards.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\io.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\main.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\planer.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="planing\player.h">
+      <Filter>소스 파일\planing</Filter>
+    </ClInclude>
+    <ClInclude Include="dialog\talkappl.h">
+      <Filter>소스 파일\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="dialog\dialog.h">
+      <Filter>소스 파일\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplay\gamefunc.h">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplay\gp.h">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="gameplay\gp_app.h">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="inphdl\inphdl.h">
+      <Filter>소스 파일\inphdl</Filter>
+    </ClInclude>
+    <ClInclude Include="organisa\organisa.h">
+      <Filter>소스 파일\organisa</Filter>
+    </ClInclude>
+    <ClInclude Include="present\interac.h">
+      <Filter>소스 파일\present</Filter>
+    </ClInclude>
+    <ClInclude Include="present\interac_p.h">
+      <Filter>소스 파일\present</Filter>
+    </ClInclude>
+    <ClInclude Include="present\present.h">
+      <Filter>소스 파일\present</Filter>
+    </ClInclude>
+    <ClInclude Include="present\present_p.h">
+      <Filter>소스 파일\present</Filter>
+    </ClInclude>
+    <ClInclude Include="present\presenta.h">
+      <Filter>소스 파일\present</Filter>
+    </ClInclude>
+    <ClInclude Include="port\port.h">
+      <Filter>소스 파일\port</Filter>
+    </ClInclude>
+    <ClInclude Include="intro\iffanim.h">
+      <Filter>소스 파일\intro</Filter>
+    </ClInclude>
+    <ClInclude Include="intro\intro.h">
+      <Filter>소스 파일\intro</Filter>
+    </ClInclude>
+    <ClInclude Include="gfx\filter.h">
+      <Filter>소스 파일\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="gfx\gfx.h">
+      <Filter>소스 파일\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="gfx\gfx_p.h">
+      <Filter>소스 파일\gfx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dummy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="anim\sysanim.c">
+      <Filter>소스 파일\anim</Filter>
+    </ClCompile>
+    <ClCompile Include="base\base.c">
+      <Filter>소스 파일\base</Filter>
+    </ClCompile>
+    <ClCompile Include="cdrom\cdrom.c">
+      <Filter>소스 파일\cdrom</Filter>
+    </ClCompile>
+    <ClCompile Include="data\datacalc.c">
+      <Filter>소스 파일\data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\relation.c">
+      <Filter>소스 파일\data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\dataappl.c">
+      <Filter>소스 파일\data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\database.c">
+      <Filter>소스 파일\data</Filter>
+    </ClCompile>
+    <ClCompile Include="disk\disk.c">
+      <Filter>소스 파일\disk</Filter>
+    </ClCompile>
+    <ClCompile Include="error\error.c">
+      <Filter>소스 파일\error</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\raster.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\scroll.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\spot.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\access.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\hardware.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\init.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="landscap\landscap.c">
+      <Filter>소스 파일\landscap</Filter>
+    </ClCompile>
+    <ClCompile Include="list\list.c">
+      <Filter>소스 파일\list</Filter>
+    </ClCompile>
+    <ClCompile Include="living\bob.c">
+      <Filter>소스 파일\living</Filter>
+    </ClCompile>
+    <ClCompile Include="living\living.c">
+      <Filter>소스 파일\living</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\memory.c">
+      <Filter>소스 파일\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="random\random.c">
+      <Filter>소스 파일\random</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\cars.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\dealer.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\done.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\evidence.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\inside.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\invest.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\scenes.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="scenes\tools.c">
+      <Filter>소스 파일\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="story\story.c">
+      <Filter>소스 파일\story</Filter>
+    </ClCompile>
+    <ClCompile Include="text\text.c">
+      <Filter>소스 파일\text</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\fmopl.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\fx.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\mxr.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\mxr_hsc.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\mxr_voc.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\mxr_wav.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="sound\newsound.c">
+      <Filter>소스 파일\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\support.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\sync.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\system.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\graphics.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\guards.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\io.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\main.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\planer.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\player.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="planing\prepare.c">
+      <Filter>소스 파일\planing</Filter>
+    </ClCompile>
+    <ClCompile Include="dialog\dialog.c">
+      <Filter>소스 파일\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="dialog\talkappl.c">
+      <Filter>소스 파일\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplay\loadsave.c">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplay\tcreques.c">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplay\gp.c">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="gameplay\gp_app.c">
+      <Filter>소스 파일\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="inphdl\arrow2x_xpm.c">
+      <Filter>소스 파일\inphdl</Filter>
+    </ClCompile>
+    <ClCompile Include="inphdl\inphdl.c">
+      <Filter>소스 파일\inphdl</Filter>
+    </ClCompile>
+    <ClCompile Include="inphdl\arrow1x_xpm.c">
+      <Filter>소스 파일\inphdl</Filter>
+    </ClCompile>
+    <ClCompile Include="organisa\organisa.c">
+      <Filter>소스 파일\organisa</Filter>
+    </ClCompile>
+    <ClCompile Include="present\interac.c">
+      <Filter>소스 파일\present</Filter>
+    </ClCompile>
+    <ClCompile Include="present\present.c">
+      <Filter>소스 파일\present</Filter>
+    </ClCompile>
+    <ClCompile Include="present\presenta.c">
+      <Filter>소스 파일\present</Filter>
+    </ClCompile>
+    <ClCompile Include="port\port.c">
+      <Filter>소스 파일\port</Filter>
+    </ClCompile>
+    <ClCompile Include="intro\iffanim.c">
+      <Filter>소스 파일\intro</Filter>
+    </ClCompile>
+    <ClCompile Include="intro\intro.c">
+      <Filter>소스 파일\intro</Filter>
+    </ClCompile>
+    <ClCompile Include="gfx\filter.c">
+      <Filter>소스 파일\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="gfx\gfx.c">
+      <Filter>소스 파일\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="gfx\gfxmcga.c">
+      <Filter>소스 파일\gfx</Filter>
+    </ClCompile>
+    <ClCompile Include="gfx\gfxnch4.c">
+      <Filter>소스 파일\gfx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\database.ph">
+      <Filter>소스 파일\data</Filter>
+    </None>
+    <None Include="disk\disk.eh">
+      <Filter>소스 파일\disk</Filter>
+    </None>
+    <None Include="landscap\landscap.ph">
+      <Filter>소스 파일\landscap</Filter>
+    </None>
+    <None Include="living\living.ph">
+      <Filter>소스 파일\living</Filter>
+    </None>
+    <None Include="text\text.eh">
+      <Filter>소스 파일\text</Filter>
+    </None>
+    <None Include="text\text.ph">
+      <Filter>소스 파일\text</Filter>
+    </None>
+  </ItemGroup>
+</Project>

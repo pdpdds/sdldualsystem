@@ -1,0 +1,7 @@
+= Tic Tac Toe
+
+A not-so-simple game of Tic Tac Toe. A work in progress.
+
+Trying to teach myself SDL and make a somewhat re-usable game engine while doing it.
+
+Copyright 2010 Sean Hagen of Zeros 2 Heroes Media Inc, released under the MIT license

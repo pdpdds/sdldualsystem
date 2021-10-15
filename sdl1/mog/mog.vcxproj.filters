@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{bf211fbd-fca5-4d52-b5b6-a2ddbdf2a0a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{5bda01aa-6529-46f4-89b0-c58379200029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sound">
+      <UniqueIdentifier>{d5d21394-7249-411b-a8a9-e4cd940136e3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\bitmaps.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\debug.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\debug-report.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\demons.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\drawing.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\filehandling.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\gameaux.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\gamecycle.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\gameinteractions.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\gameobjects.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\gametiles.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\ingamecycle.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\keyboard.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\line_clip.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\loadpcx.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\passwords.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\path.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\render.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\roomchange.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\shrines.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\sound.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sources\bitmaps.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\debug.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\drawing.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\filehandling.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\line_clip.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\loadpcx.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\mog.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\MOGtypes.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\object.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\resource.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\sound.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\sprites.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\tiles.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+﻿  native_midi_common.c
+D:\DevPlatform\SDLGame\thirdparty\sdl1\SDL_mixer-1.2.12\native_midi\native_midi_common.h(25,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'SDL.h': No such file or directory
+  native_midi_win32.c
+D:\DevPlatform\SDLGame\thirdparty\sdl1\SDL_mixer-1.2.12\native_midi\native_midi_win32.c(21,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'SDL_config.h': No such file or directory
+  코드를 생성하고 있습니다...

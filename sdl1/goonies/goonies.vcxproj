@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{4940D44F-595F-4CCA-A10D-5DBDE4B9C884}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>platformer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>goonies</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../thirdparty/sdlcl;../../thirdparty/sdl1\SDL-1.2.15/include;../../thirdparty/sdl1\SDL_image-1.2.12;../../thirdparty/sdl1\SDL_mixer-1.2.12;../../thirdparty\sdl1\SDL_ttf-2.0.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glu32.lib;sdl_image.lib;Opengl32.lib;legacy_stdio_definitions.lib;SDLcl.lib;SDL_mixer.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\DevPlatform\SDL\SDLProgramming\SDL_Modue\SDL-1.2.15\include;D:\DevPlatform\SDL\SDLProgramming\SDL_Modue\SDL_mixer-1.2.12;D:\DevPlatform\SDL\SDLProgramming\SDL_Modue\SDL_image-1.2.12</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sdlmain.lib;sdl.lib;SDL_mixer.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\DevPlatform\SDL\SDLProgramming\SDL_Modue\SDL-1.2.15\lib\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="2DCMC.h" />
+    <ClInclude Include="auxiliar.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="font_extractor.h" />
+    <ClInclude Include="geometrics.h" />
+    <ClInclude Include="Ginterface.h" />
+    <ClInclude Include="GLTile.h" />
+    <ClInclude Include="GLTManager.h" />
+    <ClInclude Include="GMap.h" />
+    <ClInclude Include="GObject.h" />
+    <ClInclude Include="GObjectCreator.h" />
+    <ClInclude Include="GooniesScript.h" />
+    <ClInclude Include="GO_bat.h" />
+    <ClInclude Include="GO_bigrock.h" />
+    <ClInclude Include="GO_bone.h" />
+    <ClInclude Include="GO_bridge.h" />
+    <ClInclude Include="GO_bullet.h" />
+    <ClInclude Include="GO_cagedoor.h" />
+    <ClInclude Include="GO_character.h" />
+    <ClInclude Include="GO_closingwall.h" />
+    <ClInclude Include="GO_coin.h" />
+    <ClInclude Include="GO_drop.h" />
+    <ClInclude Include="GO_dropgenerator.h" />
+    <ClInclude Include="GO_enemy.h" />
+    <ClInclude Include="GO_entrydoor.h" />
+    <ClInclude Include="GO_exitdoor.h" />
+    <ClInclude Include="GO_fallingrock.h" />
+    <ClInclude Include="GO_fallingwater.h" />
+    <ClInclude Include="GO_flame.h" />
+    <ClInclude Include="GO_fratelli.h" />
+    <ClInclude Include="GO_ghost.h" />
+    <ClInclude Include="GO_item.h" />
+    <ClInclude Include="GO_jumpingskull.h" />
+    <ClInclude Include="GO_key.h" />
+    <ClInclude Include="GO_lava.h" />
+    <ClInclude Include="GO_musicalnote.h" />
+    <ClInclude Include="GO_pipe_water.h" />
+    <ClInclude Include="GO_rope.h" />
+    <ClInclude Include="GO_skeleton.h" />
+    <ClInclude Include="GO_skull.h" />
+    <ClInclude Include="GO_skulldoor.h" />
+    <ClInclude Include="GO_trickyskull.h" />
+    <ClInclude Include="GO_water.h" />
+    <ClInclude Include="GO_wateropening.h" />
+    <ClInclude Include="GO_watersplash.h" />
+    <ClInclude Include="keyboardstate.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelPack.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="MusicManager.h" />
+    <ClInclude Include="PlacedGLTile.h" />
+    <ClInclude Include="randomc.h" />
+    <ClInclude Include="SDL_glutaux.h" />
+    <ClInclude Include="SFXManager.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Symbol.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TheGoonies.h" />
+    <ClInclude Include="TheGooniesApp.h" />
+    <ClInclude Include="TheGooniesCtnt.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="VirtualController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2DCMC.cpp" />
+    <ClCompile Include="auxiliar.cpp" />
+    <ClCompile Include="debug.cpp" />
+    <ClCompile Include="font_extractor.cpp" />
+    <ClCompile Include="geometrics.cpp" />
+    <ClCompile Include="Ginterface.cpp" />
+    <ClCompile Include="GinterfaceBrowser.cpp" />
+    <ClCompile Include="GinterfaceButton.cpp" />
+    <ClCompile Include="GinterfaceConfirmation.cpp" />
+    <ClCompile Include="GinterfaceMessage.cpp" />
+    <ClCompile Include="GinterfaceSButton.cpp" />
+    <ClCompile Include="GinterfaceText.cpp" />
+    <ClCompile Include="GinterfaceTextInput.cpp" />
+    <ClCompile Include="GLTile.cpp" />
+    <ClCompile Include="GLTManager.cpp" />
+    <ClCompile Include="GMap.cpp" />
+    <ClCompile Include="GMapLayer.cpp" />
+    <ClCompile Include="GObject.cpp" />
+    <ClCompile Include="GObjectCreator.cpp" />
+    <ClCompile Include="GooniesScript.cpp" />
+    <ClCompile Include="GO_bat.cpp" />
+    <ClCompile Include="GO_bigrock.cpp" />
+    <ClCompile Include="GO_bone.cpp" />
+    <ClCompile Include="GO_bridge.cpp" />
+    <ClCompile Include="GO_bullet.cpp" />
+    <ClCompile Include="GO_cagedoor.cpp" />
+    <ClCompile Include="GO_character.cpp" />
+    <ClCompile Include="GO_closingwall.cpp" />
+    <ClCompile Include="GO_coin.cpp" />
+    <ClCompile Include="GO_drop.cpp" />
+    <ClCompile Include="GO_dropgenerator.cpp" />
+    <ClCompile Include="GO_enemy.cpp" />
+    <ClCompile Include="GO_entrydoor.cpp" />
+    <ClCompile Include="GO_exitdoor.cpp" />
+    <ClCompile Include="GO_fallingrock.cpp" />
+    <ClCompile Include="GO_fallingwater.cpp" />
+    <ClCompile Include="GO_flame.cpp" />
+    <ClCompile Include="GO_fratelli.cpp" />
+    <ClCompile Include="GO_ghost.cpp" />
+    <ClCompile Include="GO_item.cpp" />
+    <ClCompile Include="GO_jumpingskull.cpp" />
+    <ClCompile Include="GO_key.cpp" />
+    <ClCompile Include="GO_lava.cpp" />
+    <ClCompile Include="GO_musicalnote.cpp" />
+    <ClCompile Include="GO_pipe_water.cpp" />
+    <ClCompile Include="GO_rope.cpp" />
+    <ClCompile Include="GO_skeleton.cpp" />
+    <ClCompile Include="GO_skull.cpp" />
+    <ClCompile Include="GO_skulldoor.cpp" />
+    <ClCompile Include="GO_trickyskull.cpp" />
+    <ClCompile Include="GO_water.cpp" />
+    <ClCompile Include="GO_wateropening.cpp" />
+    <ClCompile Include="GO_watersplash.cpp" />
+    <ClCompile Include="keyboardstate.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelPack.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MusicManager.cpp" />
+    <ClCompile Include="PlacedGLTile.cpp" />
+    <ClCompile Include="ranrotb.cpp" />
+    <ClCompile Include="SDL_glutaux.cpp" />
+    <ClCompile Include="SFXManager.cpp" />
+    <ClCompile Include="sound.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="state_credits.cpp" />
+    <ClCompile Include="state_editor.cpp" />
+    <ClCompile Include="state_endsequence.cpp" />
+    <ClCompile Include="state_game.cpp" />
+    <ClCompile Include="state_gameover.cpp" />
+    <ClCompile Include="state_gamestart.cpp" />
+    <ClCompile Include="state_howtoplay.cpp" />
+    <ClCompile Include="state_interlevel.cpp" />
+    <ClCompile Include="state_konami.cpp" />
+    <ClCompile Include="state_mapeditor.cpp" />
+    <ClCompile Include="state_msx.cpp" />
+    <ClCompile Include="state_splash.cpp" />
+    <ClCompile Include="state_title.cpp" />
+    <ClCompile Include="state_titleanimation.cpp" />
+    <ClCompile Include="Symbol.cpp" />
+    <ClCompile Include="TheGoonies.cpp" />
+    <ClCompile Include="TheGooniesApp.cpp" />
+    <ClCompile Include="Vector.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

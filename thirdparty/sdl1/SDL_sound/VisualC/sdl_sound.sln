@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playsound", "playsound.vcxproj", "{0609A8C4-E999-4F96-8100-D30CC5101E87}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playsound_static", "playsound_static.vcxproj", "{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound_dll", "sdl_sound_dll.vcxproj", "{D28BF980-C832-43B0-9776-25391F85827D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdl_sound_static", "sdl_sound_static.vcxproj", "{5D85C691-F908-4161-881C-BE4B9794DA13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Template|x86 = Template|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0609A8C4-E999-4F96-8100-D30CC5101E87}.Debug|x86.ActiveCfg = Debug|Win32
+		{0609A8C4-E999-4F96-8100-D30CC5101E87}.Debug|x86.Build.0 = Debug|Win32
+		{0609A8C4-E999-4F96-8100-D30CC5101E87}.Release|x86.ActiveCfg = Release|Win32
+		{0609A8C4-E999-4F96-8100-D30CC5101E87}.Release|x86.Build.0 = Release|Win32
+		{0609A8C4-E999-4F96-8100-D30CC5101E87}.Template|x86.ActiveCfg = Debug|Win32
+		{0609A8C4-E999-4F96-8100-D30CC5101E87}.Template|x86.Build.0 = Debug|Win32
+		{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}.Debug|x86.ActiveCfg = Debug|Win32
+		{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}.Debug|x86.Build.0 = Debug|Win32
+		{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}.Release|x86.ActiveCfg = Release|Win32
+		{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}.Release|x86.Build.0 = Release|Win32
+		{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}.Template|x86.ActiveCfg = Template|Win32
+		{A07DB73B-D5E9-4547-BA7A-57C52253FA4C}.Template|x86.Build.0 = Template|Win32
+		{D28BF980-C832-43B0-9776-25391F85827D}.Debug|x86.ActiveCfg = Debug|Win32
+		{D28BF980-C832-43B0-9776-25391F85827D}.Debug|x86.Build.0 = Debug|Win32
+		{D28BF980-C832-43B0-9776-25391F85827D}.Release|x86.ActiveCfg = Release|Win32
+		{D28BF980-C832-43B0-9776-25391F85827D}.Release|x86.Build.0 = Release|Win32
+		{D28BF980-C832-43B0-9776-25391F85827D}.Template|x86.ActiveCfg = Template|Win32
+		{D28BF980-C832-43B0-9776-25391F85827D}.Template|x86.Build.0 = Template|Win32
+		{5D85C691-F908-4161-881C-BE4B9794DA13}.Debug|x86.ActiveCfg = Debug|Win32
+		{5D85C691-F908-4161-881C-BE4B9794DA13}.Debug|x86.Build.0 = Debug|Win32
+		{5D85C691-F908-4161-881C-BE4B9794DA13}.Release|x86.ActiveCfg = Release|Win32
+		{5D85C691-F908-4161-881C-BE4B9794DA13}.Release|x86.Build.0 = Release|Win32
+		{5D85C691-F908-4161-881C-BE4B9794DA13}.Template|x86.ActiveCfg = Template|Win32
+		{5D85C691-F908-4161-881C-BE4B9794DA13}.Template|x86.Build.0 = Template|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {867255EB-BB4B-4468-AC29-C5BB04FAFD46}
+	EndGlobalSection
+EndGlobal

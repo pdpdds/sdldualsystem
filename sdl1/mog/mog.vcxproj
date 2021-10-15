@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\bitmaps.cpp" />
+    <ClCompile Include="sources\debug-report.cpp" />
+    <ClCompile Include="sources\debug.cpp" />
+    <ClCompile Include="sources\demons.cpp" />
+    <ClCompile Include="sources\drawing.cpp" />
+    <ClCompile Include="sources\filehandling.cpp" />
+    <ClCompile Include="sources\gameaux.cpp" />
+    <ClCompile Include="sources\gamecycle.cpp" />
+    <ClCompile Include="sources\gameinteractions.cpp" />
+    <ClCompile Include="sources\gameobjects.cpp" />
+    <ClCompile Include="sources\gametiles.cpp" />
+    <ClCompile Include="sources\ingamecycle.cpp" />
+    <ClCompile Include="sources\keyboard.cpp" />
+    <ClCompile Include="sources\line_clip.cpp" />
+    <ClCompile Include="sources\loadpcx.cpp" />
+    <ClCompile Include="sources\main.cpp" />
+    <ClCompile Include="sources\passwords.cpp" />
+    <ClCompile Include="sources\path.cpp" />
+    <ClCompile Include="sources\render.cpp" />
+    <ClCompile Include="sources\roomchange.cpp" />
+    <ClCompile Include="sources\shrines.cpp" />
+    <ClCompile Include="sources\sound.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sources\bitmaps.h" />
+    <ClInclude Include="sources\debug.h" />
+    <ClInclude Include="sources\drawing.h" />
+    <ClInclude Include="sources\filehandling.h" />
+    <ClInclude Include="sources\line_clip.h" />
+    <ClInclude Include="sources\loadpcx.h" />
+    <ClInclude Include="sources\mog.h" />
+    <ClInclude Include="sources\MOGtypes.h" />
+    <ClInclude Include="sources\object.h" />
+    <ClInclude Include="sources\resource.h" />
+    <ClInclude Include="sources\sound.h" />
+    <ClInclude Include="sources\sprites.h" />
+    <ClInclude Include="sources\tiles.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B1F235CB-66E6-4C94-AD7A-90FC34A85F71}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SDL2Framework</RootNamespace>
+    <ProjectName>mog</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\Bin32\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>USE_MUSIC;__WIN32;SDL_MAIN_HANDLED;WINDOWS;WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);_X86_</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./;./libgamemusic;./include;../../thirdparty\sdl1/SDL_image-1.2.12;../../thirdparty\sdl1/SDL_mixer-1.2.12;../../thirdparty\sdl1/SDL_image-1.2.12\VisualC\external\include;../../thirdparty\sdl1/SDL_ttf-2.0.11;../../thirdparty/sdl1/SDL-1.2.15\include;../../thirdparty/sdl1/SDL_sound</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819;4305;4244;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug;$(SolutionDir)/thirdparty/sdl1\SDL_sound\VisualC\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl_sound.lib;sdl_image.lib;SDL_mixer.lib;sdlcl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/lib/x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2main.lib;sdl2.lib;sdl2_mixer.lib;sdl2_image.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

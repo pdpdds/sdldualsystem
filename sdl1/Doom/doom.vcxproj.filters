@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e88f5542-4045-49e9-851b-8c9a449e7a05}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\AM">
+      <UniqueIdentifier>{4654f4a8-bb54-442b-b4f5-7697fa5ddd07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\D">
+      <UniqueIdentifier>{92005c7c-fc2b-49d1-90f9-df554b265dab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\F">
+      <UniqueIdentifier>{0de46bb2-bae2-44a3-b900-1379cf5951bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\G">
+      <UniqueIdentifier>{599473d0-0440-4644-9236-0974bdc72ac6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HU">
+      <UniqueIdentifier>{2fd3a092-b479-465d-99f5-bd553b1f74be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\I">
+      <UniqueIdentifier>{028e5f8c-0359-4c87-a58d-5b2c7c6997ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\M">
+      <UniqueIdentifier>{7e7a7d56-c18b-4f49-be8d-c91fbf6d4888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\P">
+      <UniqueIdentifier>{21ae0a6b-b93c-4eb4-890e-3a2eb3b02019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\R">
+      <UniqueIdentifier>{9c722de3-c867-4166-8e15-9879cf7484ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\S">
+      <UniqueIdentifier>{b0c04383-8488-441d-9f93-abaacd475715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ST">
+      <UniqueIdentifier>{023504d0-0c91-4c17-a8eb-19a11fadde3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\V">
+      <UniqueIdentifier>{4b1443c3-92dc-4ba0-af65-36a77f662846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\W">
+      <UniqueIdentifier>{4178ee4a-fc39-4c2a-a950-31ca55e74427}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WI">
+      <UniqueIdentifier>{9f8e1ee2-4d7d-4b81-a840-771811a678f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Z">
+      <UniqueIdentifier>{02e634ab-e60e-4fbd-99ef-e9c5c4435c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Doom">
+      <UniqueIdentifier>{09df3ba5-a7c1-4cd3-accc-248f691c3344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{190ef46e-3f35-4797-8520-8b21d7ebbebb}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\AM_">
+      <UniqueIdentifier>{f8c59d9e-0f75-412d-b475-a2bc35054289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\D_">
+      <UniqueIdentifier>{8cb3b4a5-27d3-41e0-bc56-7e7990344845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Doom_">
+      <UniqueIdentifier>{a9ff793f-e667-4986-8dc4-911e9debdc53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\F_">
+      <UniqueIdentifier>{347af253-88d1-4ec8-89e6-df97ecb4fd7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\G_">
+      <UniqueIdentifier>{f8ce8ac1-1230-4fe8-8bff-57561dad8c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HU_">
+      <UniqueIdentifier>{bb2b0bfe-e620-4005-b46b-ab0ab4b9a647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\I_">
+      <UniqueIdentifier>{d2c92d4d-ed39-4894-9d5f-5845e4622de4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\M_">
+      <UniqueIdentifier>{81b762df-f869-4984-be2d-f57a790e997c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\P_">
+      <UniqueIdentifier>{b7f2fc2f-100a-4b15-b1c3-09fd44a7bad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\R_">
+      <UniqueIdentifier>{1126f375-f3aa-4f38-b812-8d8276ccc1ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\S_">
+      <UniqueIdentifier>{3bdcb2a8-d108-40f5-90da-75ec0ace403c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ST_">
+      <UniqueIdentifier>{917fa9a7-62bb-418f-b7c5-de0bd4416bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\V_">
+      <UniqueIdentifier>{d5793141-223a-4507-9b5d-693a35f60206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\W_">
+      <UniqueIdentifier>{06f68bfa-df41-4c69-bdf3-faaae3366e80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WI_">
+      <UniqueIdentifier>{35be394e-fa84-4ddd-9f74-71e4a4df22e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Z_">
+      <UniqueIdentifier>{3890a392-bba9-444b-9c88-d2612866f15f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f4c883bf-8c38-414d-bbd4-aec6f196de28}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\am_map.c">
+      <Filter>Source Files\AM</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\d_deh.c">
+      <Filter>Source Files\D</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\d_items.c">
+      <Filter>Source Files\D</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\d_main.c">
+      <Filter>Source Files\D</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\d_net.c">
+      <Filter>Source Files\D</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\f_finale.c">
+      <Filter>Source Files\F</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\f_wipe.c">
+      <Filter>Source Files\F</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\g_game.c">
+      <Filter>Source Files\G</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\hu_lib.c">
+      <Filter>Source Files\HU</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\hu_stuff.c">
+      <Filter>Source Files\HU</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\i_main.c">
+      <Filter>Source Files\I</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\i_net.c">
+      <Filter>Source Files\I</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\i_sound.c">
+      <Filter>Source Files\I</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\i_stretch.c">
+      <Filter>Source Files\I</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\i_system.c">
+      <Filter>Source Files\I</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\i_video.c">
+      <Filter>Source Files\I</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\m_argv.c">
+      <Filter>Source Files\M</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\m_bbox.c">
+      <Filter>Source Files\M</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\m_cheat.c">
+      <Filter>Source Files\M</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\m_menu.c">
+      <Filter>Source Files\M</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\m_misc.c">
+      <Filter>Source Files\M</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\m_random.c">
+      <Filter>Source Files\M</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_ceilng.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_doors.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_enemy.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_floor.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_genlin.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_inter.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_lights.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_map.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_maputl.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_mobj.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_plats.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_pspr.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_saveg.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_setup.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_sight.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_spec.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_switch.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_telept.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_tick.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\p_user.c">
+      <Filter>Source Files\P</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_bsp.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_data.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_draw.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_main.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_plane.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_segs.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_sky.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\r_things.c">
+      <Filter>Source Files\R</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\s_sound.c">
+      <Filter>Source Files\S</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sounds.c">
+      <Filter>Source Files\S</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\st_lib.c">
+      <Filter>Source Files\ST</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\st_stuff.c">
+      <Filter>Source Files\ST</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\v_video.c">
+      <Filter>Source Files\V</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\w_wad.c">
+      <Filter>Source Files\W</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\wi_stuff.c">
+      <Filter>Source Files\WI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\z_zone.c">
+      <Filter>Source Files\Z</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\doomdef.c">
+      <Filter>Source Files\Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\doomstat.c">
+      <Filter>Source Files\Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\dstrings.c">
+      <Filter>Source Files\Doom</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\mmus2mid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dummy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\am_map.h">
+      <Filter>Header Files\AM_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_deh.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_englsh.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_event.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_french.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_io.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_items.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_main.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_net.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_player.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_textur.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_think.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\d_ticcmd.h">
+      <Filter>Header Files\D_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\doomdata.h">
+      <Filter>Header Files\Doom_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\doomdef.h">
+      <Filter>Header Files\Doom_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\doomstat.h">
+      <Filter>Header Files\Doom_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\doomtype.h">
+      <Filter>Header Files\Doom_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\dstrings.h">
+      <Filter>Header Files\Doom_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\f_finale.h">
+      <Filter>Header Files\F_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\f_wipe.h">
+      <Filter>Header Files\F_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\g_game.h">
+      <Filter>Header Files\G_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\hu_lib.h">
+      <Filter>Header Files\HU_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\hu_stuff.h">
+      <Filter>Header Files\HU_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\i_net.h">
+      <Filter>Header Files\I_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\i_sound.h">
+      <Filter>Header Files\I_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\i_system.h">
+      <Filter>Header Files\I_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\i_video.h">
+      <Filter>Header Files\I_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_argv.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_bbox.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_cheat.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_fixed.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_menu.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_misc.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_random.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\m_swap.h">
+      <Filter>Header Files\M_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_enemy.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_inter.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_map.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_maputl.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_mobj.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_pspr.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_saveg.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_setup.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_spec.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_tick.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\p_user.h">
+      <Filter>Header Files\P_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_bsp.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_data.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_defs.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_draw.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_main.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_plane.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_segs.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_sky.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_state.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\r_things.h">
+      <Filter>Header Files\R_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\s_sound.h">
+      <Filter>Header Files\S_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\sounds.h">
+      <Filter>Header Files\S_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\st_lib.h">
+      <Filter>Header Files\ST_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\st_stuff.h">
+      <Filter>Header Files\ST_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\v_video.h">
+      <Filter>Header Files\V_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\w_wad.h">
+      <Filter>Header Files\W_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\wi_stuff.h">
+      <Filter>Header Files\WI_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\z_zone.h">
+      <Filter>Header Files\Z_</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\info.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\mmus2mid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

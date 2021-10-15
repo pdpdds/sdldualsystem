@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{966ecc75-4a08-442e-bcb7-b75943a13725}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\a_action.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\am_map.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ct_chat.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d_net.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\f_finale.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\g_game.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\h2_main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_netstub.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_sdlsound.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_sdlvideo.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_sound.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_system.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\i_video.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\in_lude.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\info.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\m_fixed.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\m_misc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mn_keynames.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mn_menu.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_acs.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_anim.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_ceilng.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_doors.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_enemy.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_floor.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_inter.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_lights.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_map.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_maputl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_mobj.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_plats.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_pspr.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_setup.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_sight.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_spec.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_switch.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_telept.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_things.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_tick.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\p_user.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\po_man.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qmus2mid.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_bsp.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_data.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_draw.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_main.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_plane.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_segs.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\r_things.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sb_bar.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sc_man.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sn_sonix.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sounds.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\st_start_stub.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sv_save.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tables.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\template.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\v_video.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\w_wad.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\z_zone.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

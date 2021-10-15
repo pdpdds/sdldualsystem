@@ -1,0 +1,5 @@
+Initializing SDL video subsystem.
+SDL driver used: windib
+SDL video subsystem initialized.
+Set the video resolution to: 512x384x32
+CRoadFighter: in constructor...
