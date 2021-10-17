@@ -11,3 +11,4 @@ SDL Game Programming Using Dual System.
 |savagewheels |Savage Wheels     |  https://kenamick.itch.io/savage-wheels    |
 |rockbot |Rockbot     |  https://rockbot.upperland.net/    |
 |starfighter |Starfighter     |  https://www.parallelrealities.co.uk/    |
+|xrick |Xrick     |  https://github.com/fabiensanglard/xrick    |
