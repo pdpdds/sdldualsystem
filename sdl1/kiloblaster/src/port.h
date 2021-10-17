@@ -123,5 +123,5 @@ void setvect(int interrupt, void (*handler)(void));
 intfunc getvect(int interrupt);
 
 // SDL stuff
-#include <SDL/SDL.h>
+#include <SDL.h>
 extern SDL_Surface *screen;

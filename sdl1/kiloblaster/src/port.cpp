@@ -9,7 +9,7 @@
 #include <camoto/gamemusic.hpp>
 #include <camoto/stream_file.hpp>
 #include <camoto/stream_string.hpp>
-//#include <SDL_mutex.h>
+#include <SDL_mutex.h>
 #include <synchapi.h>
 
 namespace gm = camoto::gamemusic;
@@ -514,7 +514,7 @@ void StartWorx(void)
 {
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 	::screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 8, SDL_HWPALETTE | SDL_DOUBLEBUF);
-	
+
 	::opl.cur_song = NULL;
 	::sound.len = 0;
 
