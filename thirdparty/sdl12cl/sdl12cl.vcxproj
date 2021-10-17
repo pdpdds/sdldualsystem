@@ -18,9 +18,22 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\default_cursor.h" />
+    <ClInclude Include="src\dr_mp3.h" />
+    <ClInclude Include="src\SDL20_include_wrapper.h" />
+    <ClInclude Include="src\SDL20_syms.h" />
+    <ClInclude Include="src\x86_msvc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\SDL12_compat.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F6E427F7-D587-4D47-980A-A017BFD722AA}</ProjectGuid>
+    <ProjectGuid>{67018871-642A-4BAE-B190-B1AA13D7E039}</ProjectGuid>
     <RootNamespace>sdlcl</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -86,7 +99,12 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/arch:SSE /GS- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <Link />
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -124,37 +142,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="audio.c" />
-    <ClCompile Include="audiocvt.c" />
-    <ClCompile Include="cdrom.c" />
-    <ClCompile Include="cpuinfo.c" />
-    <ClCompile Include="cursor.c" />
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="events.c" />
-    <ClCompile Include="joystick.c" />
-    <ClCompile Include="keyboard.c" />
-    <ClCompile Include="loadso_win32.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="mouse.c" />
-    <ClCompile Include="rwops.c" />
-    <ClCompile Include="stdlib.c" />
-    <ClCompile Include="thread.c" />
-    <ClCompile Include="timer.c" />
-    <ClCompile Include="version.c" />
-    <ClCompile Include="video.c" />
-    <ClCompile Include="yuv.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="audio.h" />
-    <ClInclude Include="events.h" />
-    <ClInclude Include="loadso.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="rwops.h" />
-    <ClInclude Include="SDL2.h" />
-    <ClInclude Include="version.h" />
-    <ClInclude Include="video.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
