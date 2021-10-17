@@ -7,6 +7,7 @@ SDL Game Programming Using Dual System.
 |clonekeen |Clone Keen     |  http://clonekeen.sourceforge.net/    |
 |lastmission |Last Mission     |  https://github.com/dmitrysmagin/last-mission    |
 |bermuda |Bermuda Syndrome     |  https://github.com/cyxx/bermuda    |
-|The Clue! |theclue     |  http://cosp.sourceforge.net    |
+|theclue |The Clue!     |  http://cosp.sourceforge.net    |
 |savagewheels |Savage Wheels     |  https://kenamick.itch.io/savage-wheels    |
+|rockbot |Rockbot     |  https://rockbot.upperland.net/    |
 
