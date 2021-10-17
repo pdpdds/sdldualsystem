@@ -50,6 +50,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rockbot", "sdl1\rockbot\roc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sdlcl", "thirdparty\sdlcl\sdlcl.vcxproj", "{F6E427F7-D587-4D47-980A-A017BFD722AA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SGL4", "sdl1\SGL4\SGL4.vcxproj", "{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -394,6 +396,20 @@ Global
 		{F6E427F7-D587-4D47-980A-A017BFD722AA}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{F6E427F7-D587-4D47-980A-A017BFD722AA}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{F6E427F7-D587-4D47-980A-A017BFD722AA}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.Debug|x64.ActiveCfg = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.Debug|x86.ActiveCfg = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.Debug|x86.Build.0 = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.MinSizeRel|x64.ActiveCfg = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.MinSizeRel|x64.Build.0 = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.MinSizeRel|x86.ActiveCfg = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.MinSizeRel|x86.Build.0 = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.Release|x64.ActiveCfg = Release|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.Release|x86.ActiveCfg = Release|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.Release|x86.Build.0 = Release|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.RelWithDebInfo|x64.ActiveCfg = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.RelWithDebInfo|x64.Build.0 = Debug|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{74AB4797-6E6C-4CCA-BF99-8167D3A5C978}.RelWithDebInfo|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
