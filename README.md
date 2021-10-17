@@ -16,5 +16,8 @@ SDL Game Programming Using Dual System.
 |metapacman |metapacman     |  http://os4depot.net/index.php?function=showcontent&file=game/misc/metapacman.lha    |
 |retrobattle |Retrobattle     | http://remar.se/andreas/retrobattle     |
 |cannonball |Cannonball     | https://archive.org/details/cannonball-outrun     |
+|kiloblaster |Kiloblaster     | https://github.com/Malvineous/kiloblaster     |
+
+
 
 
