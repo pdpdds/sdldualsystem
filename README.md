@@ -8,4 +8,5 @@ SDL Game Programming Using Dual System.
 |lastmission |Last Mission     |  https://github.com/dmitrysmagin/last-mission    |
 |bermuda |Bermuda Syndrome     |  https://github.com/cyxx/bermuda    |
 |The Clue! |theclue     |  http://cosp.sourceforge.net    |
+|savagewheels |Savage Wheels     |  https://kenamick.itch.io/savage-wheels    |
 
