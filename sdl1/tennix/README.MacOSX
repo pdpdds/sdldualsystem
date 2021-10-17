@@ -1,0 +1,15 @@
+Build instructions for Tennix on Mac OS X
+=========================================
+
+Install Xcode tools (so you get gcc et al.) and then compile SDL, SDL_mixer,
+SDL_image and SDL_ttf from source. You should install the additional libraries
+in the same $PREFIX as SDL itself, so that "sdl-config --prefix" returns the
+correct prefix for all libraries. After this you should be able to compile
+Tennix with the following commands:
+
+  make
+  make release-osx
+
+This should result in a Tennix.app bundle in the build directory that should
+not depend on anything that is not included with a default Mac OS X install.
+

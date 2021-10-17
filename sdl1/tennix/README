@@ -1,0 +1,180 @@
+
+
+
+                 thp.io presents...
+
+                 ****** *****  **   **  **   **  **  **   **
+                   **   **     ***  **  ***  **  **  *** ***
+                   ==   ====   == = ==  == = ==  ==    ===
+                   ##   ##     ##  ###  ##  ###  ##  ### ###
+                   ##   #####  ##   ##  ##   ##  ##  ##   ##
+                         Classic Championship Tour 2011
+
+               Copyright (C) 2003, 2007-2011 Thomas Perl <thp.io>
+
+
+
+LICENSE
+=======
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, 
+    MA  02110-1301, USA.
+
+
+ABOUT
+=====
+
+   This is the SDL (Simple DirectMedia Layer) port of Tennix!, a 
+   game written by Thomas Perl in 2003. This version has been up-
+   scaled to a resolution of 640x480 in comparison to the 320x200 
+   format used in the original game.
+
+   Changes from the original Tennix to the first SDL release include
+   a new shadow, advanced alpha blending and the removal of the 
+   previously-included pseudo-advertisements.
+
+   For all changes, please see the ChangeLog file.
+
+   This port has been written on the 10th of May 2007 and is now 
+   being improved and updated since then.
+
+
+INSTALLATION AND BUILD INSTRUCTIONS
+===================================
+
+   To build tennix, simply run "make" (on Unix-like systems) or 
+   follow the instructions for your platform in the README.* files.
+   Be sure to install all the dependencies listed below and check out the
+   makefile for instructions on what you can enable/disable with the help
+   of environment variables (e.g. USE_PYTHON, NONFREE_LOCATIONS, DEBUG, ...)
+
+   Tennix is known to build on Debian GNU/Linux 4.0, Ubuntu 8.10, Windows XP
+   and Windows Vista (using MSYS/mingw32 - see README.win32), Mac OS X 10.4
+   and Mac OS X 10.5 (using XCode Tools - see README.MacOSX), the Maemo 4.0
+   and Maemo 4.1 SDKs (Chinook/Diablo - see README.Maemo).
+
+   Dependencies:
+     · SDL       >= 1.2.13 (www.libsdl.org)
+     · SDL_image >= 1.2.6  (www.libsdl.org/projects/SDL_image)
+     · SDL_mixer >= 1.2.8  (www.libsdl.org/projects/SDL_mixer)
+     · SDL_ttf   >= 2.0.9  (www.libsdl.org/projects/SDL_ttf)
+     · SDL_net   >= 1.2.7  (www.libsdl.org/projects/SDL_net)
+
+   (Tennix might compile and work with earlier versions of the respective
+   libraries, but the versions here have been the ones that I've tested it
+   with, so if there are problems, try to use the versions specified here)
+
+   Optional dependencies:
+     · Python    >=  2.5.x  (www.python.org)
+       => If you don't want to use the Python integration, set the variable
+          USE_PYTHON to a value other than 1 by specifying it on the "make"
+          command line like this:      make USE_PYTHON=0
+
+   On a Debian-based system, you can get all dependencies with the following
+   command line:
+
+    aptitude install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev \
+                     libsdl-ttf2.0-dev libsdl-net1.2-dev python-dev
+
+
+PLAYING TENNIX
+==============
+
+   You can play in either single-player or multi-player mode. You can even
+   let two AI players play against each other. This can be configured in
+   the controls screen.
+
+   THE POWERBAR
+
+   You have to keep your "hit" key pressed, so that your powerbar (on the
+   bottom of the screen) "fills up". The more power you have, the stronger
+   you will hit the ball (and the higher and longer it will fly). Too much
+   power could make the ball go into the OUT, so be sure to use it wisely.
+
+   CONTROLS
+
+   Select the controller you like from the input selection menu. Be sure
+   to connect gamepads and joysticks BEFORE starting Tennix, so they are
+   enumerated and detected correctly.
+
+   FUNCTION KEYS
+
+   F  .... Toggle fullscreen (X11 only)
+   P  .... Pause game
+
+
+NETWORK MULTIPLAYER
+===================
+
+   This is done using two computers, the first is the faster one and the second
+   one is the slower one. If both computers are equally powerful, just chose
+   the faster one randomly.
+
+   On the faster computer, use:
+     ./tennix -m REMOTEHOST
+
+   On the slower computer, use:
+     ./tennix -s REMOTEHOST
+
+   So, if your faster computer is called "fast.lan" and the slower computer is
+   called "slow.lan", you could use the following setup:
+
+     user@fast:~$ ./tennix -m slow.lan
+     user@slow:~$ ./tennix -s fast.lan
+
+   You have to configure each opponent in the input device selection screen
+   using "Network player" as input device. Make sure that you do the reverse
+   on the opposite computer.
+
+
+DEVELOPMENT/DEBUGGING
+=====================
+
+   If you want to compile a debugging version of "tennix", you
+   have to set the environment variable "DEBUG" to "1", either by
+   using "DEBUG=1 make" or exporting the environment variable for
+   the current session, as in "export DEBUG=1" followed by "make".
+
+   See the HACKING and TODO files for more development information.
+
+
+CREDITS
+=======
+
+   Some sound effects are based on data from the Freesound Project.
+
+   Thanks to Esad Hajdarevic and Stefan Doesinger for some optimizations
+   done during the Effiziente Programme course in January 2009 :)
+
+   Public domain artwork (stadium photos) by
+   http://en.wikipedia.org/wiki/User:Ivan
+   http://fr.wikipedia.org/wiki/Utilisateur:Arnaud_25
+   http://en.wikipedia.org/wiki/User:Aleksmot
+   http://commons.wikimedia.org/wiki/User:Alexisrael
+   http://commons.wikimedia.org/wiki/User:Vardion
+
+   Additional artwork by
+   Martin Third (http://flickr.com/photos/mthird3rd/471720012/)
+
+   This project includes SDL_rotozoom by A. Schiffler
+
+   See data/COPYING and credits.h for more information about the data files.
+
+CONTACT
+=======
+
+    E-Mail: Thomas Perl <m//thp.io>
+    URL: http://icculus.org/tennix/
+

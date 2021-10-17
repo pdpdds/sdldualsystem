@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{63C77A6D-56A5-47C8-9A88-EC68DE610C74}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>cannonball</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\DevPlatform\SDL\Windows\1.2\cannonball\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cannonball.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cannonball</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\DevPlatform\SDL\Windows\1.2\cannonball\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">cannonball.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">cannonball</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\DevPlatform\SDL\Windows\1.2\cannonball\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">cannonball.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">cannonball</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\src\main;../../thirdparty\sdl1\SDL-1.2.15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WITH_OPENGL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WITH_OPENGL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\DevPlatform\SDL\SDLProgramming\SDL_Modue\SDL-1.2.15\lib\x86;/lib;/lib/$(Configuration);c:/coding/lib/SDL-1.2.15/lib;c:/coding/lib/SDL-1.2.15/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/Debug/cannonball.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/Debug/cannonball.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WITH_OPENGL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WITH_OPENGL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/lib;/lib/$(Configuration);c:/coding/lib/SDL-1.2.15/lib;c:/coding/lib/SDL-1.2.15/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/Release/cannonball.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/Release/cannonball.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WITH_OPENGL;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WITH_OPENGL;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/lib;/lib/$(Configuration);c:/coding/lib/SDL-1.2.15/lib;c:/coding/lib/SDL-1.2.15/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/MinSizeRel/cannonball.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/MinSizeRel/cannonball.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WITH_OPENGL;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WITH_OPENGL;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>c:\coding\lib\SDL-1.2.15\include;D:\DevPlatform\SDL\Windows\1.2\cannonball\cmake\..\src\main;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>/lib;/lib/$(Configuration);c:/coding/lib/SDL-1.2.15/lib;c:/coding/lib/SDL-1.2.15/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/RelWithDebInfo/cannonball.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/RelWithDebInfo/cannonball.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main\cannonboard\asyncserial.cpp" />
+    <ClCompile Include="src\main\cannonboard\interface.cpp" />
+    <ClCompile Include="src\main\directx\ffeedback.cpp" />
+    <ClCompile Include="src\main\engine\audio\osound.cpp" />
+    <ClCompile Include="src\main\engine\audio\osoundint.cpp" />
+    <ClCompile Include="src\main\engine\oanimseq.cpp" />
+    <ClCompile Include="src\main\engine\oattractai.cpp" />
+    <ClCompile Include="src\main\engine\obonus.cpp" />
+    <ClCompile Include="src\main\engine\ocrash.cpp" />
+    <ClCompile Include="src\main\engine\oferrari.cpp" />
+    <ClCompile Include="src\main\engine\ohiscore.cpp" />
+    <ClCompile Include="src\main\engine\ohud.cpp" />
+    <ClCompile Include="src\main\engine\oinitengine.cpp" />
+    <ClCompile Include="src\main\engine\oinputs.cpp" />
+    <ClCompile Include="src\main\engine\olevelobjs.cpp" />
+    <ClCompile Include="src\main\engine\ologo.cpp" />
+    <ClCompile Include="src\main\engine\omap.cpp" />
+    <ClCompile Include="src\main\engine\omusic.cpp" />
+    <ClCompile Include="src\main\engine\ooutputs.cpp" />
+    <ClCompile Include="src\main\engine\opalette.cpp" />
+    <ClCompile Include="src\main\engine\oroad.cpp" />
+    <ClCompile Include="src\main\engine\osmoke.cpp" />
+    <ClCompile Include="src\main\engine\osprite.cpp" />
+    <ClCompile Include="src\main\engine\osprites.cpp" />
+    <ClCompile Include="src\main\engine\ostats.cpp" />
+    <ClCompile Include="src\main\engine\otiles.cpp" />
+    <ClCompile Include="src\main\engine\otraffic.cpp" />
+    <ClCompile Include="src\main\engine\outils.cpp" />
+    <ClCompile Include="src\main\engine\outrun.cpp" />
+    <ClCompile Include="src\main\frontend\cabdiag.cpp" />
+    <ClCompile Include="src\main\frontend\config.cpp" />
+    <ClCompile Include="src\main\frontend\menu.cpp" />
+    <ClCompile Include="src\main\frontend\ttrial.cpp" />
+    <ClCompile Include="src\main\hwaudio\segapcm.cpp" />
+    <ClCompile Include="src\main\hwaudio\soundchip.cpp" />
+    <ClCompile Include="src\main\hwaudio\ym2151.cpp" />
+    <ClCompile Include="src\main\hwvideo\hwroad.cpp" />
+    <ClCompile Include="src\main\hwvideo\hwsprites.cpp" />
+    <ClCompile Include="src\main\hwvideo\hwtiles.cpp" />
+    <ClCompile Include="src\main\main.cpp" />
+    <ClCompile Include="src\main\romloader.cpp" />
+    <ClCompile Include="src\main\roms.cpp" />
+    <ClCompile Include="src\main\sdl\audio.cpp" />
+    <ClCompile Include="src\main\sdl\input.cpp" />
+    <ClCompile Include="src\main\sdl\renderbase.cpp" />
+    <ClCompile Include="src\main\sdl\rendergl.cpp" />
+    <ClCompile Include="src\main\sdl\rendersw.cpp" />
+    <ClCompile Include="src\main\sdl\timer.cpp" />
+    <ClCompile Include="src\main\trackloader.cpp" />
+    <ClCompile Include="src\main\utils.cpp" />
+    <ClCompile Include="src\main\video.cpp" />
+    <ClInclude Include="src\main\cannonboard\asyncserial.hpp" />
+    <ClInclude Include="src\main\cannonboard\interface.hpp" />
+    <ClInclude Include="src\main\directx\ffeedback.hpp" />
+    <ClInclude Include="src\main\engine\audio\commands.hpp" />
+    <ClInclude Include="src\main\engine\audio\osound.hpp" />
+    <ClInclude Include="src\main\engine\audio\osoundadr.hpp" />
+    <ClInclude Include="src\main\engine\audio\osoundint.hpp" />
+    <ClInclude Include="src\main\engine\oaddresses.hpp" />
+    <ClInclude Include="src\main\engine\oanimseq.hpp" />
+    <ClInclude Include="src\main\engine\oanimsprite.hpp" />
+    <ClInclude Include="src\main\engine\oattractai.hpp" />
+    <ClInclude Include="src\main\engine\obonus.hpp" />
+    <ClInclude Include="src\main\engine\ocrash.hpp" />
+    <ClInclude Include="src\main\engine\oentry.hpp" />
+    <ClInclude Include="src\main\engine\oferrari.hpp" />
+    <ClInclude Include="src\main\engine\ohiscore.hpp" />
+    <ClInclude Include="src\main\engine\ohud.hpp" />
+    <ClInclude Include="src\main\engine\oinitengine.hpp" />
+    <ClInclude Include="src\main\engine\oinputs.hpp" />
+    <ClInclude Include="src\main\engine\olevelobjs.hpp" />
+    <ClInclude Include="src\main\engine\ologo.hpp" />
+    <ClInclude Include="src\main\engine\omap.hpp" />
+    <ClInclude Include="src\main\engine\omusic.hpp" />
+    <ClInclude Include="src\main\engine\ooutputs.hpp" />
+    <ClInclude Include="src\main\engine\opalette.hpp" />
+    <ClInclude Include="src\main\engine\oroad.hpp" />
+    <ClInclude Include="src\main\engine\osmoke.hpp" />
+    <ClInclude Include="src\main\engine\osprite.hpp" />
+    <ClInclude Include="src\main\engine\osprites.hpp" />
+    <ClInclude Include="src\main\engine\ostats.hpp" />
+    <ClInclude Include="src\main\engine\otiles.hpp" />
+    <ClInclude Include="src\main\engine\otraffic.hpp" />
+    <ClInclude Include="src\main\engine\outils.hpp" />
+    <ClInclude Include="src\main\engine\outrun.hpp" />
+    <ClInclude Include="src\main\engine\ozoom_lookup.hpp" />
+    <ClInclude Include="src\main\frontend\cabdiag.hpp" />
+    <ClInclude Include="src\main\frontend\config.hpp" />
+    <ClInclude Include="src\main\frontend\menu.hpp" />
+    <ClInclude Include="src\main\frontend\ttrial.hpp" />
+    <ClInclude Include="src\main\globals.hpp" />
+    <ClInclude Include="src\main\hwaudio\segapcm.hpp" />
+    <ClInclude Include="src\main\hwaudio\soundchip.hpp" />
+    <ClInclude Include="src\main\hwaudio\ym2151.hpp" />
+    <ClInclude Include="src\main\hwvideo\hwroad.hpp" />
+    <ClInclude Include="src\main\hwvideo\hwsprites.hpp" />
+    <ClInclude Include="src\main\hwvideo\hwtiles.hpp" />
+    <ClInclude Include="src\main\main.hpp" />
+    <ClInclude Include="src\main\romloader.hpp" />
+    <ClInclude Include="src\main\roms.hpp" />
+    <ClInclude Include="src\main\sdl\audio.hpp" />
+    <ClInclude Include="src\main\sdl\input.hpp" />
+    <ClInclude Include="src\main\sdl\renderbase.hpp" />
+    <ClInclude Include="src\main\sdl\rendergl.hpp" />
+    <ClInclude Include="src\main\sdl\rendersw.hpp" />
+    <ClInclude Include="src\main\sdl\timer.hpp" />
+    <ClInclude Include="src\main\setup.hpp" />
+    <ClInclude Include="src\main\stdint.hpp" />
+    <ClInclude Include="src\main\trackloader.hpp" />
+    <ClInclude Include="src\main\utils.hpp" />
+    <ClInclude Include="src\main\video.hpp" />
+    <ResourceCompile Include="D:\DevPlatform\SDL\Windows\1.2\cannonball\res\cannonball.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

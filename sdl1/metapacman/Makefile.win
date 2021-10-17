@@ -1,0 +1,66 @@
+# Project: MetaPacman
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = obj/Pacman_private.res
+OBJ  = obj/main.o obj/Graphics.o obj/CMap.o obj/CPacman.o obj/CNibblet.o obj/CGhost.o obj/Path.o obj/Util.o obj/XFontMap.o obj/CHighScore.o obj/CFruit.o obj/CScore.o $(RES)
+LINKOBJ  = obj/main.o obj/Graphics.o obj/CMap.o obj/CPacman.o obj/CNibblet.o obj/CGhost.o obj/Path.o obj/Util.o obj/XFontMap.o obj/CHighScore.o obj/CFruit.o obj/CScore.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/Program Files/FMOD SoundSystem/FMOD Programmers API/api/lib" -L"C:/Development/Irrlicht/lib/Win32-gcc" -L"C:/Development/Irrlicht/lib/Win32-VisualStudio" -L"C:/Dev-Cpp/RakNet-2.201-mingw/lib" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf  -s 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/include/SDL"  -I"C:/Program Files/FMOD SoundSystem/FMOD Programmers API/api/inc"  -I"C:/Development/Irrlicht/include"  -I"C:/Dev-Cpp/RakNet-2.201-mingw/Source" 
+BIN  = bin/MetaPacman.exe
+CXXFLAGS = $(CXXINCS)   -w -O3
+CFLAGS = $(INCS)   -w -O3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before bin/MetaPacman.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "bin\MetaPacman.exe" $(LIBS)
+
+obj/main.o: main.cpp
+	$(CPP) -c main.cpp -o obj/main.o $(CXXFLAGS)
+
+obj/Graphics.o: Graphics.cpp
+	$(CPP) -c Graphics.cpp -o obj/Graphics.o $(CXXFLAGS)
+
+obj/CMap.o: CMap.cpp
+	$(CPP) -c CMap.cpp -o obj/CMap.o $(CXXFLAGS)
+
+obj/CPacman.o: CPacman.cpp
+	$(CPP) -c CPacman.cpp -o obj/CPacman.o $(CXXFLAGS)
+
+obj/CNibblet.o: CNibblet.cpp
+	$(CPP) -c CNibblet.cpp -o obj/CNibblet.o $(CXXFLAGS)
+
+obj/CGhost.o: CGhost.cpp
+	$(CPP) -c CGhost.cpp -o obj/CGhost.o $(CXXFLAGS)
+
+obj/Path.o: Path.cpp
+	$(CPP) -c Path.cpp -o obj/Path.o $(CXXFLAGS)
+
+obj/Util.o: Util.cpp
+	$(CPP) -c Util.cpp -o obj/Util.o $(CXXFLAGS)
+
+obj/XFontMap.o: XFontMap.cpp
+	$(CPP) -c XFontMap.cpp -o obj/XFontMap.o $(CXXFLAGS)
+
+obj/CHighScore.o: CHighScore.cpp
+	$(CPP) -c CHighScore.cpp -o obj/CHighScore.o $(CXXFLAGS)
+
+obj/CFruit.o: CFruit.cpp
+	$(CPP) -c CFruit.cpp -o obj/CFruit.o $(CXXFLAGS)
+
+obj/CScore.o: CScore.cpp
+	$(CPP) -c CScore.cpp -o obj/CScore.o $(CXXFLAGS)
+
+obj/Pacman_private.res: Pacman_private.rc 
+	$(WINDRES) -i Pacman_private.rc --input-format=rc -o obj/Pacman_private.res -O coff 

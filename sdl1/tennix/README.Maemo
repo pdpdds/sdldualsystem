@@ -1,0 +1,13 @@
+To enable some code tweaks for the Maemo Platform (Nokia Internet Tablets),
+compile with "make MAEMO=1". This will enable (and disable) some features
+that are needed or unnecessary on Nokia Internet Tablets (i.e. Multiplayer).
+
+For audio to work, you have to convert the .ogg files in the "data/" folder
+to .wav files (Maemo's SDL seems to not have Ogg support compiled in). For
+the background.ogg file, you can create a dummy file with the following
+command: "arecord -twav -d1 background.wav". This makes the binary smaller.
+
+For all other .ogg files in the "data/" folder, you can use "oggdec *.ogg".
+
+Don't forget to update both "makefile" and "data/makefile" to ".wav" instead
+of ".ogg" for it to work correctly.

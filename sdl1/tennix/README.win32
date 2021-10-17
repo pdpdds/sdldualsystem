@@ -1,0 +1,84 @@
+Tennix can now be built on win32! :)
+
+Guide on installing SDL + MSYS + MinGW on Win32:
+http://www.netadelica.com/coding/sdl/install.html
+
+Cross-compiling on a Debian System (untested!)
+http://wiki.njh.eu/MinGW-Cross-Compiling_mit_SDL
+
+You also need the win32 development packages of
+SDL_mixer, SDL_image and SDL_ttf, these can be found here:
+
+http://www.libsdl.org/projects/SDL_mixer/
+http://www.libsdl.org/projects/SDL_image/
+http://www.libsdl.org/projects/SDL_ttf/
+
+For these libraries, copy the *.h files
+to c:\mingw\include\SDL\ and the *.lib files to 
+c:\mingw\lib\. The .dll files have to be copied 
+to the tennix source folder, so they can be 
+found and copied to the binary release archive.
+
+
+You should also consider installing UPX and ZIP 
+into your $PATH, so the .exe file can be compressed
+and the "zip" utility (from InfoZIP) is needed for
+the "release-win32" makefile target, which will create
+a zipfile with the binary release, ready to be distributed :)
+
+=====================
+Additional notes on Git + Win32 resources + InnoSetup
+=====================
+** GIT **
+You can download and bootstrap Git ported to Windows from
+http://code.google.com/p/msysgit/. Simply download the 
+"GitMe-0.4.2.exe" (or newer) and run it to install Git and
+a local version of msys to c:\msysgit\.
+
+You will be able to use Git on tennix's public repository,
+see the Tennix website for more information.
+
+** Win32 resources **
+We are now using Win32 resource files to have an icon in the
+Windows executable an to store the layout of the startup 
+dialog (that is only displayed in Windows atm).
+
+I've edited the "tennix.res" file (which contains the icon and
+the dialog layout) with "XN Resource Editor", which is a freeware
+resource editor for Windows, but you might want to use another
+resource editor of you choice.
+
+URL: http://www.wilsonc.demon.co.uk/d10resourceeditor.htm
+
+** InnoSetup **
+Make sure you have installed InnoSetup 5 if you
+want to generate a setup installer. You also have to set
+the $PATH variable to point to the Inno Setup install dir
+on your hard drive (eg c:\program files\inno setup 5\). 
+To check if you have set it up correctly, open your msys
+shell and type "iscc". It should respond with "Inno Setup
+5 Command-Line Compiler" and some generic information.
+
+When you have set up iscc correctly, simply do a "make 
+release-win32-setup" to compile a single setup executable
+with innosetup and tennix.
+
+Thomas Perl <thp@perli.net>, 2007-11-21
+=====================
+
+
+#######======------ --- -- -  -
+Additional notes on libraries on Win32
+#######======------ --- -- -  -
+
+You might have to add some libraries for Tennix 1.0 (and later) to compile
+correctly under mingw32:
+
+  -lws2_32 -lkernel32
+
+This can be set as LDFLAGS and/or LIBS variable in the makefile. For some
+specific makefile targets (e.g. the "archive" utility), you might have to
+specify "-lws2_32" directly in the target to get the build going.
+
+#######======------ --- -- -  -
+

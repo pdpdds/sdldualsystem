@@ -1,0 +1,26 @@
+If you want get your hands onto Tennix and improve / fix it, please have
+a look at the TODO file first and see if there is anything that you can
+contribute.
+
+You can send patches to me; contact information is at http://thpinfo.com/about
+
+Helpful hints:
+ * Adding graphics is done by adding a new constant to the "enum" block in
+   graphics.h (where GR_CURSOR, GR_BACK, etc.. are defined) - but BEFORE the
+   GR_COUNT constant (this is used to "count" how many graphcs there are);
+   after adding to graphics.h, add the filename of the desired image to the
+   same position to "static const char* graphics[]" in graphics.c (you'll get
+   the idea after comparing the variable and the enum - there's a system ;)
+ * Adding sounds is analog to adding graphics, but be sure to update the
+   LAST_SOUNDEFFECT_ID macro (it should point to the last non-voice effect
+ * Use the same coding style as the surrounding code (might be different for
+   different source files)
+ * Use C-style comments (/* ... */) and not C++-style comments (// ...)
+ * You can get a list of #defines that we currently use by running this command
+   in the source tree:          grep -hr "^#ifdef" *.c *.h | sort | uniq
+ * Global configuration and #defines should go into tennix.h; where all other
+   modules can access it
+ * You can extract the contents of a ".tnx" file by compiling the standalone
+   version of the "archive" tool and renaming it to "extract"
+
+-- Thomas Perl, 2009-02-24

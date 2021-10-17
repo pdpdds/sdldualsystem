@@ -1,0 +1,47 @@
+; Inno Setup Script Template for Tennix (on Windows)
+; Copyright (c) 2007 Thomas Perl <thpinfo.com/about>
+; Licensed under the same terms as Tennix iself
+
+[Setup]
+AppName=Tennix
+AppVerName=Tennix {version}
+AppPublisher=Thomas Perl
+AppPublisherURL=http://icculus.org/tennix/
+AppSupportURL=http://icculus.org/tennix/
+AppUpdatesURL=http://icculus.org/tennix/
+DefaultDirName={pf}\Tennix
+DefaultGroupName=Tennix
+LicenseFile=COPYING
+OutputDir=.
+OutputBaseFilename=tennix-{version}-win32-setup
+Compression=lzma
+SolidCompression=yes
+
+[Languages]
+Name: "english"; MessagesFile: "compiler:Default.isl"
+
+[Tasks]
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+
+[Files]
+Source: "tennix.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "zlib1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "SDL.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "SDL_image.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "SDL_mixer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "libpng12.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "COPYING"; DestDir: "{app}"; Flags: ignoreversion
+Source: "ChangeLog"; DestDir: "{app}"; Flags: ignoreversion
+Source: "README.win32"; DestDir: "{app}"; Flags: ignoreversion
+Source: "README"; DestDir: "{app}"; Flags: ignoreversion
+; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Icons]
+Name: "{group}\Tennix"; Filename: "{app}\tennix.exe"
+Name: "{group}\{cm:ProgramOnTheWeb,Tennix}"; Filename: "http://icculus.org/tennix/"
+Name: "{group}\{cm:UninstallProgram,Tennix}"; Filename: "{uninstallexe}"
+Name: "{commondesktop}\Tennix"; Filename: "{app}\tennix.exe"; Tasks: desktopicon
+
+[Run]
+Filename: "{app}\tennix.exe"; Description: "{cm:LaunchProgram,Tennix}"; Flags: nowait postinstall skipifsilent
+

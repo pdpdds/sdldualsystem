@@ -1,0 +1,1856 @@
+commit bc79dbc523abfbd8a1cc2a682fdbffddc7dd37b0
+Author: Thomas Perl <m@thp.io>
+Date:   Thu Feb 10 12:38:50 2011 +0100
+
+    Tennix 1.1 "Classic Championship Tour 2011" released
+    
+    Updated artwork; re-enabled credits; multiplayer docs
+
+commit e01d30d0fc2f988112f58e7a7e481cde55beb658
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Sat Feb 13 16:23:14 2010 +0100
+
+    Streamline the archive loading mechanism
+    
+    Only load the archive once (in the main function)
+    and pass a reference to the archive object to the
+    initialization functions for graphics, sound and
+    input (which will read the data from the archive).
+
+commit 3940b588861f4b0f56266e1dbed68a5cb288bc25
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Sat Feb 13 15:24:33 2010 +0100
+
+    Port archiving tool to C++
+
+commit 51858b38ca04d889165c923c4bf763a4b07ae0ac
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Sun Dec 27 03:16:30 2009 +0100
+
+    Add TODO: Maemo 5 Vibra support
+
+commit b74e9c848730af7fadbf7adb50fd1c54c8867cda
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Wed Oct 21 16:19:47 2009 +0200
+
+    Add N900 Feedback list to TODO
+
+commit 46b92642f2b89799e38c62c24649c59bddd74268
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 18 00:09:54 2009 +0200
+
+    Don't send input events when nothing has changed
+    
+    This should save bandwidth and speed up on slow links
+    and machines. Might introduce some bugs when the UDP
+    packet sent isn't received. Does not matter so much,
+    because input data often changes, which will lead to
+    a new packet to be sent.
+
+commit 07e8b2e7d414aee22f7a388b12da7b941ae09a31
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Mon Aug 17 23:43:22 2009 +0200
+
+    Apply fixes and documentation notes for Windows builds
+    
+    Back in February when I was building Tennix on Win32,
+    there have been some changes (to get Tennix to compile
+    under mingw32) that have not yet been re-integrated.
+    
+    This patch fixes the DLLINTERFACE issues on Win32. It
+    also describes some library linking notes in README.win32.
+
+commit 2e065406779e9154c7c1741b73fef51c09447719
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Aug 5 15:07:50 2009 +0200
+
+    Only use one sending socket; auto-determine ports
+    
+    For sending UDP packets, we only need one socket to be
+    open - both types of packets (input and state) can be
+    sent through the same socket.
+    
+    Simplify the configuration of multi-player by setting
+    the pre-defined ports based on which machine is the
+    master and which one is the slave. This way, we only
+    have to specify for each instance the type (slave or
+    master) and the hostname/ip of the opponent.
+
+commit aa790a54ad6a118fd9cef473ee98e1ada89c608e
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Aug 5 14:54:18 2009 +0200
+
+    Add Mac OS X support for networking; better network code
+    
+    Make sure that Tennix works without a network connection
+    and add the necessary libraries to get Tennix with SDL_net
+    working on Mac OS X.
+
+commit d59da3a9278f045909f951ec62539776bc3be66a
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Wed Aug 5 01:27:10 2009 +0200
+
+    First cut of multi-player support
+    
+    And we are proud of it :)
+
+commit 87208d1d7cce7957ef504e7c3f9c3cfe715f1852
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 21:00:06 2009 +0200
+
+    Add support for marshalling GameState + packed values
+
+commit 73a294297bee210901dac7c4dde1503be24bc314
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 19:53:11 2009 +0200
+
+    Split input handling + stepping; type changes in GameState
+    
+    This is in preparation for better network compatibility.
+
+commit d3a8306f4fee8e6a4e11166d60f4c569121f80fa
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 19:01:14 2009 +0200
+
+    Sound volume + panning moved into rendering function
+
+commit 778c71772dd6ab4b2504dab13cdd89d98894d102
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 18:55:34 2009 +0200
+
+    Remove dependency on local state in step()
+    
+    Allows for adding network support easier later.
+
+commit 3d1d6192a1de067173141a5db4eeab97d026e524
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 18:38:53 2009 +0200
+
+    Move weather settings to Location from GameState
+    
+    Fog, rain and night mode really belong to a location and
+    not the whole game state.
+
+commit 805dca572f20595b65ab15c45c7fe93bd50fd9cb
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 18:10:01 2009 +0200
+
+    Better status message handling in Game-/RenderState
+    
+    This allows us to strictly split the per-process data from
+    the real "status" data in the game :)
+
+commit 4e79f7dda8956a80e3d537070f223dffcc0784f7
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 17:03:24 2009 +0200
+
+    Split sound event tracking into RenderState
+    
+    This way, the gamestate does not have to be changed from
+    within render() when playing sounds.
+
+commit ee56b772bf4364cb56d0dc9e7f37ac2d9726e43a
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 16:45:56 2009 +0200
+
+    Remove obsolete data fields / simplify GameState + Player
+    
+    This should allow for easier changes later on.
+
+commit 440f8e3750516c9a50049f65b993323a0c8eba79
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Tue Aug 4 16:03:34 2009 +0200
+
+    Remove n-gram predictor which didn't work for a while
+    
+    This might return in a more advanced form in the future.
+
+commit b39487bff6d6d7e639459ead3f7e6c831eb9cb5c
+Merge: ec4ccf6 346bc39
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Aug 4 15:06:25 2009 +0200
+
+    Merge branch 'master' of git://repo.or.cz/tennix
+
+commit ec4ccf60ffad53c56c2e5301ab11c1e60104469a
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Aug 4 15:05:23 2009 +0200
+
+    Streamline building Tennix on Mac OS X (static)
+    
+    The build instructions and makefile are now tailored
+    so that they build SDL into the application and allow
+    it to run on a stock Mac OS X installation without
+    any Frameworks installed.
+
+commit 346bc39b36edb00e0dd724dc2d61107e0f7e4ee9
+Author: Thomas Perl <thp@thpinfo.com>
+Date:   Mon May 11 10:41:07 2009 +0200
+
+    Do not hardcode Python version to 2.5 (allow 2.6)
+    
+    Now that distros start shipping Python 2.6 as their
+    default Python versions, we do not depend directly
+    on Python 2.5, but leave it up to the system to provide
+    a suitable version of Python.
+    
+    Thanks to Andrea Colangelo for pointing this out.
+
+commit 20120b5884d904c6d355e6b14b7971f7f8343668
+Merge: 3d16822 7f5ae93
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Apr 24 10:59:23 2009 +0200
+
+    Merge branch 'master' of git://repo.or.cz/tennix
+
+commit 7f5ae93c6b6c76a9e1deb10f81fd0ee19e49ea5d
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Mar 2 12:43:42 2009 +0100
+
+    Add missing artwork to the doc subdirectory
+    
+    This artwork has been used in the production of
+    the Tennix 1.0 release and is now available here
+    in the form of the source .SVG files.
+    
+    Also add an experimental graphics build system
+    that automatically generates PNG graphics from
+    a single SVG file (thanks to a tool by Jimmac).
+
+commit 1ef1ed3d5f3d662e0910aac0806148f63b634932
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Feb 25 11:16:06 2009 +0100
+
+    Describe build-dependencies in README
+    
+    I did not describe the build-dependencies for Tennix
+    well enough in the README file. This is now fixed, so
+    developers and users have an easier time compiling it.
+    
+    Thanks to Devil505 for asking :)
+
+commit cd91dfa76662860e47e3e5af82e48c7b3f02cebb
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Feb 24 11:50:48 2009 +0100
+
+    Mac OS X-specific release changes for Tennix
+
+commit 3d16822909ca58212dc7f923d11bcfa5e27e0958
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Feb 24 11:50:48 2009 +0100
+
+    Mac OS X-specific release changes for Tennix
+
+commit 4cf79f9cb999ba7904dfa67e12544c710cdc0052
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Feb 24 11:21:08 2009 +0100
+
+    Updated documentation (README, manpage, etc..)
+
+commit e63179603021c4d9e70d53c7f5796a3d4b5a45bb
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Feb 24 10:48:07 2009 +0100
+
+    Clean up UI, main menu and add credits screen
+    
+    Also clarify copyright for contributed images and
+    do not include images where we do not yet have
+    permission into the source build tree.
+
+commit 5e16de8295ba7b29ad15b84025c1eb69143b569a
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Feb 24 09:36:45 2009 +0100
+
+    New branding ("Tennix 2009")
+    
+    In preparation for the 1.0 release.
+
+commit 912c5e65c436880742a7ef8f2fcba492c6b01d59
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 19 15:06:02 2009 +0100
+
+    Add prototype definitions for floating-point math
+    
+    On Maemo, we don't get the fminf(), fmaxf(), fabsf(),
+    sinf() and cosf() functions defined. We now define
+    them explicitly in util.h, so it works for Maemo, too.
+
+commit 55b0a132282c205844d9d797acbb3a2c7b10cc21
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Feb 16 16:20:23 2009 +0100
+
+    Class-based Python bot framework (proper)
+    
+    Add Jon Python as experimental bot and clean up the
+    Python bot framework, so it is more modular.
+
+commit 4e6d04e87f63439a6e89ac85c3e1cf6a63c0296d
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Feb 16 01:29:05 2009 +0100
+
+    Experimental Python-based AI bot framework
+    
+    This is subject to change, just some proof of concept code.
+
+commit 21434f1913159483172db297db3c4f792ba9274a
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Feb 13 18:29:45 2009 +0100
+
+    Save and load the current game on quit/start
+    
+    Save the current gamestate in a file and re-load it
+    on next startup, so users can play complete games.
+    
+    We're missing some input sanitizing here, but the
+    worst case is that Tennix won't start, in which case
+    the user simply has to remove the gamestate file.
+
+commit 5542af261f2804485cb03ad1d3723af8aa49dc99
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Feb 13 17:45:20 2009 +0100
+
+    Update TODO list, release targets
+
+commit 49de71c147d0cab20cad4ef9ef03f3f15ddc1bd5
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 23:28:12 2009 +0100
+
+    Add more SVG sources for Tennix resource files
+    
+    Add the SVG source file for input devices and
+    concept art for the hand-drawn main menu.
+
+commit 86c629e50875fcedaee5aad69b07ce70bc0cf906
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 23:22:30 2009 +0100
+
+    New input selection UI + Mouse support, updated TODO list
+    
+    Use the new input graphics for a nice input selection
+    menu and add mouse support to the "input" module.
+    
+    Updated TODO list with ideas for the animation framework.
+
+commit 43a7ab633669f3af209d046d67a1b1e6da4f806e
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 12:33:39 2009 +0100
+
+    Add a simple animation framework (+ intro)
+    
+    The animation framework can be extended and used later
+    on to provide storytelling content to the audience.
+    
+    Currently, an (interruptable) animation is played at
+    the start of the game as an example of how the framework
+    can be used.
+
+commit 0f3aab7e3510e90b0088af613f673743984eda17
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 12:30:59 2009 +0100
+
+    Fix sound panning for ground hit
+    
+    The ground hit sounds are now much more panned, depending
+    on the screen position of the impact. This should make
+    for a better "3D-ish" feeling when sound is enabled.
+
+commit 64a5f4d0c2e0569f06309db6cfcefb7a8bd31904
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 08:56:59 2009 +0100
+
+    Improve the appearance of the score font
+    
+    The TTF-based font system already pays off ;)
+
+commit 7e8e1f6ea733a8028431f16b97c1f63e6cf2c9b7
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 08:55:12 2009 +0100
+
+    Add permission e-mail from Martin Third
+    
+    To "doc/", this e-mail is the permission we got from
+    Martin Third for usage of his "Anyone for Tennis?"
+    photo in the user interface for Tennix. Thanks, Martin!
+
+commit 1ab688e07de035ba41f9ea0e1bb0003d2ceec852
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 12 02:23:53 2009 +0100
+
+    Floating-point fixes for the armel architecture
+    
+    There were some strange errors with the handling of
+    floating-point numbers on the armel (N8x0) targets.
+    
+    This patch fixes these problems by providing custom
+    functions for minimum, maximum and absolute value.
+
+commit 84d6b9412a89198583dee2479aff8eb5cb878996
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Feb 11 03:44:33 2009 +0100
+
+    Add rotozoom support; more realistic ball and shadow
+    
+    The SDL_rotozoom.* files are from SDL_gfx-2.0.18, and
+    we might use the shared library in the future, but for
+    now, we include rotozoom directly in Tennix source.
+
+commit f7955a4373052dddb36ec1ff3ee58106ace3e5b6
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Feb 11 03:11:21 2009 +0100
+
+    Use SDL_ttf for font rendering; drop old font code
+    
+    This makes font handling easier and allows us to easily
+    extend the available fonts during development.
+
+commit bc057d45c5a54a2e2f178877faef14665d0e93b8
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Feb 10 01:02:25 2009 +0100
+
+    updated todo list
+
+commit 54f2733af43e3ccefd7134f867499e1f7646ac91
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Feb 9 02:06:33 2009 +0100
+
+    Correct ball hit direction for Player 2
+    
+    Player 2 had a wrong orientation of the racket
+    hit position. This patch fixes this, and makes
+    the two-player game playable again :)
+
+commit 6ae18933d5f4dd7eae2f12983ec5e0f5ed0d982a
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Feb 8 15:31:13 2009 +0100
+
+    Add two new non-free locations (Austria + Beijing)
+    
+    Add Kitzbuhel (Austrian Open location) and Beijing
+    (Olympic games location) as non-free locations.
+
+commit 244d989bb79ad890018212f50686996e9ebfe2b0
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Feb 8 15:04:49 2009 +0100
+
+    More stereo sound effects with real panning
+    
+    Fix problems with panned sound effects and make it
+    possible to have multiple sound effects in the queue.
+    
+    Also allocate as much channels as necessary for the
+    amount of sound effects we have.
+
+commit 786f83429321dd397829f3482c1477cd1fba3feb
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Feb 8 14:55:36 2009 +0100
+
+    Fix bug in world map night time display
+    
+    The second "night" rectangle had the wrong height.
+
+commit ff55b16a63cc7583a5abc922461b8a2fc39fcf1f
+Author: Max <MaxAntiSpam@freenet.de>
+Date:   Sun Feb 8 11:31:06 2009 +0100
+
+    Correct installation folders for non-Debian systems
+    
+    Like this it's much easier to install Tennix
+    on non-Debian/Ubuntu-systems.
+    
+    I personally use Mandriva, where
+      * gamesbins go to:   /usr/games/<name>
+      * gamesdata goes to: /usr/share/games/<name>
+    
+    Gentoo does use pretty much the same paths, afaik.
+
+commit 7a957b7203b6c831603624dc8b309b468ca6ecb5
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Feb 8 00:06:46 2009 +0100
+
+    New input system with automatic joystick detection
+    
+    New, dynamic input system that will allow better and
+    easier configuration of input devices and make it easier
+    to add support for additional input devices later on.
+
+commit ed4ced8d06ae61576f98c81f51f82929cf1b845a
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 22:17:36 2009 +0100
+
+    Optimize drawing of location selection screen
+    
+    Don't redraw everything all the time. Thanks to the
+    UPDRECTANGLE makefile option for helping me figure this out :)
+
+commit 83d82747c9c4681a181784da11bf1817cced5dc3
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 22:09:18 2009 +0100
+
+    Implement night for world map + automatic night mode
+    
+    We now get UTC time from the system and try to determine
+    a rough estimation of day/night areas on the world map.
+    
+    This is not perfect, but good enough so that we can have
+    automatic night mode determination based on the location.
+
+commit e824d31e7dfd4af9530aab2d94b00d003e844dde
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 20:13:28 2009 +0100
+
+    First power bar code + our first non-free location
+    
+    Add power bar for better racket swinging experience.
+    
+    Add a non-free location (the photo data is non-free,
+    so we only use it when explicitly asked).
+
+commit 0f0db7a50afd2de84ca5bb7c225896115823e4d1
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 18:20:10 2009 +0100
+
+    New world map location selector screen
+    
+    Neat :)
+
+commit 304a12400ad8872e5558ca8bd8f3fb3ab2930873
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 16:44:36 2009 +0100
+
+    Add location support (all four grand slam locations)
+    
+    This is currently very rough, but will be the basis for
+    future improvements in the location support :)
+
+commit ffd239185f426548a86ba5b0be7603c8a1987ce2
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 14:32:05 2009 +0100
+
+    Fix net collision, referee and ball restitution
+    
+    Move the restitution variable to the "Ball" struct,
+    so we can later create different types of balls.
+    
+    Move the ball outside the net in case of a collision.
+    
+    Add referee movements for the new scoring system.
+
+commit 38de427d4cfbd63463a6cd41a3df53c9aa698402
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 14:13:49 2009 +0100
+
+    Add pointer-style cursor for better menu usability
+    
+    The racket as cursor does not really provide a "hit
+    area" and so many users had a hard time hitting items
+    with the "racket cursor". We fix this here by providing
+    a dedicated cursor for use in menu navigation.
+
+commit fb2027ba8e9e4a2b42f126cf2bac756ae930d8fa
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 13:09:39 2009 +0100
+
+    Add some missing #include lines, use C99 as standard
+    
+    Just some more correctness updates to the current code.
+
+commit 9feca79558fc0ccca4e82bf5306344e2771d812c
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 12:56:10 2009 +0100
+
+    Enable more compiler warnings, fix most warnings
+    
+    As a result of the recent "return" bug, I've enabled
+    some more compiler warnings and fixed most of them
+    by altering the source code, which should make the
+    codebase more robust and less prone to error :)
+
+commit e6aba0a626bdf75236395f44c28024110bba72ca
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 12:52:51 2009 +0100
+
+    Fix a severe bug on non-x86 machines (archive segfault)
+    
+    Somehow, I missed the "return" statement and the compiler
+    did not complain. That's the reason why the archiver did
+    not work on 64-bit machines and produced wrong results in
+    Scratchbox's emulated armel environment.
+
+commit 27993e75eebfca8ac0fde24adcf5b451603a1507
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Feb 7 12:39:21 2009 +0100
+
+    Remove unneeded "ground" field in GameState
+    
+    This is not needed in current versions of Tennix.
+
+commit 4068977d39785cfd9ae93fc6280feecfee9e9046
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 5 14:44:36 2009 +0100
+
+    New physics and scoring system (AI partially broken)
+    
+    Changes from February 2nd, with some clean-ups today.
+    
+    New physics and scoring system that has more "fault"
+    possibilities, like hitting the net, multiple bounces
+    of the ball, etc..
+    
+    Based on the new physics, a more advanced scoring
+    system has also been introduced that can handle the
+    new events that result in a score.
+    
+    The serving has been fixed - now the serving does not
+    change for every score, but on a per-game basis.
+    
+    Smash and topspin are new and can be played by P1
+    with e (topspin) and f (smash). The physical properties
+    of these still have to be optimized.
+    
+    The new changes break the AI, and the AI now is very
+    dumb again. We need to work on a improved AI that takes
+    advantages of the new information available via the
+    physics engine.
+    
+    Some old, unused variables have been removed.
+
+commit 749597197a66e94f8742b9ee90dfabafd59d4dc3
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Feb 6 00:34:21 2009 +0100
+
+    Tennix 0.7.0 "Deine Eltern sind auf einem Tennixturnier"
+    
+    Updated README and manpage. Made sure tennix.tnx is
+    installed in the right spot, and that the binary can
+    find the data file either in the current directory or
+    in the installed location.
+    
+    Push version to 0.7.0 and display version and URL in
+    the main screen (as with previous versions).
+
+commit a6ae7d2deba542bba9d3b8379b237323e33f679b
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Jan 31 13:55:57 2009 +0100
+
+    Updated year, README, TODO list
+    
+    Added 2009 to copyright info where necessary
+    Updated README file
+    Updated TODO list
+
+commit 9d28bad7001375e56b8c10180ba5bbc3d3eba862
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Jan 31 13:44:56 2009 +0100
+
+    Documentation: How to generate callgraphs for Tennix
+    
+    Remove the -pg option and make the callgraph-generating
+    code optional in the makefile. See doc/callgraph.txt for
+    more information.
+
+commit c1ee5818ba1684854a8a40b1585406ff309c4ee7
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jan 27 11:10:40 2009 +0100
+
+    Add makefile option for update rectangles mode
+    
+    This mode visualizes which screen regions are updated
+    on each frame. Compile with: make UPDRECTANGLE=1
+
+commit 42e6c49f66e7a81984147af75879158184361fd4
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jan 27 10:58:18 2009 +0100
+
+    Add compiler flags for Maemo
+
+commit 3c75fdba48e9ac4f5873de10831d96f88bbdecac
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jan 27 00:08:50 2009 +0100
+
+    Only redraw the referee when its state changes
+    
+    Same principle as with the score string - remember the
+    last "position" of the referee and if it has changed,
+    redraw the back buffer. This saves a lot of painting.
+
+commit 59369f27cc8c14e7a191a56e71c2dc015d61ab77
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jan 27 00:04:45 2009 +0100
+
+    Only redraw game score strings when necessary
+    
+    Do not redraw the score strings every time the
+    render() method is called, but only when the text
+    really changes (using a flag in the GameState).
+
+commit 312dfc15bbc58a058d97468a86af938c8e28f98b
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Jan 26 23:41:23 2009 +0100
+
+    Remove is_fading() from the graphics module
+    
+    Only used in two places, now refactored.
+
+commit 91414e23c4e9aeef14d6bde1c44de9a7bc07a531
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Jan 21 23:19:59 2009 +0100
+
+    Updated pygame test code
+
+commit 4eb9fc349b210bcdfa96dd2c91d6e8b4f1424cd4
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Jan 19 19:33:20 2009 +0100
+
+    Add "--benchmark/-b" command line switch
+    
+    When starting tennix with "--benchmark" or "-b", the
+    game will start in "AI vs. AI" mode for a limited
+    number of seconds. This can be used for benchmarking
+    different optimizations.
+
+commit 78baa1fe95365ec91b06563fc42d0b670a55909c
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jan 15 12:10:45 2009 +0100
+
+    Make sure graphics and sound data is really freed
+    
+    After loading of graphics and sound, make sure to
+    unload the allocated resources, because RWops does
+    not seem to free the resources, even if told so.
+
+commit 3c90f67e8b80237ecd8b1998b5c9b4d8c5cd2273
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Jan 9 15:01:13 2009 +0100
+
+    Better loading progress bar (uses button drawing)
+
+commit 7bcd5b3dd3ab24e2e09bfe78582a195c809af846
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Jan 9 15:00:40 2009 +0100
+
+    Fix referee talk image usage; support more ball states
+
+commit 85f87a017531a47e5b2389c1b3527b4522a29986
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jan 8 19:44:57 2009 +0100
+
+    Loading progress bar, add missing header files, Maemo
+    
+    Add a progress bar while loading resources (graphics
+    and sound) from the datafile.
+    
+    Add some missing "#include" lines (scratchbox complained).
+    
+    Do not make the "hovering" sound on Maemo (touchscreen!)
+
+commit c734b6b9be6d860c3cabd1d513e2980da4f33a69
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jan 8 19:32:47 2009 +0100
+
+    Cache width and xposition in get_font_metrics
+    
+    To save some cycles, do not re-calculate the font
+    metrics every time a string is drawn, but save the
+    width and xposition permanently after the first
+    calculation to speed up font drawing.
+
+commit 22eb5ce6d33ee8cc392aa209b3eb0baf1654de8d
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Jan 7 15:12:43 2009 +0100
+
+    Use Tennix Archive Format instead in-executable data
+    
+    This makes the binary smaller, and we can free the
+    raw game data once the resources have been loaded.
+    
+    Also, it makes recompiling easier. The data file is
+    currently named "tennix.tnx" and will be auto-built.
+
+commit abd420bce6014073ca49aebcc50127fed09c9ece
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Jan 7 14:09:38 2009 +0100
+
+    Voice support, experimental wind, extended referee
+    
+    Add support for playing back voice tracks if voice
+    files are available (have to enable with "DELUXE=1").
+    
+    Includes experimental support for in-game wind (you
+    can modify its direction with "1" and "2").
+    
+    Add support for the extended referee mode if the
+    extended referee resources are available (DELUXE=1).
+
+commit 54f9b4f98982a83c14c967886b78abf262c09d43
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Nov 28 15:00:46 2008 +0100
+
+    TODO items after basic user experience test
+
+commit f3cac9c77b1e5a46e766fd5776cb740de7259806
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Nov 28 14:02:32 2008 +0100
+
+    Add suggestions to TODO list
+
+commit e3f53391afd050e0e26d80724d58bcba78e9652a
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 29 16:29:38 2008 +0100
+
+    Update TODO list with ideas (tennix.dat)
+
+commit 86263a8a56a70d422e8b0d195635a4bb8805dacc
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Oct 25 02:02:27 2008 +0200
+
+    Correct sounds (enable the racket/ground sounds)
+    
+    Make sure that we are able to correctly shuffle between
+    the different racket sounds by fixing the calculation and
+    also making sure that the audience clapping stops after
+    the ball is served (range check instead of C macro).
+
+commit 65ea4189ab00467b813dc23f150cdaf364ddb590
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 23:10:44 2008 +0200
+
+    First cut of support for player selection in options
+    
+    Now support all four combinations of AI/human matches.
+
+commit 12ef35304b3a806e52d198dfc590e7d3344f7cee
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 22:27:51 2008 +0200
+
+    Add background sound for rain mode
+
+commit 862622c29a7e3ef73c986735a69a56c17a774172
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 22:11:04 2008 +0200
+
+    Make sure FPS limit in the main menu is always correct
+    
+    Without this patch, after the gameloop has finished, we
+    won't have reset the FPS counter, so the FPS limiter
+    will be practically disabled, depending on how long you
+    played.
+    
+    With this patch, the FPS limit counter is reset after
+    the gameloop has finished, so we always have a correct
+    way of calculating FPS. This can probably be improved.
+
+commit 10635ec92d8d3fafd83be699324d38c6c0d8cfd1
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 22:06:49 2008 +0200
+
+    Fix a bug with negative offsets in fill_image_offset()
+    
+    When negative values for offset_x or offset_y have been
+    passed to fill_image_offset(), the result wasn't correct.
+    
+    Fix this by translating negative offsets to positive values.
+
+commit 3a53cd6428d5d6d6892278aa7e9757a488d87c24
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 21:43:04 2008 +0200
+
+    Support for "night" mode (floodlights) added + source XCF
+    
+    Add support for playing at night, via a floodlight/spotlight
+    overlay. Also works fine with fog and rain modes :)
+
+commit 8b01cb6c302787eb3158d82692e083c8b7b1e23d
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 21:08:23 2008 +0200
+
+    More in-game weather (fog) + fill_image_offset() function
+    
+    Add support for having in-game fog clouds to make gameplay
+    harder. This needed an addition of the offset to the fill_image
+    function, so we have this now too, allowing arbitrary offsets
+    to shift the repeated image on the start for a moving effect.
+
+commit affb433e3dbaf19a6c842a9fd2ad847106829bad
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 20:10:30 2008 +0200
+
+    First support for in-game weather (rainfall)
+    
+    Use the "r" key to increase the amount of rainfall during the game.
+
+commit 1c151d28b5fab70b3f0aa79864b424b3b5e85187
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 19:59:05 2008 +0200
+
+    Add state machine for main menu + options menu
+    
+    State machine that controls navigating through the menus.
+
+commit ee28f04d632480da6e7b27927334dfc4da967f79
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 19:54:57 2008 +0200
+
+    Ideas for adding in-game weather effects/mods
+
+commit a7d137c5d8b387a8478df5be9a09f2f60da4d8a5
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 17:03:47 2008 +0200
+
+    FPS Limiting for the main menu display code
+
+commit 33af6fcdeb64e765203c72bfce6b90e6e0127268
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 16:56:00 2008 +0200
+
+    Remove "Options" button and rename to "Resume Game"
+    
+    This is needed due to a re-structuring of the navigation :)
+
+commit 23b284cf74cb574eb94a2750fcfdfd54b33c4890
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 16:49:31 2008 +0200
+
+    Move the GameState object out of the game loop, for resuming
+    
+    Rename game() to gameloop() and make the GameState struct a
+    parameter, so we can do things like resume games that have
+    not yet finished, etc..
+
+commit 5aafbf86a150528ea4bee3b74dd6aad8bfbfaeb0
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 15:57:19 2008 +0200
+
+    More menu clean-ups and simplifications
+
+commit f4ea555809fa01ff37828a7f5f32fa1aad69f1b8
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 15:02:33 2008 +0200
+
+    Optimize screen updates (update_rect); simplify menu code
+
+commit fe8ec418a2ef90b76f9ee6c70ff7940743740267
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Oct 22 13:19:49 2008 +0200
+
+    Update info about wav files on Maemo (README)
+
+commit f95d052497914ed630c9277996be3e9a37f38356
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Oct 19 13:09:55 2008 +0200
+
+    Add new, sliding main menu system
+    
+    Make the menu system simpler and nicer, based on the
+    draft of the new Tennix menu found in the doc/ subdir.
+
+commit 60da14a6ebe04587a729250aec74ab51706d13f8
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Jul 23 16:34:44 2008 +0200
+
+    Add TODO items after discussion with PG Pauli
+    
+    Add several ideas for improvements to the TODO list.
+
+commit 18e92b5271829bdf0cd5747eb775aeeaeb9f6a37
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Mar 27 22:09:07 2008 +0100
+
+    Maemo-related tweaks and keyboard mappings
+    
+    Less elektrons, no mouse cursor in main menu,
+    no multiplayer menu item (not chooseable, anyway).
+    
+    Also: Add mappings for all hardware keys on the
+    Nokia N800 Internet Tablet (Fullscreen, increase and
+    decrease, the "menu" button and the dpad "enter").
+    
+    Note in README that we now support Maemo and add a
+    README.Maemo file that contains information on how
+    to compile a Tennix package for Maemo.
+
+commit 4988a90ce144795c4df89a4be1bfc78b7a133a7f
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Mar 22 10:28:47 2008 +0100
+
+    Tennix 0.6.1
+    
+    Update makefile and manpage with new version.
+
+commit a605decbf34ccb76d7a7aec55f8bc96fd228f22a
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Mar 22 10:26:29 2008 +0100
+
+    Fix directory creation in makefile, update e-mail address
+    
+    Fix creation of the PREFIX/share/icons/hicolor/scalable/apps
+    directory, so Debian pbuilder won't complain about missing
+    directories. Thanks to Andrea Colangelo for pointing that out.
+    
+    Also, update Andrea Colangelo's e-mail address in the manpage.
+
+commit 5972a8e69893415318055f1a186d69d026428571
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Mar 20 14:28:55 2008 +0100
+
+    Tennix 0.6.0 and documentation updates
+    
+    Update README and manpage to reflect changes for
+    the new version. Update copyright notices (add 2008).
+    
+    Push version number in makefile.
+
+commit ac54375376585a5c00f06eb833b72336e7aeac9a
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Mar 20 14:19:00 2008 +0100
+
+    Fix mouse control, add mouse rectangle, enable mouse by default
+    
+    Fix problems with mouse control (lock the mouse if
+    we are using the keyboard). This makes the mouse
+    control work nicely together with the keyboard control,
+    so we enable mouse control by default now.
+    
+    Draw a mouse rectangle on the screen so the user knows
+    what's going on when using mouse control. This should
+    make playing Tennix a bit easier with the mouse, because
+    the racket is always sloppy (you can move the mouse faster
+    than you can move the racket.
+
+commit 6636418444db263c688c38cbe3b2f11ef8567dd2
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Mar 12 16:13:26 2008 +0100
+
+    Generate ChangeLog in makefile; add "release" target
+    
+    Generate the ChangeLog file in the makefile via "git log";
+    add a "release" makefile target that creates a tarball.
+
+commit df2c585bfb5caa8d7fe4579288b3bd989494355c
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Mar 11 23:30:12 2008 +0100
+
+    Add high resolution SVG icon (+install on Unix)
+    
+    Add a high resolution SVG icon that can be used when apps
+    want to display a really big icon for Tennix (i.e. Gnome Do).
+    
+    Install the scalable SVG icon in $PREFIX/share/icons/hicolor.
+
+commit 5b8676140c40aca2143b6a38072d57e0e0f63d7c
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Feb 20 11:07:17 2008 +0100
+
+    Apply patch from Enrico Zini to improve ball movement
+    
+    From the mail:
+    if I understood correctly, the position of the ball is
+    updated, then the keyboard events are read, then the
+    screen is redisplayed. It should be instead: the screen
+    is redisplayed, then keyboard events are read and handled,
+    then the ball position is updated: that way the keyboard
+    event is connected with what is on the screen, which is
+    what the player would expect.
+
+commit 72e198aa70054235aab31a61a96c61bf6d10431d
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 7 11:42:33 2008 +0100
+
+    Fix and improve mouse input, initialize players correctly
+    
+    Improve mouse input to work alongside keyboard input
+    and change the way mouse input works (press and hold
+    to move the racket, release to swing the racket).
+    
+    Initialize the "Player" structs in game.c correctly,
+    so we don't get compile warnings and so that our
+    variables for each player are initialized sanely.
+
+commit 66ae83793e07554e4dfaed4fb4e7e1666419c62e
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Feb 7 11:10:24 2008 +0100
+
+    Smoothen player racket movement (accelerate)
+    
+    Add an "acceleration" effect to the player racket
+    movement, so that keyboard control is a bit more
+    fine-grained and easier to use (hopefully).
+    
+    Thanks To Enrico Zini <enricozini.org> for suggesting
+    this change and providing the feature request.
+
+commit 6659c0a0465e8914240514ceed8dc7177ba9522a
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jan 31 19:00:31 2008 +0100
+
+    Update TODO list for Maemo
+    
+    Add some TODO items that are related to the
+    Maemo port of Tennix.
+
+commit 36796d906eddeba7a766d49466132c57c47a1718
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jan 24 08:14:07 2008 +0100
+
+    Remove some development code from makefile
+    
+    Remove the -g debug flag from the CFLAGS and make
+    the version 0.5.0 again (instead of 0.5.0+git).
+
+commit 93d77661277962bb75dfc3f22a7282ff0f11c2f9
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jan 22 23:22:12 2008 +0100
+
+    Add FPS limiting code; fix touchpad movement
+    
+    Add code to limit rendering to 33 FPS (should make the
+    CPU a bit happier, after all); this can be disabled.
+    
+    Fix touchpad movement to be more exact in input_human.
+    
+    Remove the obsolete BALL_DEFAULT_SPEED define in game.h
+
+commit d10b47bdab240d71fd5a48812c06a5a9bfc748cf
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Jan 21 17:02:28 2008 +0100
+
+    Faster graphics; touchscreen support
+    
+    Make graphics more faster by only updating the
+    parts of the UI that have to be redrawn (this
+    could still be optimized, but works well so far).
+    
+    Add support for mouse/touchscreen. The mouse and
+    touchscreen support will not be enabled in Desktop
+    builds but will be enabled for handheld devices
+    like the Nokia Internet Tablets.
+
+commit a5b52c1916298bbac529aa942c74f14b8e253c8b
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Dec 31 14:06:42 2007 +0100
+
+    Updated TODO list (add ChangeLog on release)
+    
+    Next time when we're releasing a new version
+    of Tennix, we should include a ChangeLog file.
+
+commit dbfa46593453cbf45a03b5c3eb6332361d6cbd04
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Dec 31 13:56:27 2007 +0100
+
+    Add manpage from Andrea Colangelo
+    
+    Add contributed Unix manual page from Andrea
+    Colangelo <warp10@libero.it> and install it
+    when installing Tennix on Unix-like systems.
+
+commit d98a586c57bd0493ccd681d26775dc3d2eb27f56
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Dec 19 00:13:15 2007 +0100
+
+    Tennix 0.5.0
+    
+    Pushed version in makefile
+
+commit 727c236102a32339b2c93ffd9be44b0ec274e883
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Dec 18 11:08:39 2007 +0100
+
+    Added TODO list and new side menu draft
+    
+    Added list of TODO items that has accumulated over
+    the last few weeks (photos, sounds and music).
+    
+    Added new side menu that I've created yesterday
+    evening. It's still not finished, but a future Tennix
+    release should probably have its menu to look something
+    like this draft (tennix-side-menu.xcf).
+
+commit 30e2e190c01760c69cae7eacfbf84d5b90e736ce
+Author: Thomas Perl <thp@macbook-2.local>
+Date:   Mon Dec 17 23:34:38 2007 +0100
+
+    Merge version info into Mac OS X Tennix.app
+    
+    Don't use default "1.0" version in the SDL App about dialog,
+    but replace it with the correct tennix version when building
+    the "Tennix.app" Mac OS X application.
+
+commit 017b67eeb9caacc16bb4de4a565e04745a01da21
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Dec 17 19:46:18 2007 +0100
+
+    Support for BINARY_INSTALL_DIR, Makefile updates
+    
+    After a suggestion by a package maintainer, the makefile
+    now supports the "BINARY_INSTALL_DIR" variable which can
+    be used to specify an alternative install dir for Unix-like
+    systems. This can be used to install the "tennix" binary in
+    /usr/games on Debian-based systems.
+    
+    The makefile has been updated to more directly remove some
+    files in the clean target, so all temporary files get removed.
+
+commit 4fd0714c121c9f26fdaec9cfab86fe9503bfc848
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Dec 16 16:05:47 2007 +0100
+
+    Joystick support (via command line); better keyboard controls
+    
+    Enable more keyboard controls for Player 1 (arrow keys, space,
+    left control) and enable the usage of a joystick when the user
+    specifies the name of the joystick as command line argument.
+    
+    This even works with applesmc on Linux, so you can play and
+    control Tennix by tilting your Apple MacBook and pressing the
+    left control key, which is now mapped to Player 1 swing racket.
+
+commit f416a090d91bfd0bc08f4fe5fb1ca9efab62f6e2
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Nov 22 22:09:48 2007 +0100
+
+    Update Win32 startup dialog (icon)
+    
+    Update the Win32 startup dialog (asking if the
+    user wants to start tennix in fullscreen mode)
+    and add an icon + the Tennix website URL.
+
+commit 948a7235f096fd77c97c0580502b92636fff7e9a
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Nov 22 22:53:49 2007 +0100
+
+    Sound rework, background music, image_id/sound_id
+    
+    Rework the sound system to strip sound playing from the
+    game logic and move it into the "display"/"render" code.
+    
+    Add free background music to menu from MelodyLoops.
+    Convert sound samples to OGG Vorbis to save space.
+    Sound panning (left, right) for the "racket hit" sound.
+    
+    Use image_id/sound_id for the numeric identifier of
+    resources to make the headers a bit more understandable.
+
+commit 9702b9fc8dea5c17eff85029cdc4ffafeca973fe
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Nov 21 11:32:11 2007 +0100
+
+    Better option parsing/ignoring
+    
+    For non-Windows systems, implement better command
+    line option parsing, so user will get notified on
+    stderr which command line arguments have been ignored.
+
+commit ba41083e297d5ee07357cd720693a1a95e826c82
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Nov 21 10:21:07 2007 +0100
+
+    Win32 dialog box, icon and installer
+    
+    Added a Win32-API dialog box that will let the user
+    select if she wants to run tennix in fullscreen or not.
+    
+    Add a resource file for the dialog box layout and the
+    Win32-specific icon (our executable now has an icon!).
+    
+    New .iss installer script (InnoSetup) that will compile
+    a standalone exe installer from the tennix binaries.
+    
+    README.win32: Docs for Git, resource editing and Inno Setup
+
+commit 354c8ca01b08f5eb12b3a9f621dbace7baae36a3
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Nov 14 23:52:54 2007 +0100
+
+    Tennix 0.4.2
+    
+    Pushed version in makefile
+
+commit e02dbd78e773fa4752a03d9eb6f27bf667f47b76
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Nov 14 23:51:58 2007 +0100
+
+    Support for game pausing; clean-up n-gram predictor
+    
+    Support for pausing a running game using the "p" key.
+    
+    Clean up the n-gram predictor code by only adding print
+    statements when we're compiling a debug version of Tennix.
+
+commit 03c66f6811233096d56fb11f9b22db25d179db0a
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Oct 13 15:48:16 2007 +0200
+
+    Computer AI: History-based positioning
+    
+    The computer AI now has a slightly better move
+    algorithm to "catch" the ball.
+    
+    A simple ngram-based ball position predictor has
+    been added, so the computer AI can move based on
+    previous ball movements to have a better chance
+    of catching the ball.
+
+commit abb2edd59cf70c347bbaadbed224c0f158dbf752
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Sep 23 23:23:37 2007 +0200
+
+    Tennix 0.4.1
+    
+    Pushed version in makefile
+
+commit 34adb47253e58fb9e9da61390e7c866aa08507a4
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Sep 23 23:21:03 2007 +0200
+
+    Help text scroller, font opacity, endgame controls
+    
+    Do not process input events (human or AI) when the
+    GameState of the match has set the "is_over" flag.
+    
+    When loading graphic resources, use black color key
+    for font images to support opacity-based blitting.
+    
+    Add font_draw_string_alpha() to draw fonts w/ opacity
+    and add font_draw_string() macro (opacity=255).
+    
+    Add a neat, opacity-based text scroller to the main
+    menu and provide input help text (keyboard controls).
+
+commit c740698f3347aa1681c50fc2a461998c2611fc2e
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Sep 15 15:01:38 2007 +0200
+
+    Court textures (grass, clay, hard) and clean-up
+    
+    Re-work court graphic to support different court textures
+    and convert grass texture from old court + add new textures:
+     - Clay (red/orange-ish) and
+     - Hard (concrete-looking grey)
+    
+    Don't call SDL_SetColorKey() for loaded images anymore, because
+    we're now using RGBA PNG files instead of "black-is-alpha" BMPs.
+    
+    Removed introimage() function as it's not used anywhere.
+
+commit 9dc21acea0f7cd837345fba222f45c541742c442
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Sep 13 00:55:26 2007 +0200
+
+    Tennis-like scoring with games/sets and endgame handling
+    
+    First cut of support for real Tennis-like scoring, apart
+    from some exceptional scoring rules.
+    
+    Endgame handling in in-game code by displaying endgame
+    message and not displaying gameplay graphics.
+
+commit 77bea4cd9be2d4e3f1ff7d8d2c5a7bf109d30187
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Sep 12 21:32:01 2007 +0200
+
+    Don't allow racket hit on "out"; non-permanent racket swing
+    
+    Don't allow the player to hit the ball with the racket when
+    an "out" state has been reached. The ball will fly-by the
+    racket even with the racket swung at the time of impact.
+    
+    Disallow keeping the "swing racket" button permanently
+    pressed, but add a lock to disallow re-swinging the rack when
+    the corresponding key has not been released yet.
+
+commit d12402ffe3a4a1d6f753b00b5805bdf756149200
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Sep 12 16:18:48 2007 +0200
+
+    Fix problem with data2csrc on amd64 and another bug
+
+commit 0efe960c045c1d8ade2166036cc390e3c43a0a37
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Sep 12 13:13:19 2007 +0200
+
+    data2csrc determines variable names, shell compatibility
+    
+    João Pinto pointed out that Tennix will not compile when
+    not using bash as /bin/sh, as the makefile in data/ will
+    complain about bad substitution.
+    
+    This has been worked around by making data2csrc generating
+    the variable name on-the-fly if the variable name is not
+    passed as second command line argument.
+
+commit d8a65baec82cc7d670d3030f4cd5bf45033ff46f
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Sep 9 22:10:22 2007 +0200
+
+    Tennix 0.4.0
+    
+    Fixed makefile
+
+commit d62865d9e5d929f85c0fa60e999e2665ba7d58fc
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Sep 9 21:32:23 2007 +0200
+
+    New and updated SVG artwork, referee, clean-up
+    
+    Added updated SVG artwork by Thomas Perl, new game graphics
+    and removed some obsolete files in the data folder.
+    
+    Make in-game ball rotation faster to fit better to
+    the new-style ball graphic.
+    
+    Make right-mouse button act as color switcher in main
+    menu (currently this is just a visual gimmick..).
+
+commit a68c42ad420db24f3d156ebd5ff2a70a87885775
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Sep 9 18:12:10 2007 +0200
+
+    Keep track of changed resource files in makefile
+    
+    If graphics or sounds in the "data/" folder change,
+    let the main makefile update the .c source files in
+    "data/" to reflect the new state of the resource
+    files and as a result also rebuild the tennix binary.
+
+commit 33e1a0cb5a25b267e5c3110a2610b1234985566f
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Sep 8 19:26:33 2007 +0200
+
+    Add support for unix-style installation (to /usr/local)
+    
+    Added support for the "install" makefile target and added
+    a "tennix.desktop" file for a Tennix menu entry/icon.
+
+commit fd988e78c4beca423d4c2b2aa65b98c339ca73b8
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Sep 6 22:24:36 2007 +0200
+
+    Tennix 0.3.4
+    
+    Removed ChangeLog and pushed version in makefile to 0.3.4
+
+commit 2532885046fbdd21024386aa868bba7dc94895bb
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Sep 6 00:58:29 2007 +0200
+
+    Resources in binary support, button drawing functions
+    
+    Added support for converting data files to c source, which
+    will then be included and compiled into the binary. This
+    makes Tennix run without the "data" folder, and the game
+    resources (sounds and data) cannot simply be edited for the
+    binary distribution.
+    
+    Added first cut of button drawing routines which can be
+    useful for menu navigation later on. (including text)
+    
+    Fix space character in Smallish font.
+
+commit c1971deaabf98c7faae1b3cf7d61f7771bb9322d
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Sep 5 17:14:12 2007 +0200
+
+    Font improvements, faded lines, simplified menu+quitting
+    
+    In-game scores are now displayed using the fond code, the
+    "score.png" graphic and show_digit() function got removed.
+    
+    Add dkc2 font, and improve font and graphics code (image
+    width, image height, sprite width, simplified char search.
+    
+    New draw_line_faded() method that draws a line with faded
+    colors, fixed old draw_line() code and make draw_line() a
+    macro that calls draw_line_faded().
+    
+    Add support for quitting tennix by closing the tennix window.
+    
+    Elektrons beatified, added faded line drawing. Move around
+    items in the menu, remove sound + racket animation.
+    
+    Fade to black the menu when quitting.
+    
+    Clean-up stuff in tennix.h.
+
+commit 78ce08b07b3df58a41799ad0656d515097c906e2
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Sep 2 17:00:40 2007 +0200
+
+    Smoothen animations, fix "release" target for Mac OS X
+    
+    Fix animations to be more smooth in font_draw_string()
+    and rename to BUNGEE and PENDULUM (that's what they
+    look like, after all).
+    
+    Make the "release-osx" target create a zipfile that is
+    named "tennix-x.y.z-macosx.zip" (added "-macosx").
+
+commit 22328915ac56464987613cdf52e7316a4ec84dcf
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Sep 1 19:26:29 2007 +0200
+
+    draw_line() function and pixel getting/setting
+    
+    Added new function to directly draw a line to the screen,
+    and define macros: GET_PIXEL_DATA, GET_PIXEL_RGB, SET_PIXEL_RGB.
+
+commit 021d8330718e00020821f5798db7e3db7cae4d3e
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Sep 1 01:56:38 2007 +0200
+
+    Tennix 0.3.3: Dynamic Text Engine
+    
+    This is Tennix 0.3.3, adding the first version of our dynamic
+    text engine, which enables us drawing animated bit-mapped fonts
+    to the screen. Currently used in menus and as gameplay status.
+    
+    This also disables loading the custom icon (SDL_WM_SetIcon)
+    when Tennix is ran on Mac OS X, as Tennix on OS X already has a
+    beatiful icon and OS X doesn't display per-window icons.
+
+commit f40f4e2b5f826fc77837312f2b1fbe9c9c97e29d
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Jul 7 15:51:26 2007 +0200
+
+    Tennix 0.3.2 and website transition
+    
+    Bumped version to 0.3.2 and changed all website
+    URLs to http://icculus.org/tennix/, as this is the new
+    website of Tennix!. Also removed the "settings" menu
+    item from the menu until it will become active.
+
+commit 83b82ffc68b6d84ca7f282b23c61208be2fdd575
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jun 28 20:03:31 2007 +0200
+
+    Add "Playing Tennix" section in README
+    
+    Added a Playing Tennix section in README to explain
+    keyboard controls for playing tennix in two-player mode.
+
+commit 0cb5597fdd83c0dc35529f15398821232ee2a33f
+Author: Thomas Perl <thp@perli.net>
+Date:   Mon Jun 25 22:03:28 2007 +0200
+
+    Support for ball service; AI improved; gameplay fading
+    
+    Add support for doing serving the ball (using a stopped,
+    non-moving ball that the player has to hit to start the
+    game) and re-factor ball-resetting code into a seperate
+    function.
+    
+    Improve AI player movement to make the game livelier :)
+    
+    Fade between two scores and block input (both human and
+    AI input) while the scene is being faded to add a smooth
+    crossfade between scores. Don't wait for keypresses as
+    before.
+    
+    Fade out audience sound when returning to main menu.
+
+commit 7465e728041f6fef4eb04f313018a8ec95a5c23f
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Jun 17 23:23:21 2007 +0200
+
+    Added application window icon setup code
+    
+    Added a simple tennis ball (from the menu) as application
+    window icon and set this as the window icon in the graphics
+    initialization code.
+
+commit 72c4e2ae5944792d3c5b8b2e0421dfa9abe8c320
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Jun 17 17:26:43 2007 +0200
+
+    Move release information to makefile, update win32 target
+    
+    Move release version information to makefile where it will
+    be used for release file naming and remove it from tennix.h,
+    so we have the release version information in one central
+    location for both code and release work.
+    
+    Update the win32 target to create tennix-x.y.z-win32.zip.
+
+commit ff101df4638c005412b9566adb90b0c3564c9a1c
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Jun 17 16:30:55 2007 +0200
+
+    Tennix 0.3.1
+    
+    Added ChangeLog file to keep track of Tennix' history, added
+    some documentation about how to format and generate the
+    changelog file, updated the README file and pushed version
+    string to 0.3.1 in tennix.h.
+
+commit 4975e98d44645ba8e579dcd93cb9d8ad2d28cb71
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Jun 16 20:57:28 2007 +0200
+
+    Add fading effect for menu/game transitions
+    
+    Add fading effect by utilizing alpha blending and an
+    additional screen buffer. This effect is used for the
+    menu->game and game->menu transitions currently.
+
+commit fe3ad4aecf2867958ac1c2236b3c3d002e3739d4
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Jun 16 15:57:14 2007 +0200
+
+    More elektron-based full screen menu bling bling
+    
+    Added fullscreen elektron movements when not hovering
+    over a menu item with the elektrons zooming in to the
+    menu item when hovering. Also different colors and other
+    options for the single elektrons.
+    
+    Removed the menu-highlight.png image, as we don't need
+    it anymore :)
+
+commit 49f39ccc27cb9b07909a6fd8e92de143152c0473
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Jun 15 20:21:29 2007 +0200
+
+    Removed powershot sound
+    
+    Removed the optional powershot sound in favor of the
+    better-suited default racket sounds.
+
+commit ab7881e8775b22f1d18c03953299efcd5c33c7d1
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Jun 15 14:06:22 2007 +0200
+
+    New main menu with highlight and elektron bling bling
+    
+    Added rectangle function to graphics library and added
+    code for an elektron swarm. This adds nice bling bling
+    effects to the main menu, which in turn has also been
+    updated.
+
+commit 7b3af48d891a32225ad1f651a9ee5eaf42f48971
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Jun 15 09:25:21 2007 +0200
+
+    Modularize human input and AI input (AI vs. AI testing)
+    
+    Add input_human and input_ai functions that handle human
+    and computer-controlled players and added several flags
+    and settings to the Player struct.
+    
+    This makes it possible to make a match AI vs. AI to test
+    the quality of our AI code. AI vs. AI is currently the
+    default for single player mode (still in testing mode :).
+
+commit 6642af398c0cd252760c4b76dbda22df78efcbe5
+Author: Thomas Perl <thp@perli.net>
+Date:   Fri Jun 15 00:13:02 2007 +0200
+
+    First cut of single-player mode support (Player 2 = AI)
+    
+    This adds a gameplay mode that makes the 2nd player
+    controlled by an AI tennix bot which is quite good at
+    playing tennix.
+    
+    The single-player (AI) mode is activated with the hi-
+    scores menu item currently. Still no difficulty settings.
+
+commit cd3599fc44ee4a19349602e56b835fd34bc86f82
+Author: Thomas Perl <thp@perli.net>
+Date:   Thu Jun 14 23:49:34 2007 +0200
+
+    Fix ball direction gameplay bug
+    
+    This commit fixes a small bug that appeared while testing
+    the game - ball direction sometimes was inversed, resulting
+    in the ball to go into the wrong direction.
+
+commit 34201e1944cf5d19bf7ec963801450464f9c16cb
+Author: Thomas Perl <thp@perli.net>
+Date:   Wed Jun 13 20:48:29 2007 +0200
+
+    Added tennis ball and its shadow to 3D test
+    
+    Added a yellow circle and a gray shadow to the
+    Tennix pygame 3D-rendering test. The shadow size
+    changes depending on the ball height (z) and both
+    ball and shadow size decrease when the ball moves
+    away from the observer.
+
+commit 34e2b0fd7f0c393d3fd96f815e61a414f33abbc1
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jun 12 22:39:07 2007 +0200
+
+    Setting version to 0.3.0 in tennix.h
+
+commit c6c38968a35e79761e15f38bc411bfea784f6932
+Merge: 99c7181 725b619
+Author: Thomas Perl <thp@perli.net>
+Date:   Tue Jun 12 22:37:03 2007 +0200
+
+    Merge branch 'gameplay'
+
+commit 99c7181c3166831e0de1badfe910a03f4856d46e
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Jun 10 23:09:08 2007 +0200
+
+    Bugfix for ball not moving completely off-screen
+    
+    This fix makes the game only stop when the ball is
+    completely off-screen, so it doesn't look like the
+    ball was stopped at the edge of the screen.
+
+commit 6a730bdc229260190898c90a7d2d70019634ccf2
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Jun 10 23:04:37 2007 +0200
+
+    Support for ball out with sound
+    
+    Added support for situations when the ball is out, i.e.
+    responsibilities don't change and playback out signal beep.
+
+commit 9cf76ce1916b7b8fc5a928e2999c52a02f10a16a
+Author: Thomas Perl <thp@perli.net>
+Date:   Sun Jun 10 22:19:40 2007 +0200
+
+    Compile-time debug mode, get_move_y gameplay fixes
+    
+    Added compile-time DEBUG variable to enable or disable
+    debugging code (currently position visualisation) and
+    added dest1/dest2 variables to the Ball struct.
+    
+    Fix return value and handling in get_move_y() to have
+    smoother gameplay and better ball movement control.
+
+commit 3077ccc348b7bb7c6ca51a65cbe0b5d66b64ddd0
+Author: Thomas Perl <thp@perli.net>
+Date:   Sat Jun 9 19:45:21 2007 +0200
+
+    Line drawing methods and new gameplay fixes
+    
+    Added horizontal and vertical line drawing methods for debugging
+    purposes and fix bugs for gameplay changes introduced in May, so
+    that we have working gameplay again.
+
+commit 725b619cb0ee4d18f7153ced470883d6b4f65ac7
+Author: thp <thp>
+Date:   Fri May 25 17:53:34 2007 +0000
+
+    testing 3d-to-2d conversion with a pygame draft script :)
+
+commit 6b37a62d87fae95fcac6f016d1162ff66bb9c92f
+Author: thp <thp>
+Date:   Thu May 17 20:24:36 2007 +0000
+
+    First cut of gameplay updates, partly broken
+
+commit 16b7a196287ad1524b70c183a01ff7bece13c639
+Author: thp <thp>
+Date:   Wed May 23 07:35:27 2007 +0000
+
+    Updated Mac OS X icon
+
+commit 9a42926deb4861c19f5715859bb8f349da2525ee
+Author: thp <thp>
+Date:   Wed May 23 07:25:35 2007 +0000
+
+    Add README files as data files
+
+commit e86e13a145968ae0e48a10ff6756b268d1d8920b
+Author: thp <thp>
+Date:   Wed May 23 07:16:12 2007 +0000
+
+    do not distribute bmp files
+
+commit a89cc02151a639a855832288f41bb91c58251d2c
+Author: thp <thp>
+Date:   Wed May 23 07:15:19 2007 +0000
+
+    use pngs instead of bmps
+
+commit eab7e374428a9fbc0aab749cd42c51c3ba4fb61e
+Author: thp <thp>
+Date:   Wed May 23 07:06:55 2007 +0000
+
+    Added README + COPYING for release
+    Added GPL header + copyright info to source
+    Added data/tennix-icon.png for the OSX AppIcon
+
+commit 40526f5e10e51ffc6ba86c4c9c66545440c263d0
+Author: thp <thp>
+Date:   Wed May 23 06:56:12 2007 +0000
+
+    removed images
+
+commit b0860d33ee1210bb049ea6464900b699117a6c93
+Author: thp <thp>
+Date:   Thu May 17 20:22:03 2007 +0000
+
+    High-quality Tennix icon
+
+commit 824c00c0728d9ab19f08a29186e31e234a032336
+Author: thp <thp>
+Date:   Thu May 17 20:21:05 2007 +0000
+
+    Make Tennix buildable on the MacOSX platform (Tennix.app)
+
+commit 39e3ed6acc34254ab5c2c347a28f9bc07fd80899
+Author: thp <thp>
+Date:   Tue May 15 12:16:00 2007 +0000
+
+    Better handling of display format w/ surface formats
+    Game loop is now timer-based instead of delay-based
+    Add GameState struct that holds the current game state
+
+commit 47797b612f121b8f3165660a181d93d1ecbeb741
+Author: thp <thp>
+Date:   Sun May 13 13:46:08 2007 +0000
+
+    Also add PNG files to binary release
+
+commit aa7a5bfcee6bb2ee1fde1220ffab7a3f478f501f
+Author: thp <thp>
+Date:   Sun May 13 13:44:55 2007 +0000
+
+    Support for SDL_mixer and SDL_image on win32
+
+commit eca7260400ca91971615b348e4cba02de3631e73
+Author: thp <thp>
+Date:   Sun May 13 13:27:01 2007 +0000
+
+    Proper graphics loading/caching, use IDs for images
+
+commit d9ccbb282187294e0713e85869b70d42d9613031
+Author: thp <thp>
+Date:   Sat May 12 18:00:38 2007 +0000
+
+    640x480 version, graphics updated
+
+commit e9ec680fb572e2ddbc0676b303986e9b0daa04bd
+Author: thp <thp>
+Date:   Sat May 12 15:22:16 2007 +0000
+
+    Make Tennix easier by reducing bouncing
+
+commit 0f6d46d48df3a63ebe3d5bf019753a95a5840d7b
+Author: thp <thp>
+Date:   Sat May 12 14:01:31 2007 +0000
+
+    Added sound support (needs SDL_mixer) + samples
+    Better gameplay, player responsibility and ball flight
+
+commit ffd052721293fc13ebd1845d150ce40e630e8a4c
+Author: thp <thp>
+Date:   Sat May 12 11:47:19 2007 +0000
+
+    Initial support for win32
+
+commit 6c6e259a61ceba46c3d4beb0e693378718c9969b
+Author: thp <thp>
+Date:   Fri May 11 18:59:54 2007 +0000
+
+    Removed DOS line endings
+    Shadowed and bouncing ball
+
+commit 345d4461e1d4d4292ba3abf924d0c49864354faf
+Author: thp <thp>
+Date:   Fri May 11 11:53:11 2007 +0000
+
+    initial import of tennix SDL port

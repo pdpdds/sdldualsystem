@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Tennix!
+GenericName=Tennis game
+Comment=Play tennis against the computer or a friend
+Exec=tennix
+Icon=tennix
+Terminal=false
+Type=Application
+Categories=Game;SportsGame;

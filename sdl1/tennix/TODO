@@ -1,0 +1,195 @@
+Todo and Idea List for Tennix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the file "HACKING" for help finding your way around the tennix source.
+
+HIGH-PRIORITY
+
+ 1. Proper collision detection for ball <-> racket
+    (Different sound + random movement when edge hit)
+    Maybe: make racket less visible until power value is reached
+ 7. Allow navigating menu with joystick / keyboard in addition to
+    mouse ("cursor" state that is modified instead of directly
+    using the mouse my mx coordinates)
+ 8. Flip coin to determine which player serves
+    (Using the Animation framework + some inkscape'd pictures)
+
+LOW-PRIORITY
+
+ 2. Give a visual clue where the ball goes when serving (blinking)
+    (Only when power reaches a certain level)
+ 5. Rain moves ball in the negative direction (z -= RAINSPEED)
+ 6. Reduce current "power" value when moving in Y direction
+ 9. Retrieve the ball when it goes offscreen or into the net
+    (Either via Balljunge mode, long referee hand or "hand of god")
+
+==================================================================
+MAEMO 5 VIBRA SUPPORT
+==================================================================
+
+https://git.maemo.org/projects/rfk/gitweb?p=rfk;a=blob;f=rfk.c
+
+ + GLIB-Mainloop integration (aka while(g_main_iteration(FALSE));)
+ http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html
+
+
+==================================================================
+ANIMATION FRAMEWORK
+==================================================================
+
+             FROM --------------> TO
+               position (grav+x/y)
+                       zoom
+                     rotation
+                    opacity (??)
+
+
+               + "tween functions" (sin, 1-p, exp, ...)
+
+==================================================================
+MENU AND NAVIGATION (COSMETIC)
+==================================================================
+
+ -> Make options menu same style as main menu
+ -> add picture to left side of main menu
+ -> NICE TO HAVE:
+    Physikalischer Tennis-ball im Hauptmenü zum herumspielen
+
+==================================================================
+PHYSICAL PROPERTIES
+==================================================================
+
+GROUND
+  * Restitution
+
+RACKET
+  * Restitution
+  * "power"?
+
+BALL
+  * (maximum) Speed (or: speed curve)
+  * Restitution
+  * Elasticity (???)
+
+==================================================================
+PARTY MODE AND INPUT ISSUES
+==================================================================
+
+Input selection like Fifa 96 (left / right)
+Proper gamepad axis support (can we do this in general?)
+Tournament config / setup / frontend (GTK+/Qt/[...]?)
+
+read keyboard input mappings from config file and generate bindings
+dynamically or even allow new bindings configured in the UI
+
+
+==================================================================
+CAREER MODE
+==================================================================
+
+  * Ball + racket buying/selling/upgrading
+  * Schläger: upgrades [name, verbesserung, kosten, haltbarkeit]
+  * Person, Training: Laufgeschwindigkeit, Vorhand/Rückhand
+  * add wear (abnutzung) to ball and racket, so one has to buy new
+    stuff every now and then ("design charge" vs "current charge")
+
+
+==================================================================
+LOCATIONS
+==================================================================
+
+  * Weather-verlauf pro location gegeben über W-vtlg. mit anschl.
+    berechnung des wetterverlaufs über simulierte stichprobe
+
+
+==================================================================
+IN-GAME FX
+==================================================================
+
+ * Grafische Darstellung der hit points des Balles am Ground
+ * Wind (modifies the ball movement)
+   Wind darstellen über die rot-weiße "Windfahne"
+ * Snow (christmas edition?)
+ * Sunshine (=current, normal behaviour)
+
+Schiri spannt Schirm auf, wenns es regnet
+
+Shadow computer-generiert?? (und für schläger zusätzlich?)
+Shadow x2/x4 wenn Nacht-Modus (weil scheinwerfer!!)
+
+Kleinere Schläger, dafür mehr Sprites für die Animation
+Schläger einfärben per SDL möglich? (HUE-verschiebung)
+
+Sound effect groups: Group the same types of sounds (e.g. voice,
+racket, ground) in one sound "GROUP" that shares a channel.
+
+Trainings-Modus mit Zielscheibe
+
+Möglichkeit, ans netz zu gehen, aber dann kann man sich nur mehr
+einen kleine bereich auf- und abbewegen (by mario).
+
+==================================================================
+TECHNICAL DETAILS
+==================================================================
+
+librsvg for rendering the SVG source files in-game instead of
+shipping pre-rendered PNG files (would allow us to modify XML)
+
+"Satz vom sportlichen Statistiker" (add statistics features to AI)
+
+Garbage collector für c/c++?
+
+umsteigen auf c++?
+
+Clip rectangles and image blits to visible screen area
+
+==================================================================
+
+CC-Licensed photos from Flickr:
+Public Tennis Court: http://flickr.com/photos/dan4th/1387725497/
+Tennis mit Palmen: http://flickr.com/photos/a2gemma/251846846/
+Melbourne Tennis-Stadium: http://flickr.com/photos/snips/32925154/
+Tennis Court Nightly: http://flickr.com/photos/exfordy/394570878/
+
+Tennis in der wueste: http://flickr.com/photos/mthird3rd/471720012/
+
+click sound: http://freesound.iua.upf.edu/samplesViewSingle.php?id=34099
+rain: http://www.freesound.org/samplesViewSingle.php?id=34067
+
+MAEMO WISHLIST
+~~~~~~~~~~~~~~
+Fix sounds (wav, mp3? - ogg doesn't seem to be supported)
+Widescreen support - 800x480 (make "outer areas" input-accepting)
+
+
+Brainstorming
+~~~~~~~~~~~~~
+Make sound deactivatable (or sound volume settings?)
+User-settable "sets to win" (2 or 3)
+Highscore list
+Setting player names
+Change between full screen and windowed mode in Windows
+Implement tie break
+Implement "hit in the right area on serving"
+Correct serve repeat when serving into the out
+
+
+problems w/ tennix on the n900 (as reported by timeless)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+0. most golf/sport games which use things like this have demos that walk you
+   through strokes
+1. the animation for the racket is wrong the head should move, not the handle
+3. scoring doesn't use "all" or "love"
+4. when i first used it, the background was black, and it was basically
+   impossible to see stuff
+5. there needs to be a pause key! (esc <-> backspace)
+6. sentences should start w/ capital letters (Out, Player %d scores,
+   Fault!,...)
+7. you're supposed to let me Fault and then Double Fault before the other guy
+   gets a point :)
+8. you let me fault on a return - which is wrong :)
+9. you gave the computer players names iirc, please use them instead of "player
+   2"s
+
+

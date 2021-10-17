@@ -1,0 +1,65 @@
+.TH "TENNIX" "6" "February 2011" "Tennix 2011 Edition"
+ 
+.SH "NAME"
+tennix \(em A funny 2D tennis game with network play support
+
+.SH "SYNOPSIS"
+.B tennix
+.RI [ options ]
+
+.SH "DESCRIPTION"
+.PP 
+\fBtennix\fR is a top-view 2D tennis game. It  
+features a two-player game mode and a single-player mode against the 
+computer.  
+.PP 
+This is the SDL port of a DOS game written in 2003. The original game can 
+still be found on the web at http://thp.io/2003/tennix/
+
+.SH "CONTROLS"
+.PP
+You can select the controls directly in the menu. Usually, in two-player
+game mode, player 1 plays using W, S, D, E, F and player 2 plays using
+O, L, K, I, J. You can also play using mouse, gamepad or Joystick.
+.PP
+When using network play, you have to configure your opponent with the
+input device "Network player", and make sure that the opponent does the
+same thing (but in reverse).
+.TP
+.I P
+(Un)pause the game
+.TP
+.I F
+Switch between windowed and fullscreen mode
+.SH "OPTIONS"
+.TP
+.I \-f, \-\-fullscreen
+Start the game in fullscreen mode
+.TP
+.I \-b, \-\-benchmark
+Start the game in benchmark/attract mode (AI vs AI, auto-start, no menu)
+.TP
+.I \-m, \-\-master <IP-of-slave>
+Network play mode; play as master and send input over to slave via the given IP
+.TP
+.I \-s, \-\-slave <IP-of-master>
+Network play mode; play as slave and send input over to master via the given IP
+.TP
+.I \-h, \-\-help
+Show summary of options
+.SH "HOMEPAGE" 
+.PP 
+http://icculus.org/tennix/ 
+.SH "AUTHOR" 
+.PP 
+The author and current maintainer of Tennix is Thomas Perl (thp.io/about).
+.PP 
+This manual page was written by Andrea Colangelo (warp10@ubuntu.com) for 
+the \fBUbuntu\fP system (but may be used by others).  Permission is 
+granted to copy, distribute and/or modify this document under 
+the terms of the GNU General Public License, Version 2 any  
+later version published by the Free Software Foundation. 
+.PP 
+On Debian systems, the complete text of the GNU General Public 
+License can be found in /usr/share/common-licenses/GPL-2. 
+
