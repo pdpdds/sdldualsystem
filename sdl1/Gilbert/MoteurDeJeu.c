@@ -603,12 +603,32 @@ int JoystickUpdateEvents(SDL_Joystick** joyst, Input* in, LevelGrid *levelgrid) 
 	if (in->key[SDLK_LEFT]) { in->JoyHatL = 1; }
 	if (in->key[SDLK_RIGHT]) { in->JoyHatR = 1; }
 
-	if (levelgrid->VitalInjuryTimer >= 0) {
-		if (((SDL_JoystickGetButton(*joyst, 2)) == 0) && (in->key[SDLK_LCTRL] == 0) && ((levelgrid->speedaxey > -1) && (levelgrid->speedaxey < 1))) { levelgrid->DoubleJumpCancel = 0; }
+	if (NumberofJoystick != 0)
+	{
+
+		if (levelgrid->VitalInjuryTimer >= 0) {
+			if (((SDL_JoystickGetButton(*joyst, 2)) == 0) && (in->key[SDLK_LCTRL] == 0) && ((levelgrid->speedaxey > -1) && (levelgrid->speedaxey < 1))) { levelgrid->DoubleJumpCancel = 0; }
+		}
+		else {
+			if (((SDL_JoystickGetButton(*joyst, 2)) == 0) && (in->key[SDLK_LCTRL] == 0)) { levelgrid->DoubleJumpCancel = 0; }
+		}
 	}
-	else {
-		if (((SDL_JoystickGetButton(*joyst, 2)) == 0) && (in->key[SDLK_LCTRL] == 0)) { levelgrid->DoubleJumpCancel = 0; }
+	else
+	{
+		if (levelgrid->VitalInjuryTimer >= 0) {
+			if ((in->key[SDLK_LCTRL] == 0) && ((levelgrid->speedaxey > -1) && (levelgrid->speedaxey < 1))) 
+			{ 
+				levelgrid->DoubleJumpCancel = 0; 
+			}
+		}
+		else {
+			if (in->key[SDLK_LCTRL] == 0) 
+			{ 
+				levelgrid->DoubleJumpCancel = 0; 
+			}
+		}
 	}
+
 	if (levelgrid->speedaxey > 3) { levelgrid->DoubleJumpCancel = 1; in->JoyButton1 = 0; }
 
 	if (in->JoyButton1 != 0) { return 1; }

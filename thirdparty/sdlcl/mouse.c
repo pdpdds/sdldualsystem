@@ -69,8 +69,13 @@ static Uint8 mousestate2to1 (Uint32 state) {
 }
 
 DECLSPEC Uint8 SDLCALL SDL_GetMouseState (int *x, int *y) {
-	*x = mouse_x;
-	*y = mouse_y;
+
+	if(x)
+		*x = mouse_x;
+
+	if(y)
+		*y = mouse_y;
+
 	return button_state;
 }
 

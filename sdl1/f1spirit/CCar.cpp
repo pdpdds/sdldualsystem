@@ -828,7 +828,7 @@ void CCar::draw_mini(float a, float x, float y, float z, float angle, float zoom
 
 bool CCar::cycle(bool kaccelerate, bool kbrake, int kgear, int kturn, CRoadPiece *current_piece, CTrack *track, List<RacingCCar> *cars, List<F1S_SFX> *sfx, int sfx_volume, bool check_trackcollision, int terrain, float position, List<RacingCCar> **car_grid, int car_grid_sx, int car_grid_sy)
 {
-	/* Modelo físico: */
+	/* Modelo f?ico: */
 	float old_x = tcar->x;
 	float old_y = tcar->y;
 	float old_z = tcar->z;

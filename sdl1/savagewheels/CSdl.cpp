@@ -243,7 +243,7 @@ void CSdl::GetInput()
 	//SDL_PollEvent( &event );
 	SDL_PumpEvents();
 
-	if ( _nJoystickIdxDeviceToUse != -1 )
+	if ( _nJoystickIdxDeviceToUse != 0 )
 	{
 		SDL_JoystickUpdate();
 
