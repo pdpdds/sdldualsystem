@@ -6,3 +6,4 @@ SDL Game Programming Using Dual System.
 | -------- | -------- | -------- |
 |clonekeen |Clone Keen     |  http://clonekeen.sourceforge.net/    |
 |lastmission |Last Mission     |  https://github.com/dmitrysmagin/last-mission    |
+|bermuda |Bermuda Syndrome     |  https://github.com/cyxx/bermuda    |
