@@ -338,16 +338,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="D:\DevPlatform\SDL\Windows\1.2\cannonball\res\cannonball.rc">
-      <Filter>Source Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="src\engine\audio">
       <UniqueIdentifier>{E8080393-B5BB-4D54-9181-27D2740EE80A}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{80ED0C7E-5A8C-42A9-92CF-A8CDE826CEC7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{14D5294C-9CC0-48A8-949C-94187AF6C136}</UniqueIdentifier>

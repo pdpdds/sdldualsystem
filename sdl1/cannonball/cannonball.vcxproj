@@ -116,8 +116,8 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;SDL.lib;SDLmain.lib;opengl32.lib;glu32.lib;dxguid.lib;dinput8.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\DevPlatform\SDL\SDLProgramming\SDL_Modue\SDL-1.2.15\lib\x86;/lib;/lib/$(Configuration);c:/coding/lib/SDL-1.2.15/lib;c:/coding/lib/SDL-1.2.15/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>dxguid.lib;dinput8.lib;Opengl32.lib;sdlcl.lib;sdl_mixer.lib;wsock32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>D:/DevPlatform/SDL/Windows/1.2/cannonball/build/Debug/cannonball.lib</ImportLibrary>
@@ -376,7 +376,6 @@
     <ClInclude Include="src\main\trackloader.hpp" />
     <ClInclude Include="src\main\utils.hpp" />
     <ClInclude Include="src\main\video.hpp" />
-    <ResourceCompile Include="D:\DevPlatform\SDL\Windows\1.2\cannonball\res\cannonball.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

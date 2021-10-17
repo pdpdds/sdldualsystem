@@ -10,10 +10,10 @@
 
 // SDL Library
 #include <SDL.h>
-#ifndef SDL2
+/*#ifndef SDL2
 #pragma comment(lib, "SDLmain.lib") // Replace main with SDL_main
 #endif
-#pragma comment(lib, "SDL.lib")
+#pragma comment(lib, "SDL.lib")*/
 #pragma comment(lib, "glu32.lib")
 
 // SDL Specific Code
@@ -262,6 +262,7 @@ static void main_loop()
     quit_func(0);
 }
 
+#undef main
 int main(int argc, char* argv[])
 {
     // Initialize timer and video systems
