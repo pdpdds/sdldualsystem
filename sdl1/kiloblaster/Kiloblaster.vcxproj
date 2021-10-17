@@ -183,7 +183,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl.lib;%(AdditionalDependencies);</AdditionalDependencies>
+      <AdditionalDependencies>sdlcl.lib;%(AdditionalDependencies);</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
