@@ -14,4 +14,5 @@ SDL Game Programming Using Dual System.
 |tennix |tennix     |  http://icculus.org/tennix/    |
 |xargon |xargon     |  https://github.com/Malvineous/xargon    |
 |metapacman |metapacman     |  http://os4depot.net/index.php?function=showcontent&file=game/misc/metapacman.lha    |
+|retrobattle |Retrobattle     | http://remar.se/andreas/retrobattle     |
 
