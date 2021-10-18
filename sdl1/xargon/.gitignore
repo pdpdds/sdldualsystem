@@ -12,7 +12,6 @@ ltmain.sh
 *.m4
 missing
 Makefile
-config.h
 config.log
 config.status
 .deps
