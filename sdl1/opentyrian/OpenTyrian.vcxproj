@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9FDBDAF0-C504-4A60-962E-8D8FF024EED0}</ProjectGuid>
+    <RootNamespace>Wolf4SDL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.29511.113</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../thirdparty/sdl1\SDL-1.2.15/include;../../thirdparty/sdl1\SDL_image-1.2.12;../../thirdparty/sdl1\SDL_mixer-1.2.12;../../thirdparty\sdl1\SDL_ttf-2.0.11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32;SDL_MAIN_HANDLED;WINDOWS;WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);_X86_</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <SDLCheck>false</SDLCheck>
+      <OmitFramePointers>true</OmitFramePointers>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DisableSpecificWarnings>4838;4244;4819;4005</DisableSpecificWarnings>
+      <AdditionalOptions>/Oy /arch:SSE %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>sdl_gfx.lib;sdlcl.lib;SDL_image.lib;SDL_ttf.lib;SDL_mixer.lib;%(AdditionalDependencies);kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../thirdparty/debug</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <BaseAddress>0x08000000</BaseAddress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>/safeseh:no /ALIGN:1024 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\SDL-1.2.12\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>SDL.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\SDL-1.2.12\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="Changes.txt" />
+    <Text Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\animlib.c" />
+    <ClCompile Include="src\arg_parse.c" />
+    <ClCompile Include="src\backgrnd.c" />
+    <ClCompile Include="src\config.c" />
+    <ClCompile Include="src\config_file.c" />
+    <ClCompile Include="src\destruct.c" />
+    <ClCompile Include="src\editship.c" />
+    <ClCompile Include="src\episodes.c" />
+    <ClCompile Include="src\file.c" />
+    <ClCompile Include="src\font.c" />
+    <ClCompile Include="src\fonthand.c" />
+    <ClCompile Include="src\game_menu.c" />
+    <ClCompile Include="src\helptext.c" />
+    <ClCompile Include="src\joystick.c" />
+    <ClCompile Include="src\jukebox.c" />
+    <ClCompile Include="src\keyboard.c" />
+    <ClCompile Include="src\lds_play.c" />
+    <ClCompile Include="src\loudness.c" />
+    <ClCompile Include="src\lvllib.c" />
+    <ClCompile Include="src\lvlmast.c" />
+    <ClCompile Include="src\mainint.c" />
+    <ClCompile Include="src\menus.c" />
+    <ClCompile Include="src\mouse.c" />
+    <ClCompile Include="src\mtrand.c" />
+    <ClCompile Include="src\musmast.c" />
+    <ClCompile Include="src\network.c" />
+    <ClCompile Include="src\nortsong.c" />
+    <ClCompile Include="src\nortvars.c" />
+    <ClCompile Include="src\opentyr.c" />
+    <ClCompile Include="src\opl.c" />
+    <ClCompile Include="src\palette.c" />
+    <ClCompile Include="src\params.c" />
+    <ClCompile Include="src\pcxload.c" />
+    <ClCompile Include="src\pcxmast.c" />
+    <ClCompile Include="src\picload.c" />
+    <ClCompile Include="src\player.c" />
+    <ClCompile Include="src\scroller.c" />
+    <ClCompile Include="src\setup.c" />
+    <ClCompile Include="src\shots.c" />
+    <ClCompile Include="src\sizebuf.c" />
+    <ClCompile Include="src\sndmast.c" />
+    <ClCompile Include="src\sprite.c" />
+    <ClCompile Include="src\starlib.c" />
+    <ClCompile Include="src\std_support.c" />
+    <ClCompile Include="src\tyrian2.c" />
+    <ClCompile Include="src\varz.c" />
+    <ClCompile Include="src\vga256d.c" />
+    <ClCompile Include="src\vga_palette.c" />
+    <ClCompile Include="src\video.c" />
+    <ClCompile Include="src\video_scale.c" />
+    <ClCompile Include="src\video_scale_hqNx.c" />
+    <ClCompile Include="src\xmas.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\animlib.h" />
+    <ClInclude Include="src\arg_parse.h" />
+    <ClInclude Include="src\backgrnd.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\config_file.h" />
+    <ClInclude Include="src\destruct.h" />
+    <ClInclude Include="src\editship.h" />
+    <ClInclude Include="src\episodes.h" />
+    <ClInclude Include="src\file.h" />
+    <ClInclude Include="src\font.h" />
+    <ClInclude Include="src\fonthand.h" />
+    <ClInclude Include="src\game_menu.h" />
+    <ClInclude Include="src\helptext.h" />
+    <ClInclude Include="src\hg_revision.h" />
+    <ClInclude Include="src\joystick.h" />
+    <ClInclude Include="src\jukebox.h" />
+    <ClInclude Include="src\keyboard.h" />
+    <ClInclude Include="src\lds_play.h" />
+    <ClInclude Include="src\loudness.h" />
+    <ClInclude Include="src\lvllib.h" />
+    <ClInclude Include="src\lvlmast.h" />
+    <ClInclude Include="src\mainint.h" />
+    <ClInclude Include="src\menus.h" />
+    <ClInclude Include="src\mouse.h" />
+    <ClInclude Include="src\mtrand.h" />
+    <ClInclude Include="src\musmast.h" />
+    <ClInclude Include="src\network.h" />
+    <ClInclude Include="src\nortsong.h" />
+    <ClInclude Include="src\nortvars.h" />
+    <ClInclude Include="src\opentyr.h" />
+    <ClInclude Include="src\opl.h" />
+    <ClInclude Include="src\palette.h" />
+    <ClInclude Include="src\params.h" />
+    <ClInclude Include="src\pcxload.h" />
+    <ClInclude Include="src\pcxmast.h" />
+    <ClInclude Include="src\picload.h" />
+    <ClInclude Include="src\player.h" />
+    <ClInclude Include="src\scroller.h" />
+    <ClInclude Include="src\setup.h" />
+    <ClInclude Include="src\shots.h" />
+    <ClInclude Include="src\sizebuf.h" />
+    <ClInclude Include="src\sndmast.h" />
+    <ClInclude Include="src\sprite.h" />
+    <ClInclude Include="src\starlib.h" />
+    <ClInclude Include="src\std_support.h" />
+    <ClInclude Include="src\tyrian2.h" />
+    <ClInclude Include="src\varz.h" />
+    <ClInclude Include="src\vga256d.h" />
+    <ClInclude Include="src\vga_palette.h" />
+    <ClInclude Include="src\video.h" />
+    <ClInclude Include="src\video_scale.h" />
+    <ClInclude Include="src\xmas.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
