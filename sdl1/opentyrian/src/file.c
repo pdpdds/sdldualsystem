@@ -196,7 +196,7 @@ size_t efwrite( const void *buffer, size_t size, size_t num, FILE *stream )
 	if (swap_buffer != NULL)
 		free(swap_buffer);
 	
-	if (num_written != num * size)
+	if (num_written != num)
 	{
 		fprintf(stderr, "error: An unexpected problem occurred while writing to a file.\n");
 		JE_tyrianHalt(1);
