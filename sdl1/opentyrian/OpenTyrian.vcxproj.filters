@@ -15,10 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Changes.txt" />
-    <Text Include="README.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="src\animlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>

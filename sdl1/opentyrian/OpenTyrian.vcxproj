@@ -106,10 +106,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="Changes.txt" />
-    <Text Include="README.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="src\animlib.c" />
     <ClCompile Include="src\arg_parse.c" />
     <ClCompile Include="src\backgrnd.c" />
