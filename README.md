@@ -17,6 +17,7 @@ SDL Game Programming Using Dual System.
 |retrobattle |Retrobattle     | http://remar.se/andreas/retrobattle     |
 |cannonball |Cannonball     | https://archive.org/details/cannonball-outrun     |
 |kiloblaster |Kiloblaster     | https://github.com/Malvineous/kiloblaster     |
+|wolf4sdl |Wolf4SDL     | http://wolf3d.net/wolf4sdl/     |
 
 
 
