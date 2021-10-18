@@ -16,7 +16,7 @@
 #define assert_ret(x) assert(x)
 #endif
 
-boolean fullscreen = true;
+boolean fullscreen = false;
 #if defined(_arch_dreamcast)
 boolean usedoublebuffering = false;
 unsigned screenWidth = 320;
@@ -93,6 +93,7 @@ void	VL_Shutdown (void)
 =
 =======================
 */
+
 void	VL_SetVGAPlaneMode (void)
 {
 #ifdef SPEAR
@@ -108,18 +109,15 @@ void	VL_SetVGAPlaneMode (void)
     }
 
     screen = SDL_SetVideoMode(screenWidth, screenHeight, screenBits,
-       0);
-    /*screen = SDL_SetVideoMode(screenWidth, screenHeight, screenBits,
           (usedoublebuffering ? SDL_HWSURFACE | SDL_DOUBLEBUF : 0)
         | (screenBits == 8 ? SDL_HWPALETTE : 0)
-        | (fullscreen ? SDL_FULLSCREEN : 0));*/
+        | (fullscreen ? SDL_FULLSCREEN : 0));
     if(!screen)
     {
         printf("Unable to set %ix%ix%i video mode: %s\n", screenWidth,
             screenHeight, screenBits, SDL_GetError());
         exit(1);
     }
-  
     if((screen->flags & SDL_DOUBLEBUF) != SDL_DOUBLEBUF)
         usedoublebuffering = false;
     SDL_ShowCursor(SDL_DISABLE);

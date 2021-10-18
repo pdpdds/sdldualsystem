@@ -5,14 +5,15 @@
 //
 ////////////////////////////////////////////////////////////////////
 
-//#include <sys/stat.h>
+#include <sys/stat.h>
 #include <sys/types.h>
 #ifdef _WIN32
-    //#include <io.h>
-    //#include <direct.h>
+    #include <io.h>
+    #include <direct.h>
 #else
     #include <unistd.h>
 #endif
+
 #include "wl_def.h"
 #pragma hdrstop
 
@@ -3176,14 +3177,14 @@ void SetupSaveGames()
             else
                 strcpy(savepath, name);
 
-            FILE* fp = fopen(savepath, "rb");
-            if(fp != 0)
+            const int handle = open(savepath, O_RDONLY | O_BINARY);
+            if(handle >= 0)
             {
                 char temp[32];
 
                 SaveGamesAvail[i] = 1;
-                fread(temp, 1, 32, fp);
-                fclose(fp);
+                read(handle, temp, 32);
+                close(handle);
                 strcpy(&SaveGameNames[i][0], temp);
             }
 #ifdef _arch_dreamcast
@@ -3983,14 +3984,13 @@ ShootSnd (void)
 // CHECK FOR EPISODES
 //
 ///////////////////////////////////////////////////////////////////////////
-#include <stat_def.h>
 void
 CheckForEpisodes (void)
 {
     struct stat statbuf;
 
     // On Linux like systems, the configdir defaults to $HOME/.wolf4sdl
-/*#if !defined(_WIN32) && !defined(_arch_dreamcast)
+#if !defined(_WIN32) && !defined(_arch_dreamcast)
     if(configdir[0] == 0)
     {
         // Set config location to home directory for multi-user support
@@ -4006,14 +4006,18 @@ CheckForEpisodes (void)
         }
         snprintf(configdir, sizeof(configdir), "%s" WOLFDIR, homedir);
     }
-#endif*/
+#endif
 
     if(configdir[0] != 0)
     {
         // Ensure config directory exists and create if necessary
         if(stat(configdir, &statbuf) != 0)
         {
-            if (mkdir(configdir, 0) != 0)
+#ifdef _WIN32
+            if(_mkdir(configdir) != 0)
+#else
+            if(mkdir(configdir, 0755) != 0)
+#endif
             {
                 Quit("The configuration directory \"%s\" could not be created.", configdir);
             }

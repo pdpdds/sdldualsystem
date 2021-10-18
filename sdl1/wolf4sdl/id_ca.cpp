@@ -15,11 +15,8 @@ loaded into the data segment
 */
 
 #include <sys/types.h>
-#include <minwindef.h>
 #if defined _WIN32
-    //#include <io.h>
-#elif defined SKYOS32
-
+    #include <io.h>
 #elif defined _arch_dreamcast
     #include <unistd.h>
 #else
@@ -106,9 +103,9 @@ huffnode *grhuffman;
 huffnode grhuffman[255];
 #endif
 
-FILE*    grhandle = 0;               // handle to EGAGRAPH
-FILE*    maphandle = 0;              // handle to MAPTEMP / GAMEMAPS
-FILE* audiohandle = 0;            // handle to AUDIOT / AUDIO
+int    grhandle = -1;               // handle to EGAGRAPH
+int    maphandle = -1;              // handle to MAPTEMP / GAMEMAPS
+int    audiohandle = -1;            // handle to AUDIOT / AUDIO
 
 int32_t   chunkcomplen,chunkexplen;
 
@@ -142,8 +139,8 @@ static int32_t GRFILEPOS(const size_t idx)
 
 void CAL_GetGrChunkLength (int chunk)
 {
-    fseek(grhandle,GRFILEPOS(chunk),SEEK_SET);
-    fread(&chunkexplen,1, sizeof(chunkexplen), grhandle);
+    lseek(grhandle,GRFILEPOS(chunk),SEEK_SET);
+    read(grhandle,&chunkexplen,sizeof(chunkexplen));
     chunkcomplen = GRFILEPOS(chunk+1)-GRFILEPOS(chunk)-4;
 }
 
@@ -160,16 +157,16 @@ void CAL_GetGrChunkLength (int chunk)
 
 boolean CA_WriteFile (const char *filename, void *ptr, int32_t length)
 {
-    FILE* handle = fopen(filename, "rw+");
-    if (handle == 0)
+    const int handle = open(filename, O_CREAT | O_WRONLY | O_BINARY, 0644);
+    if (handle == -1)
         return false;
 
-    if (!fwrite (ptr,1, length, handle))
+    if (!write (handle,ptr,length))
     {
-        fclose (handle);
+        close (handle);
         return false;
     }
-    fclose (handle);
+    close (handle);
     return true;
 }
 
@@ -189,21 +186,20 @@ boolean CA_LoadFile (const char *filename, memptr *ptr)
 {
     int32_t size;
 
-    FILE* handle = fopen(filename, "rb");
-    if (handle == 0)
+    const int handle = open(filename, O_RDONLY | O_BINARY);
+    if (handle == -1)
         return false;
 
-    fseek(handle, 0, SEEK_END);
-    size = ftell(handle);
-    fseek(handle, 0, SEEK_SET);
+    size = lseek(handle, 0, SEEK_END);
+    lseek(handle, 0, SEEK_SET);
     *ptr=malloc(size);
     CHECKMALLOCRESULT(*ptr);
-    if (!fread (*ptr,1, size, handle))
+    if (!read (handle,*ptr,size))
     {
-        fclose (handle);
+        close (handle);
         return false;
     }
-    fclose (handle);
+    close (handle);
     return true;
 }
 
@@ -451,7 +447,7 @@ void CA_RLEWexpand (word *source, word *dest, int32_t length, word rlewtag)
 void CAL_SetupGrFile (void)
 {
     char fname[13 + sizeof(DATADIR)];
-    FILE* handle;
+    int handle;
     byte *compseg;
 
 #ifdef GRHEADERLINKED
@@ -468,24 +464,23 @@ void CAL_SetupGrFile (void)
     strcpy(fname,gdictname);
     strcat(fname,graphext);
 
-    handle = fopen(fname, "rb");
-    if (handle == 0)
+    handle = open(fname, O_RDONLY | O_BINARY);
+    if (handle == -1)
         CA_CannotOpen(fname);
 
-    fread(grhuffman, 1, sizeof(grhuffman), handle);
-    fclose(handle);
+    read(handle, grhuffman, sizeof(grhuffman));
+    close(handle);
 
     // load the data offsets from ???head.ext
     strcpy(fname,gheadname);
     strcat(fname,graphext);
 
-    handle = fopen(fname, "rb");
-    if (handle == 0)
+    handle = open(fname, O_RDONLY | O_BINARY);
+    if (handle == -1)
         CA_CannotOpen(fname);
 
-    fseek(handle, 0, SEEK_END);
-    long headersize = ftell(handle);
-    fseek(handle, 0, SEEK_SET);
+    long headersize = lseek(handle, 0, SEEK_END);
+    lseek(handle, 0, SEEK_SET);
 
 #ifndef APOGEE_1_0
 	int expectedsize = lengthof(grstarts) - numEpisodesMissing;
@@ -501,8 +496,8 @@ void CAL_SetupGrFile (void)
             fname, headersize / 3, expectedsize);
 
     byte data[lengthof(grstarts) * 3];
-    fread(data, 1, sizeof(data), handle);
-    fclose(handle);
+    read(handle, data, sizeof(data));
+    close(handle);
 
     const byte* d = data;
     for (int32_t* i = grstarts; i != endof(grstarts); ++i)
@@ -519,8 +514,8 @@ void CAL_SetupGrFile (void)
     strcpy(fname,gfilename);
     strcat(fname,graphext);
 
-    grhandle = fopen(fname, "rb");
-    if (grhandle == 0)
+    grhandle = open(fname, O_RDONLY | O_BINARY);
+    if (grhandle == -1)
         CA_CannotOpen(fname);
 
 
@@ -532,7 +527,7 @@ void CAL_SetupGrFile (void)
     CAL_GetGrChunkLength(STRUCTPIC);                // position file pointer
     compseg=(byte *) malloc(chunkcomplen);
     CHECKMALLOCRESULT(compseg);
-    fread (compseg,1, chunkcomplen, grhandle);
+    read (grhandle,compseg,chunkcomplen);
     CAL_HuffExpand(compseg, (byte*)pictable, NUMPICS * sizeof(pictabletype), grhuffman);
     free(compseg);
 }
@@ -551,7 +546,7 @@ void CAL_SetupGrFile (void)
 void CAL_SetupMapFile (void)
 {
     int     i;
-    FILE* handle;
+    int handle;
     int32_t length,pos;
     char fname[13 + sizeof(DATADIR)];
 
@@ -561,15 +556,15 @@ void CAL_SetupMapFile (void)
     strcpy(fname,mheadname);
     strcat(fname,extension);
 
-    handle = fopen(fname, "rb");
-    if (handle == 0)
+    handle = open(fname, O_RDONLY | O_BINARY);
+    if (handle == -1)
         CA_CannotOpen(fname);
 
     length = NUMMAPS*4+2; // used to be "filelength(handle);"
     mapfiletype *tinf=(mapfiletype *) malloc(sizeof(mapfiletype));
     CHECKMALLOCRESULT(tinf);
-    fread(tinf, 1, length, handle);
-    fclose(handle);
+    read(handle, tinf, length);
+    close(handle);
 
     RLEWtag=tinf->RLEWtag;
 
@@ -580,8 +575,8 @@ void CAL_SetupMapFile (void)
     strcpy(fname, mfilecama);
     strcat(fname, extension);
 
-    maphandle = fopen(fname, "rb");
-    if (maphandle == 0)
+    maphandle = open(fname, O_RDONLY | O_BINARY);
+    if (maphandle == -1)
         CA_CannotOpen(fname);
 #else
     strcpy(fname,mfilename);
@@ -603,8 +598,8 @@ void CAL_SetupMapFile (void)
 
         mapheaderseg[i]=(maptype *) malloc(sizeof(maptype));
         CHECKMALLOCRESULT(mapheaderseg[i]);
-        fseek(maphandle,pos,SEEK_SET);
-        fread ((memptr)mapheaderseg[i],1, sizeof(maptype), maphandle);
+        lseek(maphandle,pos,SEEK_SET);
+        read (maphandle,(memptr)mapheaderseg[i],sizeof(maptype));
     }
 
     free(tinf);
@@ -652,8 +647,8 @@ void CAL_SetupAudioFile (void)
     strcpy(fname,afilename);
     strcat(fname,audioext);
 
-    audiohandle = fopen(fname, "rb");
-    if (audiohandle == 0)
+    audiohandle = open(fname, O_RDONLY | O_BINARY);
+    if (audiohandle == -1)
         CA_CannotOpen(fname);
 }
 
@@ -701,12 +696,12 @@ void CA_Shutdown (void)
 {
     int i,start;
 
-    if(maphandle != 0)
-        fclose(maphandle);
-    if(grhandle != 0)
-        fclose(grhandle);
-    if(audiohandle != 0)
-        fclose(audiohandle);
+    if(maphandle != -1)
+        close(maphandle);
+    if(grhandle != -1)
+        close(grhandle);
+    if(audiohandle != -1)
+        close(audiohandle);
 
     for(i=0; i<NUMCHUNKS; i++)
         UNCACHEGRCHUNK(i);
@@ -749,8 +744,8 @@ int32_t CA_CacheAudioChunk (int chunk)
     audiosegs[chunk]=(byte *) malloc(size);
     CHECKMALLOCRESULT(audiosegs[chunk]);
 
-    fseek(audiohandle,pos,SEEK_SET);
-    fread(audiosegs[chunk],1, size, audiohandle);
+    lseek(audiohandle,pos,SEEK_SET);
+    read(audiohandle,audiosegs[chunk],size);
 
     return size;
 }
@@ -763,8 +758,8 @@ void CA_CacheAdlibSoundChunk (int chunk)
     if (audiosegs[chunk])
         return;                        // already in memory
 
-    fseek(audiohandle, pos, SEEK_SET);
-    fread(bufferseg, 1, ORIG_ADLIBSOUND_SIZE - 1, audiohandle);   // without data[1]
+    lseek(audiohandle, pos, SEEK_SET);
+    read(audiohandle, bufferseg, ORIG_ADLIBSOUND_SIZE - 1);   // without data[1]
 
     AdLibSound *sound = (AdLibSound *) malloc(size + sizeof(AdLibSound) - ORIG_ADLIBSOUND_SIZE);
     CHECKMALLOCRESULT(sound);
@@ -790,7 +785,7 @@ void CA_CacheAdlibSoundChunk (int chunk)
     sound->inst.unused[2] = *ptr++;
     sound->block = *ptr++;
 
-    fread(sound->data, 1, size - ORIG_ADLIBSOUND_SIZE + 1, audiohandle);  // + 1 because of byte data[1]
+    read(audiohandle, sound->data, size - ORIG_ADLIBSOUND_SIZE + 1);  // + 1 because of byte data[1]
 
     audiosegs[chunk]=(byte *) sound;
 }
@@ -945,18 +940,18 @@ void CA_CacheGrChunk (int chunk)
 
     compressed = GRFILEPOS(next)-pos;
 
-    fseek(grhandle,pos,SEEK_SET);
+    lseek(grhandle,pos,SEEK_SET);
 
     if (compressed<=BUFFERSIZE)
     {
-        fread(bufferseg,1, compressed, grhandle);
+        read(grhandle,bufferseg,compressed);
         source = bufferseg;
     }
     else
     {
         source = (int32_t *) malloc(compressed);
         CHECKMALLOCRESULT(source);
-        fread(source,1, compressed, grhandle);
+        read(grhandle,source,compressed);
     }
 
     CAL_ExpandGrChunk (chunk,source);
@@ -995,11 +990,11 @@ void CA_CacheScreen (int chunk)
         next++;
     compressed = GRFILEPOS(next)-pos;
 
-    fseek(grhandle,pos,SEEK_SET);
+    lseek(grhandle,pos,SEEK_SET);
 
     bigbufferseg=malloc(compressed);
     CHECKMALLOCRESULT(bigbufferseg);
-    fread(bigbufferseg,1, compressed, grhandle);
+    read(grhandle,bigbufferseg,compressed);
     source = (int32_t *) bigbufferseg;
 
     expanded = *source++;
@@ -1067,7 +1062,7 @@ void CA_CacheMap (int mapnum)
 
         dest = mapsegs[plane];
 
-        fseek(maphandle,pos,SEEK_SET);
+        lseek(maphandle,pos,SEEK_SET);
         if (compressed<=BUFFERSIZE)
             source = (word *) bufferseg;
         else
@@ -1077,7 +1072,7 @@ void CA_CacheMap (int mapnum)
             source = (word *) bigbufferseg;
         }
 
-        fread(source,1, compressed, maphandle);
+        read(maphandle,source,compressed);
 #ifdef CARMACIZED
         //
         // unhuffman, then unRLEW

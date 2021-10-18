@@ -1,7 +1,7 @@
 // WL_MAIN.C
 
 #ifdef _WIN32
-   // #include <io.h>
+    #include <io.h>
 #else
     #include <unistd.h>
 #endif
@@ -9,7 +9,7 @@
 #include "wl_def.h"
 #pragma hdrstop
 #include "wl_atmos.h"
-#include <SDL2/SDL_syswm.h>
+#include <SDL_syswm.h>
 
 
 /*
@@ -137,43 +137,43 @@ void ReadConfig(void)
     else
         strcpy(configpath, configname);
 
-    FILE* file = fopen(configpath, "rb");
-    if (file != 0)
+    const int file = open(configpath, O_RDONLY | O_BINARY);
+    if (file != -1)
     {
         //
         // valid config file
         //
         word tmp;
-        fread(&tmp,1, sizeof(tmp), file);
+        read(file,&tmp,sizeof(tmp));
         if(tmp!=0xfefa)
         {
-            fclose(file);
+            close(file);
             goto noconfig;
         }
-        fread(Scores, 1, sizeof(HighScore) * MaxScores, file);
+        read(file,Scores,sizeof(HighScore) * MaxScores);
 
-        fread(&sd, 1, sizeof(sd), file);
-        fread(&sm, 1, sizeof(sm), file);
-        fread(&sds, 1, sizeof(sds), file);
+        read(file,&sd,sizeof(sd));
+        read(file,&sm,sizeof(sm));
+        read(file,&sds,sizeof(sds));
 
-        fread(&mouseenabled, 1, sizeof(mouseenabled), file);
-        fread(&joystickenabled, 1, sizeof(joystickenabled), file);
+        read(file,&mouseenabled,sizeof(mouseenabled));
+        read(file,&joystickenabled,sizeof(joystickenabled));
         boolean dummyJoypadEnabled;
-        fread(&dummyJoypadEnabled, 1, sizeof(dummyJoypadEnabled), file);
+        read(file,&dummyJoypadEnabled,sizeof(dummyJoypadEnabled));
         boolean dummyJoystickProgressive;
-        fread(&dummyJoystickProgressive, 1, sizeof(dummyJoystickProgressive), file);
+        read(file,&dummyJoystickProgressive,sizeof(dummyJoystickProgressive));
         int dummyJoystickPort = 0;
-        fread(&dummyJoystickPort, 1, sizeof(dummyJoystickPort), file);
+        read(file,&dummyJoystickPort,sizeof(dummyJoystickPort));
 
-        fread(dirscan, 1, sizeof(dirscan) ,file);
-        fread(buttonscan, 1, sizeof(buttonscan), file);
-        fread(buttonmouse, 1, sizeof(buttonmouse), file);
-        fread(buttonjoy, 1, sizeof(buttonjoy), file);
+        read(file,dirscan,sizeof(dirscan));
+        read(file,buttonscan,sizeof(buttonscan));
+        read(file,buttonmouse,sizeof(buttonmouse));
+        read(file,buttonjoy,sizeof(buttonjoy));
 
-        fread(&viewsize, 1, sizeof(viewsize), file);
-        fread(&mouseadjustment, 1, sizeof(mouseadjustment), file);
+        read(file,&viewsize,sizeof(viewsize));
+        read(file,&mouseadjustment,sizeof(mouseadjustment));
 
-        fclose(file);
+        close(file);
 
         if ((sd == sdm_AdLib || sm == smm_AdLib) && !AdLibPresent
                 && !SoundBlasterPresent)
@@ -262,35 +262,35 @@ void WriteConfig(void)
     else
         strcpy(configpath, configname);
 
-    FILE* file = fopen(configpath, "rw+");
-    if (file != 0)
+    const int file = open(configpath, O_CREAT | O_WRONLY | O_BINARY, 0644);
+    if (file != -1)
     {
         word tmp=0xfefa;
-        fwrite(&tmp, 1, sizeof(tmp), file);
-        fwrite(Scores, 1, sizeof(HighScore) * MaxScores, file);
+        write(file,&tmp,sizeof(tmp));
+        write(file,Scores,sizeof(HighScore) * MaxScores);
 
-        fwrite(&SoundMode, 1, sizeof(SoundMode), file);
-        fwrite(&MusicMode, 1, sizeof(MusicMode), file);
-        fwrite(&DigiMode, 1, sizeof(DigiMode), file);
+        write(file,&SoundMode,sizeof(SoundMode));
+        write(file,&MusicMode,sizeof(MusicMode));
+        write(file,&DigiMode,sizeof(DigiMode));
 
-        fwrite(&mouseenabled, 1, sizeof(mouseenabled), file);
-        fwrite(&joystickenabled, 1, sizeof(joystickenabled), file);
+        write(file,&mouseenabled,sizeof(mouseenabled));
+        write(file,&joystickenabled,sizeof(joystickenabled));
         boolean dummyJoypadEnabled = false;
-        fwrite(&dummyJoypadEnabled, 1, sizeof(dummyJoypadEnabled), file);
+        write(file,&dummyJoypadEnabled,sizeof(dummyJoypadEnabled));
         boolean dummyJoystickProgressive = false;
-        fwrite(&dummyJoystickProgressive, 1, sizeof(dummyJoystickProgressive), file);
+        write(file,&dummyJoystickProgressive,sizeof(dummyJoystickProgressive));
         int dummyJoystickPort = 0;
-        fwrite(&dummyJoystickPort, 1, sizeof(dummyJoystickPort), file);
+        write(file,&dummyJoystickPort,sizeof(dummyJoystickPort));
 
-        fwrite(dirscan, 1, sizeof(dirscan), file);
-        fwrite(buttonscan, 1, sizeof(buttonscan), file);
-        fwrite(buttonmouse, 1, sizeof(buttonmouse), file);
-        fwrite(buttonjoy, 1, sizeof(buttonjoy), file);
+        write(file,dirscan,sizeof(dirscan));
+        write(file,buttonscan,sizeof(buttonscan));
+        write(file,buttonmouse,sizeof(buttonmouse));
+        write(file,buttonjoy,sizeof(buttonjoy));
 
-        fwrite(&viewsize, 1, sizeof(viewsize), file);
-        fwrite(&mouseadjustment, 1, sizeof(mouseadjustment) ,file);
+        write(file,&viewsize,sizeof(viewsize));
+        write(file,&mouseadjustment,sizeof(mouseadjustment));
 
-        fclose(file);
+        close(file);
     }
 #ifdef _arch_dreamcast
     DC_SaveToVMU(configname, NULL);
@@ -1209,9 +1209,9 @@ static void InitGame()
 
     // initialize SDL
 #if defined _WIN32
-    putenv("SDL_VIDEODRIVER=directx");
+   // putenv("SDL_VIDEODRIVER=directx");
 #endif
-    //if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0)
+   // if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0)
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0)
     {
         printf("Unable to init SDL: %s\n", SDL_GetError());
@@ -1447,13 +1447,12 @@ void Quit (const char *errorStr, ...)
 #ifdef NOTYET
             SetTextCursor(0,0);
 #endif
-            printf(error);
+            puts(error);
 #ifdef NOTYET
             SetTextCursor(0,2);
 #endif
             VW_WaitVBL(100);
         }
-        for (;;);
         exit(1);
     }
 
@@ -1483,12 +1482,11 @@ void Quit (const char *errorStr, ...)
         memcpy((byte *)0xb8000,screen+7,7*160);
         SetTextCursor(9,3);
 #endif
-        printf(error);
+        puts(error);
 #ifdef NOTYET
         SetTextCursor(0,7);
 #endif
         VW_WaitVBL(200);
-        for (;;);
         exit(1);
     }
     else
@@ -1501,7 +1499,7 @@ void Quit (const char *errorStr, ...)
         SetTextCursor(0,23);
 #endif
     }
-    for (;;);
+
     exit(0);
 }
 

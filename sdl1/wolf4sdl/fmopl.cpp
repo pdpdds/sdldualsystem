@@ -75,7 +75,7 @@ Revision History:
 		add delay before key off in CSM mode (see CSMKeyControll)
 		verify volume of the FM part on the Y8950
 */
-#include <minwindef.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -944,7 +944,7 @@ INLINE void OPL_CALC_CH( OPL_CH *CH )
 	env  = volume_calc(SLOT);
 	out  = SLOT->op1_out[0] + SLOT->op1_out[1];
 	SLOT->op1_out[0] = SLOT->op1_out[1];
-	if(!CH->muted || SLOT->connect1!=(INT32*)output)
+	if(!CH->muted || SLOT->connect1!=output)
 		*SLOT->connect1 += SLOT->op1_out[0];
 	SLOT->op1_out[1] = 0;
 	if( env < ENV_QUIET )
@@ -1728,7 +1728,7 @@ static void OPLWriteReg(FM_OPL *OPL, int r, int v)
 		CH = &OPL->P_CH[r&0x0f];
 		CH->SLOT[SLOT1].FB  = (v>>1)&7 ? ((v>>1)&7) + 7 : 0;
 		CH->SLOT[SLOT1].CON = v&1;
-		CH->SLOT[SLOT1].connect1 = (INT32*)(CH->SLOT[SLOT1].CON ? &output[0] : &phase_modulation);
+		CH->SLOT[SLOT1].connect1 = CH->SLOT[SLOT1].CON ? &output[0] : &phase_modulation;
 		break;
 	case 0xe0: /* waveform select */
 		/* simply ignore write to the waveform select register if selecting not enabled in test register */

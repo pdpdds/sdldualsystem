@@ -132,9 +132,9 @@ void PictureGrabber (void)
         fname[7] = i % 10 + '0';
         fname[6] = (i / 10) % 10 + '0';
         fname[5] = i / 100 + '0';
-        FILE* file = fopen(fname, "rb");
-        if(file == 0) break;       // file does not exist, so use that filename
-        fclose(file);
+        int file = open(fname, O_RDONLY | O_BINARY);
+        if(file == -1) break;       // file does not exist, so use that filename
+        close(file);
     }
 
     // overwrites WSHOT999.BMP if all wshot files exist

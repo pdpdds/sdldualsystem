@@ -3,7 +3,7 @@
 
 // Defines which version shall be built and configures supported extra features
 #include "version.h"
-#include <minwindef.h>
+
 #include <assert.h>
 #include <fcntl.h>
 #include <math.h>
@@ -18,7 +18,7 @@
 #	include <string.h>
 #	include <stdarg.h>
 #endif
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #if !defined O_BINARY
 #	define O_BINARY 0
@@ -1396,7 +1396,7 @@ static inline fixed FixedMul(fixed a, fixed b)
 #ifdef _WIN32
     #define strcasecmp stricmp
     #define strncasecmp strnicmp
-    //#define snprintf _snprintf
+    #define snprintf _snprintf
 #else
     static inline char* itoa(int value, char* string, int radix)
     {
