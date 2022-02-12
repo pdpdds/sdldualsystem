@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Image Include="resources\BackGround.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Purple.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\Yellow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5c4a48ee-d7b9-4f73-9097-2a1335352ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5ae13d70-247a-4823-b1f1-4246cf7400fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{04e10df2-f8af-4401-9be0-b71008fc9d43}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stall_ai.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stall_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stall_render.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stall_ai.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stall_ini.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stall_render.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stall_types.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
