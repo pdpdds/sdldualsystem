@@ -51,7 +51,7 @@ jobs:
       
     - name: ThirdParty
       working-directory: ${{env.GITHUB_WORKSPACE}}thirdParty
-      run: msbuild sdlcl.sln /t:Build /p:Configuration=Debug /p:Platform=x86    
+      run: msbuild sdlcl.sln /t:Build /p:Configuration=${{env.BUILD_CONFIGURATION}} /p:Platform=x86    
 
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
