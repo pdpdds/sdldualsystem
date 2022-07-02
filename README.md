@@ -1,7 +1,7 @@
 # sdldualsystem
 SDL Game Programming Using Dual System.
 
-
+## SDL 1.2 Game List
 | Project | Game Name| Link |
 | -------- | -------- | -------- |
 |clonekeen |Clone Keen     |  http://clonekeen.sourceforge.net/    |
@@ -19,6 +19,33 @@ SDL Game Programming Using Dual System.
 |kiloblaster |Kiloblaster     | https://github.com/Malvineous/kiloblaster     |
 |wolf4sdl |Wolf4SDL     | http://wolf3d.net/wolf4sdl/     |
 
+## Build
+* Visual Studio 2019 or Higher Needed
+* vckpg
+
+```
+git clone https://github.com/microsoft/vcpkg
+bootstrap-vcpkg.bat
+vcpkg integrate install
+vcpkg install sdl2
+vcpkg install sdl2-image
+vcpkg install sdl2-mixer
+vcpkg install sdl2-ttf
+vcpkg install sdl2-net
+vcpkg install sdl2-gfx  
+vcpkg install box2d
+vcpkg install lua
+vcpkg install libmikmod
+vcpkg install libflac
+vcpkg install smpeg2
+vcpkg install libvorbis
+vcpkg install curl
+vcpkg install tiff
+vcpkg install gettext
+```
+
+* open thirdprty/sdlcl.sln and build
+* open SDL1_Project.sln and build
 
 
 
