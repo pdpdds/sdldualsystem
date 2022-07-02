@@ -116,7 +116,7 @@
       <Optimization>MinSpace</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\;..\decoders;..\decoders\timidity;..\decoders\mpglib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\;..\decoders;..\decoders\timidity;..\decoders\mpglib;$(SolutionDir)/sdl1\SDL-1.2.15\include;$(SolutionDir)/sdl1\SDL_mixer-1.2.12;$(SolutionDir)/sdl1\SDL_mixer-1.2.12\VisualC\external\include;$(SolutionDir)/sdl1/SDL-1.2.15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;NDEBUG;_LIB;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_WAV;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_SMPEG;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_MODPLUG;SOUND_SUPPORTS_FLAC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\sdl_sound_dll.pch</PrecompiledHeaderOutputFile>
