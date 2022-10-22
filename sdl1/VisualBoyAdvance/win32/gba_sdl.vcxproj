@@ -19,13 +19,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -180,7 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\src\i386\2xSaImmx.asm">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)nasm.exe -D__DJGPP__ -f win32 -o $(OutDir)%(Filename).obj %(FullPath)
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm.exe -D__DJGPP__ -f win32 -o $(OutDir)%(Filename).obj %(FullPath)
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"c:\Program Files\Nasm\nasmw.exe" -D__DJGPP__ -f win32 -o $(OutDir)%(Filename).obj %(FullPath)

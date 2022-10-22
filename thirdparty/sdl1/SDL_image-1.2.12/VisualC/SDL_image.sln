@@ -1,12 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SDL_image", "SDL_image.vcproj", "{2BD5534E-00E2-4BEA-AC96-D9A92EA24696}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "showimage", "showimage\showimage.vcproj", "{FEE80C5D-762E-4E57-9BCB-928749E8203F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2BD5534E-00E2-4BEA-AC96-D9A92EA24696} = {2BD5534E-00E2-4BEA-AC96-D9A92EA24696}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "showimage", "showimage\showimage.vcxproj", "{FEE80C5D-762E-4E57-9BCB-928749E8203F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DC3694F-B7B8-4A57-8B5A-0BA3FA5F56D0}
 	EndGlobalSection
 EndGlobal
