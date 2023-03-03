@@ -18,9 +18,12 @@ SDL Game Programming Using Dual System.
 |cannonball |Cannonball     | https://archive.org/details/cannonball-outrun     |
 |kiloblaster |Kiloblaster     | https://github.com/Malvineous/kiloblaster     |
 |wolf4sdl |Wolf4SDL     | http://wolf3d.net/wolf4sdl/     |
+|stall | stall     | https://github.com/repu1sion/stall     |
+|mog | maze of galious     | https://github.com/OSSGames/GAME-SDL-ACTION-Maze_of_Galious     |
+
 
 ## Build
-* Visual Studio 2019 or Higher Needed
+* Visual Studio 2022 or Higher Needed
 * vckpg
 
 ```
@@ -39,6 +42,7 @@ vcpkg install libmikmod
 vcpkg install libflac
 vcpkg install smpeg2
 vcpkg install libvorbis
+vcpkg install libmodplug
 vcpkg install curl
 vcpkg install tiff
 vcpkg install gettext
