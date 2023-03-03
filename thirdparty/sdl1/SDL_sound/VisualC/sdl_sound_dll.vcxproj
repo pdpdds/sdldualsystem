@@ -57,8 +57,8 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\win32lib\</OutDir>
-    <IntDir>.\Release\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,7 +117,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <AdditionalIncludeDirectories>..\;..\decoders;..\decoders\timidity;..\decoders\mpglib;$(SolutionDir)/sdl1\SDL-1.2.15\include;$(SolutionDir)/sdl1\SDL_mixer-1.2.12;$(SolutionDir)/sdl1\SDL_mixer-1.2.12\VisualC\external\include;$(SolutionDir)/sdl1/SDL-1.2.15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;NDEBUG;_LIB;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_WAV;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_SMPEG;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_MODPLUG;SOUND_SUPPORTS_FLAC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;SDL_SOUND_DLL_EXPORTS;NDEBUG;_LIB;SOUND_SUPPORTS_AU;SOUND_SUPPORTS_AIFF;SOUND_SUPPORTS_SHN;SOUND_SUPPORTS_MIDI;SOUND_SUPPORTS_WAV;SOUND_SUPPORTS_VOC;SOUND_SUPPORTS_MIKMOD;SOUND_SUPPORTS_MPGLIB;SOUND_SUPPORTS_SMPEG;SOUND_SUPPORTS_OGG;SOUND_SUPPORTS_RAW;SOUND_SUPPORTS_FLAC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Release\sdl_sound_dll.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
@@ -142,9 +142,10 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Console</SubSystem>
-      <OutputFile>win32lib/sdl_sound.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>.\win32lib\sdl_sound.lib</ImportLibrary>
-      <AdditionalDependencies>sdl.lib;vorbis.lib;vorbisfile.lib;ogg.lib;smpeg.lib;libFLAC.lib;mikmod.lib;modplug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sdlcl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -152,6 +153,37 @@
     <ClCompile Include="..\decoders\aiff.c" />
     <ClCompile Include="..\decoders\au.c" />
     <ClCompile Include="..\decoders\flac.c" />
+    <ClCompile Include="..\decoders\libmodplug\fastmix.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_669.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_abc.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_amf.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_ams.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_dbm.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_dmf.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_dsm.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_far.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_it.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_mdl.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_med.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_mid.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_mod.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_mt2.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_mtm.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_okt.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_pat.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_psm.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_ptm.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_s3m.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_stm.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_ult.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_umx.c" />
+    <ClCompile Include="..\decoders\libmodplug\load_xm.c" />
+    <ClCompile Include="..\decoders\libmodplug\modplug.c" />
+    <ClCompile Include="..\decoders\libmodplug\sndfile.c" />
+    <ClCompile Include="..\decoders\libmodplug\sndmix.c" />
+    <ClCompile Include="..\decoders\libmodplug\snd_dsp.c" />
+    <ClCompile Include="..\decoders\libmodplug\snd_flt.c" />
+    <ClCompile Include="..\decoders\libmodplug\snd_fx.c" />
     <ClCompile Include="..\decoders\midi.c" />
     <ClCompile Include="..\decoders\mikmod.c" />
     <ClCompile Include="..\decoders\mpglib.c" />
@@ -184,6 +216,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\acconfig.h" />
+    <ClInclude Include="..\decoders\libmodplug\libmodplug.h" />
+    <ClInclude Include="..\decoders\libmodplug\load_pat.h" />
+    <ClInclude Include="..\decoders\libmodplug\modplug.h" />
+    <ClInclude Include="..\decoders\libmodplug\tables.h" />
     <ClInclude Include="..\decoders\mpglib\huffman.h" />
     <ClInclude Include="..\decoders\mpglib\l2tables.h" />
     <ClInclude Include="..\decoders\mpglib\mpg123_sdlsound.h" />

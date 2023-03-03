@@ -17,7 +17,6 @@
  * since they do some extra magic in the file WRT the main() function: */
 #include <SDL.h>
 
-#undef main
 int main(int argc, char *argv[]) {
 	unsigned i, is_reading_level=0, is_reading_seed=0, is_reading_file=0;
 	unsigned fullscreen=0, width=1000, height=500, player_count = 2, debug = 0;

@@ -95,10 +95,10 @@
       <DisableSpecificWarnings>4244;4275;4273;4251;4005;4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);sdlcl.lib</AdditionalDependencies>
+      <AdditionalDependencies>sdl2maind.lib;%(AdditionalDependencies);sdlcl.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

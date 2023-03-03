@@ -22,6 +22,9 @@
       <UniqueIdentifier>{a2c76ed6-c4e5-452e-83c5-f8434835b744}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="Source Files\decoders\modplug">
+      <UniqueIdentifier>{7e6fc347-9957-4d4c-9db6-0baebe3e36a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\decoders\mpglib\dct64_i386.c">
@@ -123,6 +126,99 @@
     <ClCompile Include="..\decoders\timidity\instrum_dls.c">
       <Filter>Source Files\decoders\timidity</Filter>
     </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\fastmix.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_669.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_abc.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_amf.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_ams.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_dbm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_dmf.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_dsm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_far.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_it.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_mdl.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_med.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_mid.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_mod.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_mt2.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_mtm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_okt.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_pat.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_psm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_ptm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_s3m.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_stm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_ult.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_umx.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\load_xm.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\modplug.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\snd_dsp.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\snd_flt.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\snd_fx.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\sndfile.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\decoders\libmodplug\sndmix.c">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\decoders\mpglib\huffman.h">
@@ -178,6 +274,18 @@
     </ClInclude>
     <ClInclude Include="..\SDL_sound_internal.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\decoders\libmodplug\libmodplug.h">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\decoders\libmodplug\load_pat.h">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\decoders\libmodplug\modplug.h">
+      <Filter>Source Files\decoders\modplug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\decoders\libmodplug\tables.h">
+      <Filter>Source Files\decoders\modplug</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

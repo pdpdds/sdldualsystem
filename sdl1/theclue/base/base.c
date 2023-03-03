@@ -503,7 +503,6 @@ static void loadConfig(const char *rootPath)
 	dskClose(file);
 }
 
-#undef main
 int main(int argc, char **argv)
 {
 	char result[256] = "./", res;

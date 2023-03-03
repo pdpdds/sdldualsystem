@@ -1693,7 +1693,6 @@ void stall_reset()
 	bonus_init();
 }
 
-#undef main
 int main(int argc, char *argv[])
 {
 	printf("stall started. version %s \n", version);

@@ -5,7 +5,6 @@
 using bejeweled::Engine;
 using bejeweled::GameException;
 
-#undef main
 int main(int argc, char* argv[]) 
 {
     try {
