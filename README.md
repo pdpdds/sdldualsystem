@@ -21,7 +21,7 @@ SDL Game Programming Using Dual System.
 |stall | stall     | https://github.com/repu1sion/stall     |
 
 ## Build
-* Visual Studio 2019 or Higher Needed
+* Visual Studio 2022 or Higher Needed
 * vckpg
 
 ```
@@ -40,6 +40,7 @@ vcpkg install libmikmod
 vcpkg install libflac
 vcpkg install smpeg2
 vcpkg install libvorbis
+vcpkg install libmodplug
 vcpkg install curl
 vcpkg install tiff
 vcpkg install gettext
