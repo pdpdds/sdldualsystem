@@ -18,6 +18,7 @@ SDL Game Programming Using Dual System.
 |cannonball |Cannonball     | https://archive.org/details/cannonball-outrun     |
 |kiloblaster |Kiloblaster     | https://github.com/Malvineous/kiloblaster     |
 |wolf4sdl |Wolf4SDL     | http://wolf3d.net/wolf4sdl/     |
+|stall | stall     | https://github.com/repu1sion/stall     |
 
 ## Build
 * Visual Studio 2019 or Higher Needed
