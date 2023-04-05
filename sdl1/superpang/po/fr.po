@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Hugo Ruscitti 2005
+# This file is distributed under the same license as the Ceferino package.
+# YBSAR <gybsar@gmail.com>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ceferino\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-14 19:21-0300\n"
+"PO-Revision-Date: 2006-1-14 HO:MI+ZONE\n"
+"Last-Translator: YBSAR <gybsar@gmail.com>\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/audio.cc:62
+#, c-format
+msgid "+ Starting audio system: "
+msgstr "+ Lancement du son : "
+
+#: src/audio.cc:79
+#, c-format
+msgid "- Audio system disable from options\n"
+msgstr "+ Son désactivé par les options\n"
+
+#: src/audio.cc:87
+#, c-format
+msgid "- Sound system disable from options\n"
+msgstr "- Bruitages désactivés par les options\n"
+
+#: src/audio.cc:96
+#, c-format
+msgid "- Music system disable from options\n"
+msgstr "- Musiques désactivées par les options\n"
+
+#: src/audio.cc:142
+#, c-format
+msgid "+ Loading sound files: "
+msgstr "+ Chargement des bruitages : "
+
+#: src/audio.cc:154 src/audio.cc:187
+#, c-format
+msgid "Can't load '%s': %s\n"
+msgstr "Ne peut pas charger '%s' : %s\n"
+
+#: src/audio.cc:156
+#, c-format
+msgid "- Disable sound system because of errors\n"
+msgstr "- Désactive les bruitages à cause d'erreurs\n"
+
+#: src/audio.cc:175
+#, c-format
+msgid "+ Loading music files: "
+msgstr "+ Chargement des musiques : "
+
+#: src/audio.cc:190
+#, c-format
+msgid "- Disable music system because of errors\n"
+msgstr "- Désactive les musiques à cause d'erreurs\n"
+
+#: src/comojugar.cc:37 src/menu.cc:86
+msgid "how to play"
+msgstr "comment jouer"
+
+#: src/comojugar.cc:70 src/marcas.cc:124
+#, fuzzy
+msgid "(escape to continue)"
+msgstr "(échap. pour sortir)"
+
+#: src/creditos.cc:77 src/marcas.cc:65 src/opciones.cc:64
+#, c-format
+msgid "error: Can't copy screen: '%s'\n"
+msgstr ""
+
+#: src/creditos.cc:168 src/opciones.cc:112
+msgid "(space to continue)"
+msgstr ""
+
+#: src/creditos.cc:182
+msgid ""
+"Developed by:\n"
+"    Hugo Ruscitti\n"
+"\n"
+"Graphics by:\n"
+"    Walter Velazquez\n"
+"\n"
+"Music by:\n"
+"    Javier Da Silva"
+msgstr ""
+"programmation :\n"
+"    Hugo Ruscitti\n"
+"\n"
+"Graphismes :\n"
+"    Walter Velazquez\n"
+"\n"
+"Musiques :\n"
+"    Javier Da Silva"
+
+#: src/creditos.cc:189
+msgid ""
+"You can know more about what we are doing visitting the web site of the "
+"Losers Proyect:\n"
+"\n"
+"www.losersjuegos.com.ar"
+msgstr ""
+"pour en savoir plus sur ce que nous faisons visitez le site web du projet "
+"Losers :\n"
+"www.losersjuegos.com.ar"
+
+#: src/creditos.cc:197
+msgid ""
+"License:\n"
+"\n"
+"This program is free software and is distributed under theterms of the GPL "
+"license. please read the copying file to obtain more information."
+msgstr ""
+"Licence :\n"
+"\n"
+"ce programme est un logiciel libre et est distribué sous les termes de la "
+"licence GPL. Lisez s'il vous plaît les fichiers copying et readme pour "
+"obtenir plus d'informations."
+
+#: src/final.cc:71
+#, c-format
+msgid "+ Loading final: "
+msgstr "+ Chargement du final : "
+
+#: src/final.cc:87 src/intro.cc:89
+#, c-format
+msgid "\t Can't load '%s' : '%s'\n"
+msgstr "\t Ne peut pas charger '%s' : '%s'\n"
+
+#: src/final.cc:186
+msgid "Good job !, Don Ceferino arribe to spaceship ..."
+msgstr "bon travail ..., Don Ceferino arrive à la navette..."
+
+#: src/final.cc:190
+msgid "uses a Mate (a drink) loaded with powder."
+msgstr "utilise un mâle chargé de  poudre à canon."
+
+#: src/final.cc:194
+msgid "he escape with the spaceship rescuing the cow."
+msgstr "s'échappe de la navette pour secourir la vache."
+
+#: src/final.cc:198
+msgid "It seems like all is getting back to normal."
+msgstr "Il semble que tout redevienne normal."
+
+#: src/final.cc:202
+msgid ""
+"Though it seems like don ceferino is very hungry after all this action..."
+msgstr ""
+"bien qu'il semble don ceferino est très affamé après tout cette action..."
+
+#: src/final.cc:206
+msgid "At the end. Thanks for playing this game."
+msgstr "enfin. merci d'avoir joué à ce jeu."
+
+#: src/fuente2.cc:49 src/grafico.cc:74
+#, c-format
+msgid "error : error reshaping the image: '%s' "
+msgstr "erreur : erreur pendant la redimension de l'image : '%s' "
+
+#: src/fuente2.cc:61
+#, c-format
+msgid "+ loading: %s\n"
+msgstr ""
+
+#: src/fuente2.cc:107
+#, c-format
+msgid "invalid bpp: %d\n"
+msgstr ""
+
+#: src/fuente2.cc:164
+#, c-format
+msgid "Found %d fonts in bitmap\n"
+msgstr ""
+
+#: src/fuente2.cc:209
+#, c-format
+msgid "'%c' not found in font tiles\n"
+msgstr ""
+
+#: src/grafico.cc:63
+#, c-format
+msgid "error : can't open: '%s' "
+msgstr "erreur : ne peut pas ouvrir : '%s' "
+
+#: src/grafico.cc:113 src/grafico.cc:230
+#, c-format
+msgid "Can't show the graphic %d\n"
+msgstr "Ne peut pas afficher les graphismes %d\n"
+
+#: src/intro.cc:44
+#, c-format
+msgid "- Loading presentation: "
+msgstr "- Chargement de la présentation : "
+
+#: src/intro.cc:73
+#, c-format
+msgid "+ Loading intro: "
+msgstr "+ Chargement de l'introduction : "
+
+#: src/intro.cc:204
+msgid "Presents ..."
+msgstr "Presente ..."
+
+#: src/intro.cc:208
+msgid ""
+"the cowboy Don Ceferino lived very happy in his quite and modest house in "
+"the countryside"
+msgstr ""
+"le vacher don ceferino vivait heureux dans sa tranquille et modeste maison "
+"dans la campagne"
+
+#: src/intro.cc:214
+msgid ""
+"but one day he reades in the newspaper that aliens were kidnaping all the "
+"cows around"
+msgstr ""
+"mais un jour il lut dans le journal que des extraterrestres avaient kidnappé "
+"toutes les vaches des environs."
+
+#: src/intro.cc:220
+msgid "whith not exception. The aliens arrive at the farm of don ceferino..."
+msgstr ""
+"sans exception. les extraterrestres arrivèrent à la ferme de don ceferino..."
+
+#: src/intro.cc:226
+msgid "and kidnapped his only cow."
+msgstr "et kidnappèrent son unique vache."
+
+#: src/intro.cc:230
+msgid ""
+"but this doesn't end here.Don Ceferino is determinat to recover his precious "
+"cow."
+msgstr ""
+"mais ce n'est pas fini. don ceferino est déterminé à récupérer sa précieuse "
+"vache."
+
+#: src/juego.cc:82
+#, c-format
+msgid "error, can't create a copy of the\t\t\t\t\tscreen (juego::inciar)\n"
+msgstr "erreur, ne peut pas créer de copie d'écran (juego::iniciar)\n"
+
+#: src/juego.cc:155 src/juego.cc:518
+#, fuzzy, c-format
+msgid "level %d"
+msgstr "niveau %d"
+
+#: src/juego.cc:257
+msgid "time out"
+msgstr "temps écoulé"
+
+#: src/juego.cc:610
+#, fuzzy
+msgid "bonus"
+msgstr "bonus"
+
+#: src/juego.cc:646
+msgid "level complete"
+msgstr "niveau terminé"
+
+#: src/juego.cc:890 src/juego.cc:972 src/marcas.cc:149
+#, c-format
+msgid "Can't open the marcs file\n"
+msgstr "Ne peut ouvrir le fichier de scores\n"
+
+#: src/juego.cc:924
+msgid "you made a new record"
+msgstr "vous avez fait un nouveau record"
+
+#: src/juego.cc:925
+msgid "enter your name"
+msgstr "entrez votre nom"
+
+#: src/juego.cc:1022
+msgid "pause"
+msgstr "pause"
+
+#: src/juego.cc:1048
+#, fuzzy
+msgid "Game Over"
+msgstr "Perdu"
+
+#: src/juego.cc:1051
+msgid "If you want to continue push 'space' key"
+msgstr "If you want to continue push 'space' key"
+
+#: src/libgrafico.cc:68
+#, c-format
+msgid "error at creating the object 'grafico'\n"
+msgstr "erreur à la création de l'objet 'grafico'\n"
+
+#: src/libgrafico.cc:71
+#, c-format
+msgid "can't continue\n"
+msgstr "ne peut pas continuer\n"
+
+#: src/libgrafico.cc:116
+#, c-format
+msgid "+ Loading and reshapping images: "
+msgstr "+ Chargement et redimensionnement des images : "
+
+#: src/libgrafico.cc:118
+#, c-format
+msgid "+ Loading images: "
+msgstr "+ Chargement des images : "
+
+#: src/main.cc:56
+#, c-format
+msgid ""
+"Remember: run 'ceferinosetup' for more options, and 'ceferinoeditor' to edit "
+"any level.\n"
+msgstr ""
+
+#: src/main.cc:69
+#, c-format
+msgid ""
+"\n"
+"Thanks for playing\n"
+"\n"
+msgstr ""
+"\n"
+"Merci de jouer\n"
+"\n"
+
+#: src/marcas.cc:104
+msgid "best point"
+msgstr "meilleur score"
+
+#: src/menu.cc:73
+#, c-format
+msgid "error: can't create a copy of the screen : '%s'\n"
+msgstr ""
+"erreur : ne peut créer de copie d'écrne peut créer de copie d'écran : '%s'\n"
+
+#: src/menu.cc:85
+msgid "new game"
+msgstr "nouvelle partie"
+
+#: src/menu.cc:87
+msgid "options"
+msgstr ""
+
+#: src/menu.cc:88
+msgid "credits"
+msgstr "crédits"
+
+#: src/menu.cc:89
+msgid "high scores"
+msgstr "meilleurs scores"
+
+#: src/menu.cc:90
+msgid "exit"
+msgstr "sortir"
+
+#: src/mundo.cc:58
+#, c-format
+msgid "+ Starting the SDL library:"
+msgstr "+ Lancement de la bibliothèque SDL:"
+
+#: src/mundo.cc:287
+#, c-format
+msgid "It doesn't exist the configuration file '%s',execute 'ceferinosetup':\n"
+msgstr ""
+"Il n'existe pas de fichier de configuration '%s', exécute 'ceferinosetup':\n"
+
+#: src/mundo.cc:318
+#, c-format
+msgid "Incorrect '%s' parameter\n"
+msgstr "Paramètre incorrect : '%s'\n"
+
+#: src/mundo.cc:387
+#, c-format
+msgid "Error at changing scene\n"
+msgstr "Erreur pendant le changement de scène\n"
+
+#: src/mundo.cc:429
+#, c-format
+msgid "Can't find the file '%s'\n"
+msgstr "Ne peut pas trouver le fichier '%s'\n"
+
+#: src/nivel.cc:70
+#, c-format
+msgid "Can't load the level %d\n"
+msgstr "Ne peut pas charger le niveau %d\n"
+
+#: src/nivel.cc:182
+#, c-format
+msgid "Can't open the file '%s'"
+msgstr "Ne peut pas ouvrir le fichier '%s'"
+
+#: src/nivel.cc:360
+#, c-format
+msgid "error: there is 2 cowboys in the same level\n"
+msgstr "erreur : il y a 2 vachers dans le même niveau\n"
+
+#: src/nivel.cc:387
+#, c-format
+msgid ""
+"error, the actual level does't define the posicionof the object 'gaucho'\n"
+msgstr ""
+"erreur, le niveau actuel ne définit pas la position de l'objet 'gaucho'\n"
+
+#: src/nivel.cc:391
+#, c-format
+msgid "error, no enemy was created in this level, you musthave at least one\n"
+msgstr ""
+"erreur, aucune ennemi n'a été créé dans ce niveau, vous devez en avoir au "
+"moins 1\n"
+
+#: src/procesos.cc:70
+#, c-format
+msgid "error, already exist a cowboy in the scene, verify the level created\n"
+msgstr ""
+"erreur, il existe déjà un vacher dans cette scène, vérifié le niveau créé\n"
+
+#: src/tiro.cc:142
+#, c-format
+msgid "tiro: error, trying to print with state %d\n"
+msgstr "tiro: erreur, tentative d'impression avec l'état %d\n"
+
+#: src/utils.cc:231
+#, c-format
+msgid "Can't copy the image\n"
+msgstr "Ne peut pas copier l'image\n"
+
+#: src/utils.cc:327
+#, c-format
+msgid "Creating the marcs file '%s'\n"
+msgstr "Création du fichier de scores '%s'\n"
+
+#: src/utils.cc:332
+#, c-format
+msgid "Can't create the marcs file '%s'\n"
+msgstr "Ne peut pas créer de fichier de scores '%s'\n"
+
+#: src/opciones.cc:74
+msgid ""
+"This feature has been temporaly disabled, please run 'ceferinosetup' instead."
+msgstr ""

@@ -1,0 +1,57 @@
+sáb jul 14 17:39:30 ART 2007
+	- Ahora el protagonista puede ser controlado con las teclas "w,a,s,d"
+	"h,j,k,l" (como en el editor 'vi'), y las teclas "1, 2 y 3".
+	- El menu también puede ser controlado con las mismas teclas que se
+	utilizan para controla al personaje principal.
+	- Se cambia el texto de la parte inferior de la pantalla de las 
+	  escenas 'puntaje' y 'como jugar'.
+	- Ahora solicita el nombre del usuario inmediatamente despues de
+	terminar su sesión de juego.
+
+27-01-2006:
+	- Algunas mejoras a los procesos Item
+	- Mejora en el soporte de texto, ahora conforme a iso_8859_1
+	- Actualización de la internacionalización a Catalán y Español
+	- Otros arreglos menores.
+
+14-01-2006:
+	- Nuevos gráficos para la escena final
+	- Nuevo sistema de fuentes basado en mapas de bits
+	- Se corrigió el problema de ejecución que producía el programa bajo
+	el soporte para 'Francés'
+	- El usuario ahora puede continuar luego de perder todas sus vidas.
+	- Otros arreglos menores.
+	
+
+24-06-2005:
+	- Modificaciones en el último nivel
+	- Mejoras en el editor de niveles, cada usuario puede editar sus
+	niveles.
+	- mejoras en la impresión de pantalla.
+	- trucos añadidos para pasar de nivel, tirar bombas etc (ver
+	README_ES).
+	- los disparos son mas lentos.
+
+05-06-2005:
+	- Arreglos en el idioma Español
+	- Nueva traducción a Catalán
+	- Nueva traducción a Frances
+
+24-05-2005:
+	- Sección como jugar
+	- Arreglos menores
+
+25-03-2005:
+	- Arreglos en las traducciones.
+
+20-03-2005:
+	- Músicas agregadas.
+
+11-03-2005: (DD MM YY)
+	- Retardo en el bucle principal para reducir el uso de CPU.
+	- Mas tiempo para pasar cada nivel.
+	- Automake, autoconf implementados.
+	- Soporte para varios idiomas (gettext).
+	- Mas graficos.
+	- Mejoras en el modo Pausa.
+	- Otros arreglos menores.

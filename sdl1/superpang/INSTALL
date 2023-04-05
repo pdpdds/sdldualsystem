@@ -1,0 +1,53 @@
+Requerimientos:
+---------------
+
+Para compilar el programa necesita las bibliotecas de desarrollo SDL, puede
+descargarlas desde www.libsdl.org o desde nuestro sitio web
+www.loosersjuegos.com.ar:
+
+	* libSDL
+	* libSDL_image
+	* libSDL_mixer (http://www.libsdl.org/projects/SDL_mixer/)
+
+
+Si usted descargó la versión compilada para GNU/Linux necesita las bibliotecas:
+
+	* libSDL-1.2.so.0
+	* libSDL_image-1.2.so.0
+	* libSDL_mixer-1.2.so.0
+
+
+La versión para "sistemas" Windows incluye las bibliotecas necesarias como 
+archivos DLLs.
+
+
+Como compilar, installar y ejecutar el programa:
+-----------------------------------------------
+  ./configure
+  make
+  make install		(como usuario root)
+
+luego cualquier usuario puede ejecutar uno de los 3 programas incluidos
+
+  ceferino		(para jugar)
+  ceferinosetup 	(para configurar)
+  ceferinoeditor	(para editar niveles)
+
+
+
+Como compilar y ejecutar el programa sin instalarlo:
+----------------------------------------------------
+Posiblemente quiera ejecutar y probar el programa antes de instalarlo, para
+eso debe:
+
+configurar el programa de forma local y compilarlo:
+
+  ./configure --disable-install
+  make
+
+luego podrá ejecuta el programa:
+
+  cd src
+  ./ceferino		(para jugar)
+  ./ceferinosetup 	(para configurar)
+  ./ceferinoeditor	(para editar niveles)

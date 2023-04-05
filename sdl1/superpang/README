@@ -1,0 +1,42 @@
+Don Ceferino Hazaña - free game
+--------------------------------------
+  Copyright (C) - 2004, 2005, 2006 - Hugo Ruscitti, Walter Velazquez
+  Website: www.losersjuegos.com.ar
+
+
+Description:
+------------
+	Is a fun game similar to 'super pang' developed using the SDL library.
+
+License:
+--------
+	This program is free software and is distributed under the terms of 
+	the General Public Licence GNU, please read the COPYNG file before 
+	continue reading this.
+	
+Installing:
+-----------
+	Read the INSTALL file.
+
+How to play:
+-----------
+
+	The main character moves whith the arrow keys, fires whith the 'x' key
+	and makes a sweep with the 'z' or 'c' keys.
+
+	You can hold down the sweep keys ('z' or 'c') so that Ceferino keeps
+	doing the sweep.
+
+	Whith the 'q' key you can exit the game immediately.
+	
+	In the GNU/Linux system you can either choose 'full screen' or 'window'
+	by pressing the 'f' key.
+
+
+Cheats
+------
+	During game you must push (simultaneously):
+
+		ju - for (ju)mp 1 level
+		sj - for jump to level 26 - (s)uper (j)ump
+		bo - for (bo)om
