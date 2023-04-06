@@ -72,7 +72,7 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>sdlcl.lib;winmm.lib;wsock32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib.lib;libpng16.lib;sdlcl.lib;winmm.lib;wsock32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libmmd;libircmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -81,7 +81,7 @@
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>.\SDLDebug/VisualBoyAdvance-SDL.map</MapFileName>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug;$(SolutionDir)/thirdparty/external/lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <TypeLibraryName>.\SDLDebug/gba_sdl.tlb</TypeLibraryName>
