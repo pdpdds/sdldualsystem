@@ -55,7 +55,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../src;include/zlib;include/png;SDL-1.2.2/include;./dependencies\zlib;./win32\dependencies\libpng;../../../thirdparty\sdl1\SDL-1.2.15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../src;include/zlib;include/png;SDL-1.2.2/include;./dependencies\zlib;./win32\dependencies\libpng;../../../thirdparty\sdl1\SDL-1.2.15\include;$(SolutionDir)\thirdparty\external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;DEV_VERSION;WIN32;_CONSOLE;BKPT_SUPPORT;MMX;SDL;PROFILING;C_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
