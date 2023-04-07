@@ -30,7 +30,6 @@ const int HEIGHT = 600;
 const int BPP = 32;
 const int FS = 0;
 
-#undef main
 int main(int argc, char *argv[])
 {
  // char *datadir = setup_datadir(argc, argv);
@@ -72,4 +71,6 @@ int main(int argc, char *argv[])
 #endif
 
   SDL_Quit();
+
+  return 0;
 }

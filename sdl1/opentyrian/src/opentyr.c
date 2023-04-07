@@ -267,7 +267,6 @@ void opentyrian_menu( void )
 	} while (!quit);
 }
 
-#undef main
 int main( int argc, char *argv[] )
 {
 	mt_srand(time(NULL));

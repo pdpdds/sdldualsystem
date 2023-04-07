@@ -163,7 +163,7 @@
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IntDir>$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -201,9 +201,9 @@
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <Link>
-      <AdditionalDependencies>sdlcl.lib;sdl_image.lib;tiff.lib;libpng16.lib;jpeg.lib</AdditionalDependencies>
+      <AdditionalDependencies>sdlmain.lib;sdlcl.lib;sdl_image.lib;tiff.lib;libpng16.lib;jpeg.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug;$(SolutionDir)/thirdparty/external/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/$(Configuration);$(SolutionDir)/thirdparty/external/lib</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateMapFile>true</GenerateMapFile>
       <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
@@ -391,9 +391,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <DisableSpecificWarnings>4457</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>./;../../CommonLib;../../Include;./CPU;./Memory;./Heap;./Test;../../CommonLib/stl;../../CommonLib/jsmn;./FileSystem</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>ARCH_X86;</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./src;./include;../../thirdparty/sdlcl;../../thirdparty/sdl1\SDL-1.2.15/include;../../thirdparty/sdl1\SDL_image-1.2.12;../../thirdparty/sdl1\SDL_mixer-1.2.12;../../thirdparty\sdl1\SDL_ttf-2.0.11;$(SolutionDir)/thirdparty/external/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BACKEND_SDL;__WIN32;SDL_MAIN_HANDLED;WINDOWS;WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);_X86_</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/$(Configuration);$(SolutionDir)/thirdparty/external/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdlmain.lib;sdlcl.lib;sdl_image.lib;tiff.lib;libpng16.lib;jpeg.lib</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -422,7 +422,6 @@ void initAll() {
 /** Main engine function
 	@param argc numner of arguments
 	@param argv array with all arguments strings */
-#undef main
 int main(int argc, char *argv[]) {
 	
 	initEngine();

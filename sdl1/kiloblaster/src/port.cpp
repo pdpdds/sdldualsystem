@@ -47,7 +47,7 @@ char *strupr(char *s)
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <unistd.h>
+//#include <unistd.h>
 unsigned long filelength(int fd)
 {
 	struct stat buf;

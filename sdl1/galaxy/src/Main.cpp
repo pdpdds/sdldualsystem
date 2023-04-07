@@ -10,7 +10,6 @@
 //============================================================================
 
  #include 	"Game.h"
-#undef main
  int main(int argc, char* args[]) {
 
 	//Instance the game

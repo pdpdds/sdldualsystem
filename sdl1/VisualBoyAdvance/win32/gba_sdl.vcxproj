@@ -48,8 +48,8 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\SDLRelease\</OutDir>
-    <IntDir>.\SDLRelease\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -66,13 +66,13 @@
       <ProgramDataBaseFileName>.\SDLDebug/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
       <DisableSpecificWarnings>2440</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>zlib.lib;libpng16.lib;sdlcl.lib;winmm.lib;wsock32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sdlmain.lib;zlib.lib;libpng16.lib;sdlcl.lib;winmm.lib;wsock32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libmmd;libircmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -95,8 +95,8 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>../src;include/zlib;include/png;SDL-1.2.2/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NDEBUG;FINAL_VERSION;DEV_VERSION;WIN32;_CONSOLE;BKPT_SUPPORT;MMX;SDL;PROFILING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src;include/zlib;include/png;SDL-1.2.2/include;./dependencies\zlib;./win32\dependencies\libpng;../../../thirdparty\sdl1\SDL-1.2.15\include;$(SolutionDir)\thirdparty\external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FINAL_VERSION;NDEBUG;DEV_VERSION;WIN32;_CONSOLE;BKPT_SUPPORT;MMX;SDL;PROFILING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -108,15 +108,17 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>2440;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>SDLRelease/VisualBoyAdvance-SDL.exe</OutputFile>
+      <AdditionalDependencies>sdlmain.lib;zlib.lib;libpng16.lib;sdlcl.lib;winmm.lib;wsock32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <IgnoreSpecificDefaultLibraries>libmmd;libircmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libmm;libircmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ProgramDatabaseFile>.\SDLRelease/VisualBoyAdvance-SDL.pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/$(Configuration);$(SolutionDir)/thirdparty/external/lib</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <TypeLibraryName>.\SDLRelease/gba_sdl.tlb</TypeLibraryName>
@@ -183,8 +185,7 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm.exe -D__DJGPP__ -f win32 -o $(OutDir)%(Filename).obj %(FullPath)
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"c:\Program Files\Nasm\nasmw.exe" -D__DJGPP__ -f win32 -o $(OutDir)%(Filename).obj %(FullPath)
-</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -D__DJGPP__ -f win32 -o $(OutDir)%(Filename).obj %(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>

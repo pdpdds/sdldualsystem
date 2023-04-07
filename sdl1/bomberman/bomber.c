@@ -1924,7 +1924,7 @@ void helptext(char *cmd)
 {
 	fprintf(stderr, "Use: %s [-m matcher_host]\n", cmd);
 }
-#undef main
+
 int main(int argc, char **argv)
 {
 	int i;

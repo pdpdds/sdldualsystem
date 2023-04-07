@@ -229,7 +229,7 @@ extern "C" FILE * __cdecl __iob_func(void)
 {
 	return _iob;
 }
-#undef main
+
 int main(int argc, char** argv) {
 
     TheGooniesApp *game;

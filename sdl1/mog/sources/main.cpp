@@ -73,7 +73,6 @@ void finalizeSDL();
   //                  LPSTR lpCmdLine, int nCmdShow)
 //{
 //#else
-#undef main
 int main(int argc, char** argv)
 {
 //#endif

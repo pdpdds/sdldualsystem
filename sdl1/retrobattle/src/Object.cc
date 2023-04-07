@@ -108,10 +108,12 @@ Object::getBoundingBox()
   return &bounding_box;
 }
 
+#if !defined(_MSC_VER)
 inline int abs(int x)
 {
   return x < 0 ? -x : x;
 }
+#endif
 
 /*
   TODO: Consider when an object fits within another object completely... :P

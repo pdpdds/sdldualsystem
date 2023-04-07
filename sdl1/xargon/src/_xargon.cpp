@@ -1391,7 +1391,7 @@ void dodemo(void) {
 	} while (!macaborted);
 };
 
-#undef main
+
 int main(int argc, char* argv[])
 {
 	//	cfg_getpath(argc,argv); strcpy (tempname,path);

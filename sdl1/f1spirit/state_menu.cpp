@@ -999,7 +999,7 @@ int F1SpiritApp::menu_cycle(KEYBOARDSTATE *k)
 
 					break;
 
-				case 38: { /* CHANGE Nº of ENEMY CARS: */
+				case 38: { /* CHANGE N?of ENEMY CARS: */
 					}
 
 					break;
@@ -2811,7 +2811,7 @@ int F1SpiritApp::menu_cycle(KEYBOARDSTATE *k)
 
 					/* Listen to the client sockets: */
 					{
-						F1SComputer *c, *found = 0;
+						F1SComputer *c = 0, *found = 0;
 
 						menu_registered_clients.Rewind();
 

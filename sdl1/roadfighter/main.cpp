@@ -114,7 +114,6 @@ void finalizeSDL()
 
 
 #ifdef _WIN32
-#undef main
 int main(int argc, char** argv)
 {
 	

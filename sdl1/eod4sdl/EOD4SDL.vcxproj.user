@@ -10,6 +10,6 @@
     <LocalDebuggerCommand>$(OutDir)$(TargetName)$(TargetExt)</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>--windowed --noss</LocalDebuggerCommandArguments>
-    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)resources/eod4sdl/gamefiles</LocalDebuggerWorkingDirectory>
   </PropertyGroup>
 </Project>

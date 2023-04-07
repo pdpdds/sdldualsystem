@@ -262,7 +262,6 @@ static void main_loop()
     quit_func(0);
 }
 
-#undef main
 int main(int argc, char* argv[])
 {
     // Initialize timer and video systems

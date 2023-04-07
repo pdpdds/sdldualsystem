@@ -22,7 +22,6 @@ void SGLDevice::buildSinCosTable(void)
 }
 extern int sglMain(int argc, char* argv[]);
 SGLDevice sglDevice;
-#undef main
 int main(int argc, char *argv[])
 {
 	sglMain(argc, argv);

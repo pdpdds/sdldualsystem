@@ -833,7 +833,6 @@ void AddScore(int Points) {
 	if((Score / SCORE_FOR_LIFE) > (OldScore / SCORE_FOR_LIFE)) Lives++;
 }
 
-#undef main
 //------------------------------------------------------------------------------
 int main(int argc, char* argv[]) {
 	atexit(OnCleanup);

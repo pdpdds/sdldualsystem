@@ -33,7 +33,6 @@ gcc -o Gilbert Gilbert.c Widjet.c MoteurDeJeu.c -lm -lSDL_mixer  `sdl-config --l
 //#include <windows.h> //For windows only
 
 enum { INGAME = 1, MENU = 0 };
-#undef main
 int main(int argc, char* argv[]) {
 	MainBoot();//initialisation des variable public au demarage
 	//FreeConsole(); //efface le terminal pour windows

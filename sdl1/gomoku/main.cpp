@@ -8,7 +8,6 @@
 #include "BoardView.h"
 #include "BoardControl.h"
 
-#undef main
 int main(int argc, char* argv[])
 {
 	bool quit = false;

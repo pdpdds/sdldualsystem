@@ -48,7 +48,6 @@ static void mainLoop() {
 }
 #endif
 
-#undef main
 int main(int argc, char *argv[]) {
 	char *dataPath = 0;
 	char *savePath = 0;

@@ -51,7 +51,6 @@ const char *usr_datadir;
 
 char *ART_FILE;
 char *BINDINGS_FILE;
-#undef main
 int main( int argc, char *argv[] )
 {
 	bool hardware_support = true;

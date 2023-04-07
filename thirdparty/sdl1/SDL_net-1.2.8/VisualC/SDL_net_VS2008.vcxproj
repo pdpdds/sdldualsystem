@@ -194,7 +194,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>wsock32.lib;iphlpapi.lib;sdlcl.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\Release/SDL_net.dll</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ProgramDatabaseFile>.\Release/SDL_net.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>

@@ -100,7 +100,6 @@ void InitPref(void)
 }
 
 /*****************************/
-#undef main
 int main(int narg, char* argv[])
 {
 	int i;

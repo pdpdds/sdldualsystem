@@ -1951,7 +1951,6 @@ Long options only:\n\
       --show-speed-detailed    Show detailed speed data\n\
 ");
 }
-#undef main
 int main(int argc, char **argv)
 {
   fprintf(stderr, "VisualBoyAdvance version %s [SDL]\n", VERSION);

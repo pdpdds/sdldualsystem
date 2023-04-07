@@ -988,7 +988,7 @@ void play(int16_t demoflg, int16_t loadflg) {
 		setpagemode(0); printhi(1);
 	};
 };
-#undef main
+
 int main(int argc, char *argv[]) {
 	int16_t n;
 	strcpy(tempname, "temp");

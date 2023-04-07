@@ -13,7 +13,6 @@ void I_ReadCyberCmd (ticcmd_t *cmd) {
 // stub
 }
 
-#undef main
 int main(int argc, char *argv[])
 {
 	myargc = argc;

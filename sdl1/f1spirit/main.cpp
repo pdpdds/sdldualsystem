@@ -247,7 +247,6 @@ void finalization()
 } /* finalization */
 
 
-#undef main
 int main(int argc, char** argv) {
 
 	SDL_Surface *screen_sfc;
