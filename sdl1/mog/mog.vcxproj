@@ -97,14 +97,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>USE_MUSIC;__WIN32;SDL_MAIN_HANDLED;WINDOWS;WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions);_X86_</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>./;./libgamemusic;./include;../../thirdparty\sdl1/SDL_image-1.2.12;../../thirdparty\sdl1/SDL_mixer-1.2.12;../../thirdparty\sdl1/SDL_image-1.2.12\VisualC\external\include;../../thirdparty\sdl1/SDL_ttf-2.0.11;../../thirdparty/sdl1/SDL-1.2.15\include;../../thirdparty/sdl1/SDL_sound</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;./libgamemusic;./include;../../thirdparty\sdl1/SDL_image-1.2.12;../../thirdparty\sdl1/SDL_mixer-1.2.12;../../thirdparty\sdl1/SDL_image-1.2.12\VisualC\external\include;../../thirdparty\sdl1/SDL_ttf-2.0.11;../../thirdparty/sdl1/SDL-1.2.15\include;../../thirdparty/external/include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819;4305;4244;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/debug;$(SolutionDir)/thirdparty/sdl1\SDL_sound\VisualC\Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdlmain.lib;sdl_sound.lib;sdl_image.lib;SDL_mixer.lib;sdlcl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/thirdparty/$(configuration);$(SolutionDir)/thirdparty\external\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdlmain.lib;sdl2_sound.lib;sdl_image.lib;SDL_mixer.lib;sdlcl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
