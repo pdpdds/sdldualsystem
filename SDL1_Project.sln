@@ -61,8 +61,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "metapacman", "sdl1\metapacm
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "retrobattle", "sdl1\retrobattle\retrobattle.vcxproj", "{FFBEBF12-786F-4F1C-A6D7-6335A0BDFC68}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kiloblaster", "sdl1\kiloblaster\Kiloblaster.vcxproj", "{F97B0A59-395D-417D-B4E4-306109C5BB3B}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenTyrian", "sdl1\opentyrian\OpenTyrian.vcxproj", "{9FDBDAF0-C504-4A60-962E-8D8FF024EED0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wolf4SDL", "sdl1\wolf4sdl\Wolf4SDL.vcxproj", "{5ED93D5F-752C-4F37-95EC-F8B1BF105FE0}"
@@ -355,14 +353,6 @@ Global
 		{FFBEBF12-786F-4F1C-A6D7-6335A0BDFC68}.Release|x64.Build.0 = Release|x64
 		{FFBEBF12-786F-4F1C-A6D7-6335A0BDFC68}.Release|x86.ActiveCfg = Release|Win32
 		{FFBEBF12-786F-4F1C-A6D7-6335A0BDFC68}.Release|x86.Build.0 = Release|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Debug|Itanium.ActiveCfg = Debug|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Debug|x64.ActiveCfg = Debug|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Debug|x86.ActiveCfg = Debug|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Debug|x86.Build.0 = Debug|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Release|Itanium.ActiveCfg = Release|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Release|x64.ActiveCfg = Release|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Release|x86.ActiveCfg = Release|Win32
-		{F97B0A59-395D-417D-B4E4-306109C5BB3B}.Release|x86.Build.0 = Release|Win32
 		{9FDBDAF0-C504-4A60-962E-8D8FF024EED0}.Debug|Itanium.ActiveCfg = Debug|Win32
 		{9FDBDAF0-C504-4A60-962E-8D8FF024EED0}.Debug|x64.ActiveCfg = Debug|Win32
 		{9FDBDAF0-C504-4A60-962E-8D8FF024EED0}.Debug|x86.ActiveCfg = Debug|Win32
