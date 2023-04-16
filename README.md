@@ -16,11 +16,10 @@ SDL Game Programming Using Dual System.
 |metapacman |metapacman     |  http://os4depot.net/index.php?function=showcontent&file=game/misc/metapacman.lha    |
 |retrobattle |Retrobattle     | http://remar.se/andreas/retrobattle     |
 |cannonball |Cannonball     | https://archive.org/details/cannonball-outrun     |
-|kiloblaster |Kiloblaster     | https://github.com/Malvineous/kiloblaster     |
 |wolf4sdl |Wolf4SDL     | http://wolf3d.net/wolf4sdl/     |
 |stall | stall     | https://github.com/repu1sion/stall     |
 |mog | maze of galious     | https://github.com/OSSGames/GAME-SDL-ACTION-Maze_of_Galious     |
-
+|SGL | Software 3D Graphics Rendering Library     | https://github.com/skyfe79/SGL     |
 
 ## Build
 * Visual Studio 2022 or Higher Needed
