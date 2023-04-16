@@ -24,7 +24,7 @@ SDL Game Programming Using Dual System.
 
 ## Build
 * Visual Studio 2022 or Higher Needed
-* open thirdprty/sdlcl.sln and build
+* open thirdparty/sdlcl.sln and build
 * open SDL1_Project.sln and build
 
 
